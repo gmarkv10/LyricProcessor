@@ -1,4 +1,4 @@
-
+//Gabe was here
 public class CircList {
 	
 	int ptr = 0;
