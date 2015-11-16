@@ -29,9 +29,11 @@ public class FrequencyProcessor implements LyricProcessor {
 		this.filename = f;
 		window = 1;
 		word = "";  //fake instantiation to match window > 1 
+		
 		try {
-			reader = new BufferedReader(new FileReader(file.getCanonicalPath() + "\\" + f + ".lyr"));
-			writer = new BufferedWriter(new FileWriter(file.getCanonicalPath() + "\\" + f + window + ".json"));
+			//System.out.println(new File(file.getCanonicalPath() + "\\Lyrics\\" + f + ".lyr").exists());
+			reader = new BufferedReader(new FileReader(file.getCanonicalPath() + "\\Lyrics\\" + f));
+			writer = new BufferedWriter(new FileWriter(file.getCanonicalPath() + "\\Data\\" + f + window + ".json"));
 			frqMap = new MyMap<String, Integer>();
 		} catch (Exception e) {
 			System.err.println("File unable to be processed.");
@@ -46,8 +48,8 @@ public class FrequencyProcessor implements LyricProcessor {
 		word = "";
 		cList = new CircList(length);
 		try {
-			reader = new BufferedReader(new FileReader(file.getCanonicalPath() + "\\" + f + ".lyr"));
-			writer = new BufferedWriter(new FileWriter(file.getCanonicalPath() + "\\" + f + window + ".json"));
+			reader = new BufferedReader(new FileReader(file.getCanonicalPath() + "\\Lyrics\\" + f));
+			writer = new BufferedWriter(new FileWriter(file.getCanonicalPath() + "\\Data\\" + f + window + ".json"));
 			frqMap = new MyMap<String, Integer>();
 		} catch (Exception e) {
 			System.err.println("File unable to be processed.");
