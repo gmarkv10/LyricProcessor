@@ -1,7 +1,15 @@
+import java.io.BufferedReader;
+import java.io.IOException;
 
 public abstract class LyricProcessor {
 	
+	BufferedReader reader;
+	
 	abstract String getCurrentPath();
+	
+	public String processWord(String s){
+		return s.toLowerCase();
+	}
 	
 	abstract boolean processLine();
 	

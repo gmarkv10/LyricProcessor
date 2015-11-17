@@ -96,7 +96,7 @@ public class MyMap<K,V> implements Map<K,V> {
 		return null;
 	}
 	
-	public String toJSON(int window){
+	public String toJSON(){
 		String s = "{\n";
 		KList.resetPtr(); VList.resetPtr();
 		int count = 0;

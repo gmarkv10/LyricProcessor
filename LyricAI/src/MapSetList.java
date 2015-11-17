@@ -108,7 +108,7 @@ public class MapSetList<T> {
 	
 	public Node getIdx(int i){
 		if(i > size || i < 0){
-			System.err.println("Index out of range, return val is null");
+			//System.err.println("Index out of range, return val is null");
 			return null;
 		}
 		else{

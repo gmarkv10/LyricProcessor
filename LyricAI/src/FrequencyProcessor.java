@@ -32,7 +32,7 @@ public class FrequencyProcessor extends LyricProcessor {
 		
 		try {
 			//System.out.println(new File(file.getCanonicalPath() + "\\Lyrics\\" + f + ".lyr").exists());
-			reader = new BufferedReader(new FileReader(file.getCanonicalPath() + "\\Lyrics\\" + f));
+			reader = new BufferedReader(new FileReader(file.getCanonicalPath() + "\\Lyrics\\" + f + ".lyr"));
 			writer = new BufferedWriter(new FileWriter(file.getCanonicalPath() + "\\Data\\" + f + window + ".json"));
 			frqMap = new MyMap<String, Integer>();
 		} catch (Exception e) {
@@ -57,10 +57,7 @@ public class FrequencyProcessor extends LyricProcessor {
 		}
 	}
 	
-	//Build out to only extract useful parts of words
-	static String processWord(String s){
-		return s.toLowerCase();
-	}
+
 
 	public String readWords(){
 		try {
@@ -91,9 +88,9 @@ public class FrequencyProcessor extends LyricProcessor {
 			String word;
 			String phrase; //for if we're using a CircList
 			for(int i = 0; i < words.length; i++){
-				word = FrequencyProcessor.processWord(words[i]);
+				word = this.processWord(words[i]);
 				if(window > 1){ //then we're using a CircList
-					cList.insert(word);
+					cList.insert(processWord(word));
 					phrase = cList.getPhrase();
 					Integer freq = frqMap.get(phrase);
 					frqMap.put(phrase, (freq == null) ? 1 : freq + 1);
@@ -118,12 +115,12 @@ public class FrequencyProcessor extends LyricProcessor {
 	}
 	
 	public String toJSon(){
-		return frqMap.toJSON(window);
+		return frqMap.toJSON();
 	}
 	
 	public void exportJSON(){
 		PrintWriter pw = new PrintWriter(writer);
-		pw.println(frqMap.toJSON(window));
+		pw.println(frqMap.toJSON());
 		pw.close();	
 	}
 	

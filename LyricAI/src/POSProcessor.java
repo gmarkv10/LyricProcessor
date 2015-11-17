@@ -1,47 +1,91 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
+
+import opennlp.tools.postag.POSModel;
+import opennlp.tools.postag.POSTaggerME;
 
 public class POSProcessor extends LyricProcessor {
+	private String filename;
+	private File   file;
+	private BufferedReader reader;
+	private BufferedWriter writer;
+	MyMap<String, Integer> posMap;
+	String word = null;
+	
+	//NLP Objects
+	InputStream model;
+	POSModel nModel;
+	POSTaggerME tagger;
+	String leftovers = "";
+	
+	public POSProcessor(String f){
+		file = new File(".");
+		this.filename = f; 
+		try {
+			//System.out.println(new File(file.getCanonicalPath() + "\\Lyrics\\" + f + ".lyr").exists());
+			String net = file.getCanonicalPath()+"\\OpenNLP\\en-pos-maxent.bin";
+			posMap = new MyMap();
+			model = new FileInputStream(new File(net));
+			nModel = new POSModel(model);
+			String[] words = {"one","1","epr","they","the"};
+			tagger = new POSTaggerME(nModel);
+			reader = new BufferedReader(new FileReader(file.getCanonicalPath() + "\\Lyrics\\" + f + ".lyr"));
+		} catch(IOException e){
+			System.err.println("unable to process file ");
+		}
+	}
 	
 	enum SPEECH { VERB, CONJUNCTION,ADJECTIVE, PRONOUN , NUMBER, NOUN, 
-		           TO, PREPOSITION, ADVERB, INTERJECTION, OTHER, FOREIGN
+		           TO, PREPOSITION, ADVERB, INTERJECTION, OTHER, FOREIGN,
+		           INTERROGATIVE
 		          }
 	
-	
-
-	@Override
-	public String getCurrentPath() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getSpeech(){
+		System.out.println(SPEECH.ADJECTIVE.toString());
+		return SPEECH.ADJECTIVE.toString();
 	}
-	public SPEECH getSpeech(){
-		System.out.println(SPEECH.ADJECTIVE);
-		return SPEECH.ADJECTIVE;
+	
+	public String readWords(){
+		try {
+			return reader.readLine();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			System.out.println("EXCEPTION while reading file");
+			return "";
+		}
 	}
 	
 
 	
 	public boolean processLine(){
-		return false; //if EOF
-//		String line = readWords();
-//		if(line == null) return false;
-//		else{
-//			String[] words = line.split(" ");
-//			String word;
-//			String phrase; //for if we're using a CircList
-//			for(int i = 0; i < words.length; i++){
-//				word = FrequencyProcessor.processWord(words[i]);
-//				if(window > 1){ //then we're using a CircList
-//					cList.insert(word);
-//					phrase = cList.getPhrase();
-//					Integer freq = frqMap.get(phrase);
-//					frqMap.put(phrase, (freq == null) ? 1 : freq + 1);
-//				}
-//				else{
-//					Integer freq = frqMap.get(word);
-//					frqMap.put(word, (freq == null) ? 1 : freq + 1);
-//				}
-//			}
-//			return true;
-//		}
+	//	return false; //if EOF
+		String line = readWords();
+		if(line == null) return false;
+		else{
+			String[] words = line.split(" ");
+			String[] posTags = tagger.tag(words); //give raw tags from https://javaextreme.wordpress.com/category/java-part-of-speech-tagging/
+			String tag;
+			for(int i = 0; i < posTags.length; i++){
+				if(posTags[i].equals("WRB")){
+					System.out.println("A WRB is: " + words[i]);
+				}
+				
+				tag = this.simplifyPOS(posTags[i]).toString();
+				Integer freq = posMap.get(tag);
+				posMap.put(tag, (freq == null) ? 1 : freq + 1);
+			}
+			return true;
+		}
+		
+	}
+	
+	public String toJSON(){
+		return posMap.toJSON();
 	}
 	
 
@@ -74,6 +118,8 @@ public class POSProcessor extends LyricProcessor {
 			return SPEECH.NOUN;
 		case "NNP":
 			return SPEECH.NOUN;
+		case "NNS":
+			return SPEECH.NOUN;
 		case "NNPS":
 			return SPEECH.NOUN;
 		case "PDT": 
@@ -82,6 +128,9 @@ public class POSProcessor extends LyricProcessor {
 			return SPEECH.OTHER;
 		case "PRP":
 			return SPEECH.PRONOUN;
+		case "PRP$":
+			return SPEECH.PRONOUN;
+				
 		case "RB":
 			return SPEECH.ADVERB;
 		case "RBR":
@@ -108,11 +157,35 @@ public class POSProcessor extends LyricProcessor {
 			return SPEECH.VERB;
 		case "VBZ":
 			return SPEECH.VERB;
+		case "WRB":
+			return SPEECH.INTERROGATIVE;
+		case "WDT":
+			return SPEECH.INTERROGATIVE;
+		case "WP":
+			return SPEECH.INTERROGATIVE;
+		case "WP$":
+			return SPEECH.INTERROGATIVE;
 		default:
+			leftovers += s + " ";
 			return SPEECH.OTHER;
 		}
 
 	}
+	
+	String getLeftovers(){
+		return leftovers;
+	}
 
+	@Override
+	public String getCurrentPath() {
+		// TODO Auto-generated method stub
+		try {
+			return file.getCanonicalPath() + "\\Lyrics\\" + filename + ".lyr";
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return "";
+		}
+	}
 
 }
