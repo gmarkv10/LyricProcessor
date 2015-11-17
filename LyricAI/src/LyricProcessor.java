@@ -1,8 +1,11 @@
 
-public interface LyricProcessor {
+public abstract class LyricProcessor {
 	
-	String getCurrentPath();
+	String getCurrentPath() {
+		return null;
+	}
 	
-	void processLines();
+	void processLines() {
+	}
 
 }

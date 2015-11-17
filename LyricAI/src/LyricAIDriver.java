@@ -6,7 +6,23 @@ public class LyricAIDriver {
 	public static void main(String[] args) {
 		// TODO Get There
 		
-		FrequencyProcessor fp;
+	
+		
+		
+		
+		POSProcessor posp = new POSProcessor();
+		posp.getSpeech();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*	FrequencyProcessor fp;
 		try {
 			File lyrdir = new File((new File(".").getCanonicalPath()) + "\\Lyrics");
 			String[] lyrfiles = lyrdir.list();
@@ -30,7 +46,7 @@ public class LyricAIDriver {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		//FrequencyProcessor fp = new FrequencyProcessor("hello");
 		//fp.processLines();
 		

@@ -18,7 +18,7 @@ public class NLPDriver {
 			model = new FileInputStream(new File(s));
 
 			POSModel nModel = new POSModel(model);
-			String[] words = {"Hello","beatiful","seemingly","they","the"};
+			String[] words = {"one","1","epr","they","the"};
 			POSTaggerME tagger = new POSTaggerME(nModel);
 			String[]  tags = tagger.tag(words);
 			for(String p : tags){
@@ -37,3 +37,6 @@ public class NLPDriver {
 	}
 
 }
+
+
+
