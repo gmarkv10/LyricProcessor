@@ -1,5 +1,5 @@
 
-public class POSProcessor implements LyricProcessor {
+public class POSProcessor extends LyricProcessor {
 	
 	enum SPEECH { VERB, CONJUNCTION,ADJECTIVE, PRONOUN , NUMBER, NOUN, 
 		           TO, PREPOSITION, ADVERB, INTERJECTION, OTHER, FOREIGN
@@ -12,53 +12,39 @@ public class POSProcessor implements LyricProcessor {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
-	
-
-	@Override
-	public void processLines() {
-		// TODO Auto-generated method stub
-		
-	}
-	
 	public SPEECH getSpeech(){
 		System.out.println(SPEECH.ADJECTIVE);
 		return SPEECH.ADJECTIVE;
 	}
 	
+
+	
 	public boolean processLine(){
-		String line = readWords();
-		if(line == null) return false;
-		else{
-			String[] words = line.split(" ");
-			String word;
-			String phrase; //for if we're using a CircList
-			for(int i = 0; i < words.length; i++){
-				word = FrequencyProcessor.processWord(words[i]);
-				if(window > 1){ //then we're using a CircList
-					cList.insert(word);
-					phrase = cList.getPhrase();
-					Integer freq = frqMap.get(phrase);
-					frqMap.put(phrase, (freq == null) ? 1 : freq + 1);
-				}
-				else{
-					Integer freq = frqMap.get(word);
-					frqMap.put(word, (freq == null) ? 1 : freq + 1);
-				}
-			}
-			return true;
-		}
+		return false; //if EOF
+//		String line = readWords();
+//		if(line == null) return false;
+//		else{
+//			String[] words = line.split(" ");
+//			String word;
+//			String phrase; //for if we're using a CircList
+//			for(int i = 0; i < words.length; i++){
+//				word = FrequencyProcessor.processWord(words[i]);
+//				if(window > 1){ //then we're using a CircList
+//					cList.insert(word);
+//					phrase = cList.getPhrase();
+//					Integer freq = frqMap.get(phrase);
+//					frqMap.put(phrase, (freq == null) ? 1 : freq + 1);
+//				}
+//				else{
+//					Integer freq = frqMap.get(word);
+//					frqMap.put(word, (freq == null) ? 1 : freq + 1);
+//				}
+//			}
+//			return true;
+//		}
 	}
 	
-	@Override //TODO: DEPRECATED, implementing in processLine() for now
-	public void processLines() {
-		// TODO Auto-generated method stub
-		int lin = 0;
-		while( processLine() ){
-			lin++;
-		}
-		System.out.println(lin + " lines processed" );
-	}
+
 	
 	public SPEECH simplifyPOS(String s){
 		switch(s){
@@ -127,5 +113,6 @@ public class POSProcessor implements LyricProcessor {
 		}
 
 	}
+
 
 }
