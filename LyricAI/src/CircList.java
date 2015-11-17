@@ -22,7 +22,6 @@ public class CircList {
 	}
 	
 	public void insert(String s){
-		FrequencyProcessor.processWord(s);
 		words[ptr] = s;
 		advance();
 	}

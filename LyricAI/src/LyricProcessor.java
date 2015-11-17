@@ -1,11 +1,27 @@
+import java.io.BufferedReader;
+import java.io.IOException;
 
 public abstract class LyricProcessor {
 	
-	String getCurrentPath() {
-		return null;
+	BufferedReader reader;
+	
+	abstract String getCurrentPath();
+	
+	public String processWord(String s){
+		return s.toLowerCase();
 	}
 	
-	void processLines() {
+	abstract boolean processLine();
+	
+	public void processLines(){
+		// TODO Auto-generated method stub
+		int lin = 0;
+		while( processLine() ){
+			lin++;
+		}
+		System.out.println(lin + " lines processed" );
 	}
+	
+	
 
 }

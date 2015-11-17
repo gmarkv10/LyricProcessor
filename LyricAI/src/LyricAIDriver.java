@@ -10,9 +10,10 @@ public class LyricAIDriver {
 		
 		
 		
-		POSProcessor posp = new POSProcessor();
-		posp.getSpeech();
-		
+		POSProcessor posp = new POSProcessor("hello");
+		posp.processLines();
+		System.out.println(posp.toJSON());
+		System.out.println(posp.leftovers);
 		
 		
 		
