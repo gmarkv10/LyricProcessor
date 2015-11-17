@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-public class FrequencyProcessor implements LyricProcessor {
+public class FrequencyProcessor extends LyricProcessor {
 
 	private String filename;
 	private File   file;
@@ -107,7 +107,7 @@ public class FrequencyProcessor implements LyricProcessor {
 		}
 	}
 	
-	@Override //TODO: DEPRECATED, implementing in processLine() for now
+	@Override
 	public void processLines() {
 		// TODO Auto-generated method stub
 		int lin = 0;
@@ -117,7 +117,9 @@ public class FrequencyProcessor implements LyricProcessor {
 		System.out.println(lin + " lines processed" );
 	}
 	
-	
+	public String toJSon(){
+		return frqMap.toJSON(window);
+	}
 	
 	public void exportJSON(){
 		PrintWriter pw = new PrintWriter(writer);
