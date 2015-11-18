@@ -18,11 +18,12 @@ public class NLPDriver {
 			model = new FileInputStream(new File(s));
 
 			POSModel nModel = new POSModel(model);
-			String[] words = {"Hello,","its","me","they","the"};
+			String[] words = {"hang","hang\n","I've","they","the"};
 			POSTaggerME tagger = new POSTaggerME(nModel);
 			String[]  tags = tagger.tag(words);
-			for(String p : tags){
-				System.out.println(p + " " + p.equals("CC"));
+			double[] probs = tagger.probs();
+			for(int i =0; i < tags.length; i++){
+				System.out.println(tags[i] + " " + probs[i]);
 			}
 			
 

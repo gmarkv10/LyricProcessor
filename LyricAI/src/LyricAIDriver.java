@@ -6,14 +6,17 @@ public class LyricAIDriver {
 	public static void main(String[] args) {
 		// TODO Get There
 		
-	
+		LyricProcessor posp = new POSProcessor("hello");
+		String s = "hello,\n";
+		System.out.println(s);
+		s = posp.processWord(s);
+		System.out.println(s);
 		
 		
 		
-		POSProcessor posp = new POSProcessor("hello");
-		posp.processLines();
-		System.out.println(posp.toJSON());
-		System.out.println(posp.leftovers);
+		//posp.processLines();
+		//System.out.println(posp.toJSON());
+		//System.out.println(posp.leftovers);
 		
 		
 		

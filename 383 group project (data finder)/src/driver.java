@@ -15,8 +15,8 @@ public class driver{
            //  String test = "Wiz Khalifa featuring Charlie puth";
            //  System.out.println(p.trimArtist(test));
              
-           //  String test2 = "[verse1] hey dasdas dasd asd sd [hook] asdasdasd asdas a sdas [outro] asdasd..d asd... as";
-            // System.out.println(p.trimGeniusBrackets(test2));
+             String test2 = "[verse1] hey dasdas dasd asd sd [hook] asdasdasd asdas a sdas [outro] asdasd..d asd... as";
+             System.out.println(p.trimGeniusBrackets(test2));
            // dbm.pullLyrics();
              //System.out.println(p.removeApos("don't cost a' thanggg'"));
              
