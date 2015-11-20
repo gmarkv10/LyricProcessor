@@ -180,6 +180,27 @@ public class MapSetList<T> {
 		}
 	}
 	
+	public int[] sort(){
+		//I'm constructing an array to return in the map implementation
+		//when the values get sorted we have to reorder the keys accoringly
+		int[] orderArr = new int[size];
+		for(int i = 0; i < size; i++){
+			orderArr[i] = i;
+		}
+		
+		for(int x = 0; x < size; x++){//idx of elt to sort in place
+			
+			for(int y = x; x >= 0; y--){ //idx of where we are sorting in place
+				
+				
+			}
+		}
+		
+		
+		
+		return orderArr;
+	}
+	
 	public int minisort(){
 		if(isSorted()){
 			return 0;
@@ -250,10 +271,11 @@ public class MapSetList<T> {
 				advancePtr();
 				idx++;
 			}
+			if(ptr.getValue().equals(q)) return idx;
 			return -2;
 		}
 	}
-
+	
 
 	public void print(){
 		try{
@@ -274,6 +296,14 @@ public class MapSetList<T> {
 	public void resetPtr(){
 		ptr = head;
 	}
+	
+	void arraySwap(int[] a, int id1, int id2){
+		int placeholder = a[id1];
+		a[id1] = a[id2];
+		a[id2] = placeholder;
+	}
+	
+	
 
 }
 

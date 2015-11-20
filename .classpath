@@ -3,5 +3,7 @@
 	<classpathentry kind="src" path="LyricAI/src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="C:/Users/Gabe Markarian/SkyDrive/UMass/AI/LyricProcessor/OpenNLP/opennlp-tools-1.6.0.jar"/>
+	<classpathentry kind="lib" path="383 group project (data finder)/jsoup-1.8.3.jar"/>
+	<classpathentry kind="lib" path="383 group project (data finder)/sqlite-jdbc-3.8.11.2.jar"/>
 	<classpathentry kind="output" path="LyricAI/bin"/>
 </classpath>

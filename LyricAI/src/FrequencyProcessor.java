@@ -19,7 +19,7 @@ public class FrequencyProcessor extends LyricProcessor {
 	private File   file;
 	private BufferedReader reader;
 	private BufferedWriter writer;
-	MyMap<String, Integer> frqMap;
+	MyMap<String, Integer> frqMap = null;
 	String word = null;
 	CircList cList;
 	int window = 0;
@@ -63,7 +63,6 @@ public class FrequencyProcessor extends LyricProcessor {
 		try {
 			return reader.readLine();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			System.out.println("EXCEPTION while reading file");
 			return "";
 		}
@@ -90,7 +89,7 @@ public class FrequencyProcessor extends LyricProcessor {
 			for(int i = 0; i < words.length; i++){
 				word = this.processWord(words[i]);
 				if(window > 1){ //then we're using a CircList
-					cList.insert(processWord(word));
+					cList.insert(word);
 					phrase = cList.getPhrase();
 					Integer freq = frqMap.get(phrase);
 					frqMap.put(phrase, (freq == null) ? 1 : freq + 1);
@@ -112,6 +111,10 @@ public class FrequencyProcessor extends LyricProcessor {
 			lin++;
 		}
 		System.out.println(lin + " lines processed" );
+	}
+	
+	public MyMap getMap(){
+		return frqMap;
 	}
 	
 	public String toJSon(){

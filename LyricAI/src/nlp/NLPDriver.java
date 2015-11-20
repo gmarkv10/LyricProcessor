@@ -18,7 +18,7 @@ public class NLPDriver {
 			model = new FileInputStream(new File(s));
 
 			POSModel nModel = new POSModel(model);
-			String[] words = {"hang","hang\n","I've","they","the"};
+			String[] words = {"hang","hang\n","I've","dat","that"};
 			POSTaggerME tagger = new POSTaggerME(nModel);
 			String[]  tags = tagger.tag(words);
 			double[] probs = tagger.probs();
