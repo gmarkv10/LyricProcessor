@@ -114,6 +114,16 @@ public class FrequencyProcessor extends LyricProcessor {
 		System.out.println(lin + " lines processed" );
 	}
 	
+	public String[] getTop10(){
+		String[] ret = new String[10];
+		frqMap.KList.resetPtr();
+		for(int i = 0; i < 10; i++){
+			ret[i] = frqMap.KList.getPtr();
+			frqMap.KList.advancePtr();
+		}
+		return ret;
+	}
+	
 	public MyMap getMap(){
 		return frqMap;
 	}
