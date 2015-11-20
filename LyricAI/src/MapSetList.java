@@ -233,7 +233,7 @@ public class MapSetList<T> {
 			while(ptr != tail){
 				//System.out.println("Comparing:" + getIdx(comparison).getValue() + " " + getIdx(comparison+1).getValue());
 				//Syste/m.out.println(comp.compare(getIdx(comparison).getValue(), getIdx(comparison + 1).getValue()) < 0);
-				if(comp.compare(getIdx(comparison).getValue(), getIdx(comparison + 1).getValue()) < 0){
+				if(comp.compare(getIdx(comparison).getValue(), getIdx(comparison + 1).getValue()) <= 0){
 					//System.out.println("Swapping:" + comparison + " " + (comparison +1));
 					swap(comparison, comparison+1);
 					advancePtr();

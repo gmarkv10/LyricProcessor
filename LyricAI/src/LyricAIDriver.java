@@ -10,11 +10,10 @@ public class LyricAIDriver {
 		m.put("one", 1);
 		m.put("two", 1);
 		m.put("three", 1);
+		System.out.println(m.toJSON());
 		m.put("two", 2);
+		System.out.println(m.toJSON());
 		m.put("one", 2);
-		m.put("one", 3);
-		m.put("four", 1);
-		m.put("four", 2);
 		System.out.println(m.toJSON());
 		
 //		FrequencyProcessor fp = new FrequencyProcessor("hotline");
