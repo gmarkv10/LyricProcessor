@@ -159,6 +159,48 @@ public class MapSetList<T> {
 		}
 	}
 	
+	public void removeAt(int idx){
+		if(idx >= size || idx < 0){
+			System.out.println("Can't remove at the index");
+			return;
+		}
+		else{
+			if(idx == 0){//new elt goes to head
+				if(size == 1){
+					head = null;
+					tail = null;
+					ptr = null;
+					size = 0;
+					return; //total reset, can only reference idx 0 when size is 1, also
+				}
+				Node oldHead = head;
+				head.getNext().setPrev(null);
+				head = head.getNext();
+				oldHead = null;
+			}
+			else if(idx == size - 1){//new elt goes to tail
+				Node oldTail = tail;
+				tail.getPrev().setNext(null);
+				tail = tail.getPrev();
+				oldTail = null;
+			}
+			else{
+				ptr = head;
+				for(int j = 0; j < idx; j++ ){
+					advancePtr();
+				}
+				Node previous = ptr.getPrev();
+				Node cNext    = ptr.getNext();
+				previous.setNext(cNext);
+				cNext.setPrev(previous);
+				ptr = null; resetPtr();//make sure calling pointer somewhere else wont cause problems
+			}
+			size--;
+
+		}
+		
+	}
+	
 	public boolean swap(int i1, int i2 ){
 		if((i1 > size || i1 < 0) && (i2 > size || i2 < 0)){
 			System.err.println("Index out of range, return val is null");
@@ -180,26 +222,6 @@ public class MapSetList<T> {
 		}
 	}
 	
-	public int[] sort(){
-		//I'm constructing an array to return in the map implementation
-		//when the values get sorted we have to reorder the keys accoringly
-		int[] orderArr = new int[size];
-		for(int i = 0; i < size; i++){
-			orderArr[i] = i;
-		}
-		
-		for(int x = 0; x < size; x++){//idx of elt to sort in place
-			
-			for(int y = x; x >= 0; y--){ //idx of where we are sorting in place
-				
-				
-			}
-		}
-		
-		
-		
-		return orderArr;
-	}
 	
 	public int minisort(){
 		if(isSorted()){
@@ -210,8 +232,8 @@ public class MapSetList<T> {
 			ptr = head;
 			while(ptr != tail){
 				//System.out.println("Comparing:" + getIdx(comparison).getValue() + " " + getIdx(comparison+1).getValue());
-				//System.out.println(comp.compare(getIdx(comparison).getValue(), getIdx(comparison + 1).getValue()) < 0);
-				if(comp.compare(getIdx(comparison).getValue(), getIdx(comparison + 1).getValue()) < 0){
+				//Syste/m.out.println(comp.compare(getIdx(comparison).getValue(), getIdx(comparison + 1).getValue()) < 0);
+				if(comp.compare(getIdx(comparison).getValue(), getIdx(comparison + 1).getValue()) <= 0){
 					//System.out.println("Swapping:" + comparison + " " + (comparison +1));
 					swap(comparison, comparison+1);
 					advancePtr();

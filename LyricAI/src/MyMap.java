@@ -51,8 +51,10 @@ public class MyMap<K,V> implements Map<K,V> {
 	public V put(K key, V value) {
 		// TODO Auto-generated method stub
 		if( containsKey(key) ){
-			int idx = KList.contains(key); //returns index
-			VList.getIdx(idx).setValue(value);
+			int vActiveIdx = KList.contains(key); //returns index
+			VList.removeAt(vActiveIdx);
+			int kActiveIdx = VList.insert(value);
+			KList.swap(vActiveIdx, kActiveIdx);
 		}
 		else{
 			KList.insertAt(VList.insert(value), key);

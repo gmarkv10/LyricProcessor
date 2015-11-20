@@ -48,7 +48,7 @@ public class FrequencyProcessor extends LyricProcessor {
 		word = "";
 		cList = new CircList(length);
 		try {
-			reader = new BufferedReader(new FileReader(file.getCanonicalPath() + "\\Lyrics\\" + f));
+			reader = new BufferedReader(new FileReader(file.getCanonicalPath() + "\\Lyrics\\" + f + ".lyr"));
 			writer = new BufferedWriter(new FileWriter(file.getCanonicalPath() + "\\Data\\" + f + window + ".json"));
 			frqMap = new MyMap<String, Integer>();
 		} catch (Exception e) {
@@ -90,6 +90,7 @@ public class FrequencyProcessor extends LyricProcessor {
 				word = this.processWord(words[i]);
 				if(window > 1){ //then we're using a CircList
 					cList.insert(word);
+					if(!cList.isFull) continue;
 					phrase = cList.getPhrase();
 					Integer freq = frqMap.get(phrase);
 					frqMap.put(phrase, (freq == null) ? 1 : freq + 1);

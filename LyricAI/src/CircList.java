@@ -5,6 +5,7 @@ public class CircList {
 	int ptr = 0;
 	String[] words;
 	int size = 0;
+	boolean isFull = false;
 	
 	public CircList(int size){
 		if(size < 1){
@@ -19,6 +20,9 @@ public class CircList {
 	
 	public void advance(){
 		ptr = (ptr + 1) % size;
+		if(ptr == 0){
+			isFull = true;
+		}
 	}
 	
 	public void insert(String s){
