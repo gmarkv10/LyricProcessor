@@ -6,17 +6,17 @@ public class LyricAIDriver {
 	public static void main(String[] args) {
 		// TODO Get There
 		
-		MyMap<String, Integer> m = new MyMap<String,Integer>();
-		m.put("one", 1);
-		m.put("two", 1);
-		m.put("three", 1);
-		System.out.println(m.toJSON());
-		m.put("two", 2);
-		System.out.println(m.toJSON());
-		m.put("one", 2);
-		System.out.println(m.toJSON());
+		MapSetList<Integer> m = new MapSetList<Integer>();
+		m.insert(1);
+		m.insert(2);
+		m.insert(5);
+		m.insert(0);
+		m.insert(3);
+		m.insert(1);
+		m.print();
 		
-//		FrequencyProcessor fp = new FrequencyProcessor("hotline");
+//		FrequencyProcessor fp = new FrequencyProcessor("hotline", 3);
+//		fp.processLine();
 //		fp.processLine();
 //		System.out.println(fp.frqMap.toJSON());
 		
