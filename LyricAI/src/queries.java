@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class queries {
 	
 	//"\\LyricAI\\src\\DataDB\\lyricproject.db"
-	public String path = "\\LyricAI\\src\\DataDB\\lyricproject.db";
+	public String path = "LyricAI\\src\\DataDB\\lyricproject.db";
 	
 	//returns multidimentional array of song, artist strings for all songs which lyrics are not null (lyrics we've found)
 	public String[][] songsANDartists() throws ClassNotFoundException{
