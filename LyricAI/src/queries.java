@@ -71,10 +71,10 @@ public class queries {
 		        System.err.println(e);
 		      }
 		    }
-		    for (int i =0;i<songArtists.length;i++){
-		    	System.out.println("Song: "+songArtists[i][0]+" || Artist: "+songArtists[i][1]);
-		    }
-		    System.out.println("returned "+songArtists.length+" distinct songs");
+		    //for (int i =0;i<songArtists.length;i++){
+		    //	System.out.println("Song: "+songArtists[i][0]+" || Artist: "+songArtists[i][1]);
+		    //}
+		    //System.out.println("returned "+songArtists.length+" distinct songs");
 		    return songArtists;
 	}
 	//returns lowest ranking 1-50 given song and artist, case sensitive
