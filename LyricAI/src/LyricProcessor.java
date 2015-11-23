@@ -3,10 +3,6 @@ import java.io.IOException;
 
 public abstract class LyricProcessor {
 	
-	char[] invalid_chars = {',', '\'', '\n' };
-	
-	BufferedReader reader;
-	
 	abstract String getCurrentPath();
 	
 	public String processWord(String s){
@@ -14,7 +10,8 @@ public abstract class LyricProcessor {
 		if(s.charAt(s.length() - 1) == ','  ||
 		   s.charAt(s.length() - 1) == '\'' ||
 		   s.charAt(s.length() - 1) == '\n' ||
-		   s.charAt(s.length() - 1) == '.'  ){
+		   s.charAt(s.length() - 1) == '.'  ||
+		   s.charAt(s.length() - 1) == ')'){
 			s = s.substring(0, s.length() - 1);
 			s = processWord(s);
 		}

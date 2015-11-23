@@ -13,6 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+//GABE WAS HERE
 public class FrequencyProcessor extends LyricProcessor {
 
 	private String filename;
