@@ -7,7 +7,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 public class queries {
-	
 	//"\\LyricAI\\src\\DataDB\\lyricproject.db"
 	public String path = "LyricAI\\src\\DataDB\\lyricproject.db";
 	
@@ -88,6 +87,7 @@ public class queries {
 		      // create a database connection
 		    	connection = DriverManager.getConnection("jdbc:sqlite:"+path);
 
+
 		      PreparedStatement ps = connection.prepareStatement("SELECT week, min(rank) as rank, song, artist from rankdata where song = ? and artist = ? group by song, artist");
 		      ps.setString(1, song);
 		      ps.setString(2, artist);
@@ -136,7 +136,9 @@ public class queries {
 		    try
 		    {
 		      // create a database connection
+
 		    	connection = DriverManager.getConnection("jdbc:sqlite:"+path);
+
 
 		      PreparedStatement ps = connection.prepareStatement("SELECT week, min(rank) as rank, song, artist from rankdata where song = ? and artist = ? group by song, artist");
 		      ps.setString(1, song);
@@ -186,7 +188,9 @@ public class queries {
 		    try
 		    {
 		      // create a database connection
+
 		    	connection = DriverManager.getConnection("jdbc:sqlite:"+path);
+
 
 		      PreparedStatement ps = connection.prepareStatement("SELECT lyrics AS lyrics from lyrics where song = ? and artist = ?");
 		      ps.setString(1, song);
