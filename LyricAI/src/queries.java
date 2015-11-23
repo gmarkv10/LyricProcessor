@@ -7,7 +7,9 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 public class queries {
-
+	//"\\LyricAI\\src\\DataDB\\lyricproject.db"
+	public String path = "LyricAI\\src\\DataDB\\lyricproject.db";
+	
 	//returns multidimentional array of song, artist strings for all songs which lyrics are not null (lyrics we've found)
 	public String[][] songsANDartists() throws ClassNotFoundException{
 		 	Class.forName("org.sqlite.JDBC");
@@ -18,7 +20,7 @@ public class queries {
 		    try
 		    {
 		      // create a database connection
-		      connection = DriverManager.getConnection("jdbc:sqlite:lyricproject.db");
+		      connection = DriverManager.getConnection("jdbc:sqlite:"+path);
 		      Statement statement = connection.createStatement();
 		      statement.setQueryTimeout(30);  // set timeout to 30 sec.
 		      
@@ -83,7 +85,8 @@ public class queries {
 		    try
 		    {
 		      // create a database connection
-		      connection = DriverManager.getConnection("jdbc:sqlite:lyricproject.db");
+		    	connection = DriverManager.getConnection("jdbc:sqlite:"+path);
+
 
 		      PreparedStatement ps = connection.prepareStatement("SELECT week, min(rank) as rank, song, artist from rankdata where song = ? and artist = ? group by song, artist");
 		      ps.setString(1, song);
@@ -133,7 +136,9 @@ public class queries {
 		    try
 		    {
 		      // create a database connection
-		      connection = DriverManager.getConnection("jdbc:sqlite:lyricproject.db");
+
+		    	connection = DriverManager.getConnection("jdbc:sqlite:"+path);
+
 
 		      PreparedStatement ps = connection.prepareStatement("SELECT week, min(rank) as rank, song, artist from rankdata where song = ? and artist = ? group by song, artist");
 		      ps.setString(1, song);
@@ -183,7 +188,9 @@ public class queries {
 		    try
 		    {
 		      // create a database connection
-		      connection = DriverManager.getConnection("jdbc:sqlite:lyricproject.db");
+
+		    	connection = DriverManager.getConnection("jdbc:sqlite:"+path);
+
 
 		      PreparedStatement ps = connection.prepareStatement("SELECT lyrics AS lyrics from lyrics where song = ? and artist = ?");
 		      ps.setString(1, song);

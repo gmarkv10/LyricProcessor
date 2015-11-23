@@ -13,77 +13,40 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+//GABE WAS HERE
 public class FrequencyProcessor extends LyricProcessor {
 
-	private String filename;
-	private File   file;
-	private BufferedReader reader;
-	private BufferedWriter writer;
 	MyMap<String, Integer> frqMap = null;
 	String word = null;
 	CircList cList;
 	int window = 0;
+	String lyric;
+	String[] words;
 
-	public FrequencyProcessor(String f){
-		file = new File(".");
-		this.filename = f;
+	public FrequencyProcessor(){
 		window = 1;
-		word = "";  //fake instantiation to match window > 1 
-		
-		try {
 			//System.out.println(new File(file.getCanonicalPath() + "\\Lyrics\\" + f + ".lyr").exists());
-			reader = new BufferedReader(new FileReader(file.getCanonicalPath() + "\\Lyrics\\" + f + ".lyr"));
-			writer = new BufferedWriter(new FileWriter(file.getCanonicalPath() + "\\Data\\" + f + window + ".json"));
-			frqMap = new MyMap<String, Integer>();
-		} catch (Exception e) {
-			System.err.println("File unable to be processed.");
-			reader = null;
-		}
+			//reader = new BufferedReader(new FileReader(file.getCanonicalPath() + "\\Lyrics\\" + f + ".lyr"));
+			//writer = new BufferedWriter(new FileWriter(file.getCanonicalPath() + "\\Data\\" + f + window + ".json"));
+
 	}
 	
-	public FrequencyProcessor(String f, int length){
-		file = new File(".");
-		this.filename = f;
-		this.window = length;
-		word = "";
+	public FrequencyProcessor(int length){
+		window = length;
 		cList = new CircList(length);
-		try {
-			reader = new BufferedReader(new FileReader(file.getCanonicalPath() + "\\Lyrics\\" + f + ".lyr"));
-			writer = new BufferedWriter(new FileWriter(file.getCanonicalPath() + "\\Data\\" + f + window + ".json"));
-			frqMap = new MyMap<String, Integer>();
-		} catch (Exception e) {
-			System.err.println("File unable to be processed.");
-			reader = null;
-		}
 	}
 	
-
-
-	public String readWords(){
-		try {
-			return reader.readLine();
-		} catch (IOException e) {
-			System.out.println("EXCEPTION while reading file");
-			return "";
-		}
+	@Override
+	public void resetLyric(String l){
+		lyric = l;
+		frqMap = new MyMap<String, Integer>();
 	}
 
 	@Override
-	public String getCurrentPath() {
-		// TODO Auto-generated method stub
-		try {
-			return file.getCanonicalPath()+ "\\" + filename;
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			return "NOT FOUND";
-		}
-	}
-
-	public boolean processLine(){
-		String line = readWords();
-		if(line == null) return false;
+	public int processLyric(){
+		if(lyric == null) return -1;
 		else{
-			String[] words = line.split(" ");
+			words = lyric.split(" ");
 			String word;
 			String phrase; //for if we're using a CircList
 			for(int i = 0; i < words.length; i++){
@@ -100,19 +63,11 @@ public class FrequencyProcessor extends LyricProcessor {
 					frqMap.put(word, (freq == null) ? 1 : freq + 1);
 				}
 			}
-			return true;
+			return words.length;
 		}
 	}
 	
-	@Override
-	public void processLines() {
-		// TODO Auto-generated method stub
-		int lin = 0;
-		while( processLine() ){
-			lin++;
-		}
-		System.out.println(lin + " lines processed" );
-	}
+
 	
 	public String[] getTop10(){
 		String[] ret = new String[10];
@@ -124,6 +79,10 @@ public class FrequencyProcessor extends LyricProcessor {
 		return ret;
 	}
 	
+	public double distinctToTotalRatio(){
+		return (double) frqMap.KList.size / words.length;
+	}
+	
 	public MyMap getMap(){
 		return frqMap;
 	}
@@ -132,21 +91,11 @@ public class FrequencyProcessor extends LyricProcessor {
 		return frqMap.toJSON();
 	}
 	
-	public void exportJSON(){
-		PrintWriter pw = new PrintWriter(writer);
-		pw.println(frqMap.toJSON());
-		pw.close();	
-	}
+//	public void exportJSON(){
+//		PrintWriter pw = new PrintWriter(writer);
+//		pw.println(frqMap.toJSON());
+//		pw.close();	
+//	}
 	
-	public void close(){
-		
-		try {
-			reader.close();
-			writer.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			System.err.println("ERR on close");
-		}
-	}
 
 }

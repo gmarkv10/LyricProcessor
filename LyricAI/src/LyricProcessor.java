@@ -3,34 +3,33 @@ import java.io.IOException;
 
 public abstract class LyricProcessor {
 	
-	char[] invalid_chars = {',', '\'', '\n' };
-	
-	BufferedReader reader;
-	
-	abstract String getCurrentPath();
 	
 	public String processWord(String s){
 		
 		if(s.charAt(s.length() - 1) == ','  ||
 		   s.charAt(s.length() - 1) == '\'' ||
 		   s.charAt(s.length() - 1) == '\n' ||
-		   s.charAt(s.length() - 1) == '.'  ){
+		   s.charAt(s.length() - 1) == '.'  ||
+		   s.charAt(s.length() - 1) == ')'){
 			s = s.substring(0, s.length() - 1);
 			s = processWord(s);
 		}
 		return s.toLowerCase();
 	}
 	
-	abstract boolean processLine();
+	abstract void resetLyric(String l);
 	
-	public void processLines(){
+	abstract int processLyric();
+	
+	//DEPRECATED AFTER Lyrics2005 Driver introduced with both our work.
+	/*public void processLines(){
 		// TODO Auto-generated method stub
 		int lin = 0;
 		while( processLine() ){
 			lin++;
 		}
 		System.out.println(lin + " lines processed" );
-	}
+	}*/
 	
 	
 

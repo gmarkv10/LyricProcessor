@@ -5,17 +5,22 @@ public class LyricAIDriver {
 
 	public static void main(String[] args) {
 		// TODO Get There
+		String s = "You used to call me on my, you used to, you used to You used to call me on my cell phone Late night when you need my love";
 		
-		FrequencyProcessor fp = new FrequencyProcessor("hotline");
-		fp.processLine();
-		fp.processLine();
-		fp.processLine();
-		System.out.println(fp.frqMap.toJSON());
-		String[] top10 = fp.getTop10();
-		for(int i = 0; i < 10; i++){
-			System.out.println(top10[i]);
-		}
 		
+		POSProcessor fp = new POSProcessor();
+		fp.resetLyric(s);
+		fp.processLyric();
+		System.out.println(fp.toJSON());
+//		fp.processLine();
+//		fp.processLine();
+//		fp.processLine();
+//		System.out.println(fp.frqMap.toJSON());
+//		String[] top10 = fp.getTop10();
+//		for(int i = 0; i < 10; i++){
+//			System.out.println(top10[i]);
+//		}
+//		
 
 		
 		
