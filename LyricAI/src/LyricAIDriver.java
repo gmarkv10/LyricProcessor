@@ -6,16 +6,24 @@ public class LyricAIDriver {
 	public static void main(String[] args) {
 		// TODO Get There
 		
-		FrequencyProcessor fp = new FrequencyProcessor("hotline");
-		fp.processLine();
-		fp.processLine();
-		fp.processLine();
-		System.out.println(fp.frqMap.toJSON());
-		String[] top10 = fp.getTop10();
-		for(int i = 0; i < 10; i++){
-			System.out.println(top10[i]);
+		File f = new File(".");
+		try {
+			System.out.println(new File(f.getCanonicalPath()));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
+		//		FrequencyProcessor fp = new FrequencyProcessor("hotline");
+//		fp.processLine();
+//		fp.processLine();
+//		fp.processLine();
+//		System.out.println(fp.frqMap.toJSON());
+//		String[] top10 = fp.getTop10();
+//		for(int i = 0; i < 10; i++){
+//			System.out.println(top10[i]);
+//		}
+//		
 
 		
 		
