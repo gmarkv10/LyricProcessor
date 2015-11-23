@@ -3,7 +3,6 @@ import java.io.IOException;
 
 public abstract class LyricProcessor {
 	
-	abstract String getCurrentPath();
 	
 	public String processWord(String s){
 		
@@ -18,16 +17,19 @@ public abstract class LyricProcessor {
 		return s.toLowerCase();
 	}
 	
-	abstract boolean processLine();
+	abstract void resetLyric(String l);
 	
-	public void processLines(){
+	abstract int processLyric();
+	
+	//DEPRECATED AFTER Lyrics2005 Driver introduced with both our work.
+	/*public void processLines(){
 		// TODO Auto-generated method stub
 		int lin = 0;
 		while( processLine() ){
 			lin++;
 		}
 		System.out.println(lin + " lines processed" );
-	}
+	}*/
 	
 	
 

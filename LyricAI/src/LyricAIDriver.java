@@ -5,16 +5,12 @@ public class LyricAIDriver {
 
 	public static void main(String[] args) {
 		// TODO Get There
+		String s = "You used to call me on my, you used to, you used to You used to call me on my cell phone Late night when you need my love";
 		
-		File f = new File(".");
-		try {
-			System.out.println(new File(f.getCanonicalPath()));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		
-		//		FrequencyProcessor fp = new FrequencyProcessor("hotline");
+		FrequencyProcessor fp = new FrequencyProcessor();
+		fp.resetLyric(s);
+		System.out.println(fp.frqMap.toJSON());
 //		fp.processLine();
 //		fp.processLine();
 //		fp.processLine();

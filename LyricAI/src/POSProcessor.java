@@ -13,9 +13,9 @@ public class POSProcessor extends LyricProcessor {
 	private String filename;
 	private File   file;
 	private BufferedReader reader;
-	private BufferedWriter writer;
 	MyMap<String, Integer> posMap;
-	String word = null;
+	String lyric = null;
+	
 	
 	//NLP Objects
 	InputStream model;
@@ -32,9 +32,7 @@ public class POSProcessor extends LyricProcessor {
 			posMap = new MyMap();
 			model = new FileInputStream(new File(net));
 			nModel = new POSModel(model);
-			String[] words = {"one","1","epr","they","the"};
 			tagger = new POSTaggerME(nModel);
-			reader = new BufferedReader(new FileReader(file.getCanonicalPath() + "\\Lyrics\\" + f + ".lyr"));
 		} catch(IOException e){
 			System.err.println("unable to process file ");
 		}
@@ -45,41 +43,29 @@ public class POSProcessor extends LyricProcessor {
 		           INTERROGATIVE
 		          }
 	
-	public String getSpeech(){
-		System.out.println(SPEECH.ADJECTIVE.toString());
-		return SPEECH.ADJECTIVE.toString();
-	}
-	
-	public String readWords(){
-		try {
-			return reader.readLine();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			System.out.println("EXCEPTION while reading file");
-			return "";
-		}
-	}
 	
 
+	@Override 
+	public void resetLyric(String l){
+		lyric = l;
+		posMap = new MyMap<String, Integer>();
+		
+	}
 	
-	public boolean processLine(){
+	@Override
+	public int processLyric(){
 	//	return false; //if EOF
-		String line = readWords();
-		if(line == null) return false;
+		if(lyric == null) return -1;
 		else{
-			String[] words = line.split(" ");
+			String[] words = lyric.split(" ");
 			String[] posTags = tagger.tag(words); //give raw tags from https://javaextreme.wordpress.com/category/java-part-of-speech-tagging/
 			String tag;
 			for(int i = 0; i < posTags.length; i++){
-				if(posTags[i].equals("WRB")){
-					System.out.println("A WRB is: " + words[i]);
-				}
-				
 				tag = this.simplifyPOS(posTags[i]).toString();
 				Integer freq = posMap.get(tag);
 				posMap.put(tag, (freq == null) ? 1 : freq + 1);
 			}
-			return true;
+			return words.length;
 		}
 		
 	}
@@ -176,16 +162,6 @@ public class POSProcessor extends LyricProcessor {
 		return leftovers;
 	}
 
-	@Override
-	public String getCurrentPath() {
-		// TODO Auto-generated method stub
-		try {
-			return file.getCanonicalPath() + "\\Lyrics\\" + filename + ".lyr";
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return "";
-		}
-	}
+
 
 }
