@@ -23,9 +23,8 @@ public class POSProcessor extends LyricProcessor {
 	POSTaggerME tagger;
 	String leftovers = "";
 	
-	public POSProcessor(String f){
-		file = new File(".");
-		this.filename = f; 
+	public POSProcessor(){
+		file = new File("."); 
 		try {
 			//System.out.println(new File(file.getCanonicalPath() + "\\Lyrics\\" + f + ".lyr").exists());
 			String net = file.getCanonicalPath()+"\\OpenNLP\\en-pos-maxent.bin";

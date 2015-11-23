@@ -8,9 +8,10 @@ public class LyricAIDriver {
 		String s = "You used to call me on my, you used to, you used to You used to call me on my cell phone Late night when you need my love";
 		
 		
-		FrequencyProcessor fp = new FrequencyProcessor();
+		POSProcessor fp = new POSProcessor();
 		fp.resetLyric(s);
-		System.out.println(fp.frqMap.toJSON());
+		fp.processLyric();
+		System.out.println(fp.toJSON());
 //		fp.processLine();
 //		fp.processLine();
 //		fp.processLine();
