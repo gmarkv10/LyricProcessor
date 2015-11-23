@@ -1,7 +1,7 @@
 
 public class Lyrics2005 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception{
 		
 		//query the db for [Songname, artist] from 'lyrics' pair and store in an array
 		
@@ -19,6 +19,13 @@ public class Lyrics2005 {
 		
 		//contruct a line for an aarf file
 		//write that line to an aarf file
+		
+		  queries q = new queries();
+          
+          String[][] songsnartists = q.songsANDartists();
+          int bestRank = q.bestRanking("Your Man", "Josh Turner");
+          String bestWeek = q.bestWeek("Your Man", "Josh Turner");
+          String lyrics =  q.getLyrics("Your Man", "Josh Turner");
 
 	}
 
