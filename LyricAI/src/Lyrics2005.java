@@ -16,7 +16,7 @@ public class Lyrics2005 {
 		String[][] songsnartists = q.songsANDartists();
 		
 		//for([Songname, artist] in that object):
-		for(int i = 300; i < 305; i++ ){
+/*		for(int i = 300; i < 305; i++ ){
 			//	song = songname
 			String song = songsnartists[i][0];
 			// 	art = artist
@@ -45,12 +45,13 @@ public class Lyrics2005 {
 			
 			//contruct a line for an aarf file
 			//write that line to an aarf file
-		}
+		}*/
 		  
           
           
           //int bestRank = q.bestRanking("Your Man", "Josh Turner");
-          //String bestWeek = q.bestWeek("Your Man", "Josh Turner");
+          String bestWeek = q.bestWeek("Your Man", "Josh Turner");
+          System.out.println(bestWeek);
           //String lyrics =  q.getLyrics("Your Man", "Josh Turner");
 
 	}

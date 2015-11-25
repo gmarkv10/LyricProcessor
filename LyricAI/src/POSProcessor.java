@@ -37,7 +37,7 @@ public class POSProcessor extends LyricProcessor {
 		}
 	}
 	
-	enum SPEECH { VERB, CONJUNCTION,ADJECTIVE, PRONOUN , NUMBER, NOUN, 
+	static enum SPEECH { VERB, CONJUNCTION,ADJECTIVE, PRONOUN , NUMBER, NOUN, 
 		           TO, PREPOSITION, ADVERB, INTERJECTION, OTHER, FOREIGN,
 		           INTERROGATIVE
 		          }
@@ -67,6 +67,10 @@ public class POSProcessor extends LyricProcessor {
 			return words.length;
 		}
 		
+	}
+	
+	public int getPOSinMap(SPEECH pos){
+		return posMap.get(pos.toString());
 	}
 	
 	public String toJSON(){
