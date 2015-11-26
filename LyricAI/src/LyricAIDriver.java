@@ -7,19 +7,20 @@ public class LyricAIDriver {
 		
 		
 		
+		String h = "hello";
+		h = h.substring(1);
+		System.out.println(h);
 		
 		
 		
-		
-		
-		String s = "You used to call me on my, you used to, you used to You used to call me on my cell phone Late night when you need my love";
+/*		String s = "You used to call me on my, you used to, you used to You used to call me on my cell phone Late night when you need my love";
 		
 		
 		POSProcessor fp = new POSProcessor();
 		fp.resetLyric(s);
 		fp.processLyric();
 		//System.out.println(fp.posMap.toJSON());
-		System.out.println(fp.getPOSinMap(POSProcessor.SPEECH.VERB));
+		System.out.println(fp.getPOSinMap(POSProcessor.SPEECH.VERB));*/
 //		fp.processLine();
 //		fp.processLine();
 //		fp.processLine();

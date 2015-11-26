@@ -16,7 +16,7 @@ public class Lyrics2005 {
 		String[][] songsnartists = q.songsANDartists();
 		
 		//for([Songname, artist] in that object):
-		for(int i = 300; i < 305; i++ ){
+		for(int i = 700; i < 710; i++ ){
 			//	song = songname
 			String song = songsnartists[i][0];
 			// 	art = artist
@@ -25,6 +25,7 @@ public class Lyrics2005 {
 			String bestWeek = q.bestWeek(song, artist);
 			//	rank
 			int bestRank = q.bestRanking(song, artist);
+			String rankClass = rankClass(bestRank);
 			//	lyric = query the db by [Songname, artist] for lyrics store in a string
 			String lyrics =  q.getLyrics(song, artist);
 			oneWordFreq.resetLyric(lyrics);   
@@ -44,29 +45,16 @@ public class Lyrics2005 {
 			int[] posArr = pos.getPOSFrqInArffOrder();
 			
 			//contruct a line for an aarf file
-			String arffLine = constructARFFLine(song, totalWords, distinctWords, top10words, top10phrases2, top10phrases3, posArr, bestWeek, bestRank);
+			String arffLine = constructARFFLine(song, totalWords, distinctWords, top10words, top10phrases2, top10phrases3, posArr, bestWeek, rankClass);
 			System.out.println(arffLine);
 			//write that line to an aarf file
 		}
-		  
-          
-          
-          //int bestRank = q.bestRanking("Your Man", "Josh Turner");
-          //String bestWeek = q.bestWeek("Your Man", "Josh Turner");
-//          String lyrics =  q.getLyrics("Your Man", "Josh Turner");
-//          oneWordFreq.resetLyric(lyrics);
-//          int totalWords = oneWordFreq.processLyric();
-//          double total = totalWords;
-//          int distinctWords = oneWordFreq.frqMap.size();
-//          double distinct = distinctWords;
-//          double ratio = distinct/total;
-//          System.out.println(totalWords + ":" + distinctWords + ":" + ratio);
 
 	}
 	
 	private static String constructARFFLine(String song, int numWords,
 			int distinctWords, String[] top10_1, String[] top10_2,
-			String[] top10_3, int[] POS, String date, int rank
+			String[] top10_3, int[] POS, String date, String rank
 			){
 		String arff = "";
 		arff += ("\"" + song + "\",");
@@ -91,9 +79,29 @@ public class Lyrics2005 {
 			arff += POS[i] + ",";    //add parts of speech in order
 		}
 		
-		arff += "\"" + date + "\"," + rank + "\n";
+		arff += "\"" + date + "\"," + rank;
 		
 		return arff;
+	}
+	
+	private static String rankClass(int rank){
+		if(rank <= 10){
+			return "top10";
+		}
+		if(rank <= 20){
+			return "top20";
+		}
+		if(rank <= 30){
+			return "top30";
+		}
+		if(rank <= 40){
+			return "top40";
+		}
+		if(rank <= 50){
+			return "top50";
+		}
+		return "notTop";
+		
 	}
 
 }
