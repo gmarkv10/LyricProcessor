@@ -1,0 +1,71 @@
+@relation lyrics383.small
+
+@attribute song string
+@attribute numWords numeric
+@attribute distinctWRatio numeric
+@attribute word_1 string
+@attribute word_2 string
+@attribute word_3 string
+@attribute word_4 string
+@attribute word_5 string
+@attribute word_6 string
+@attribute word_7 string
+@attribute word_8 string
+@attribute word_9 string
+@attribute word_10 string
+@attribute phrase2_1 string
+@attribute phrase2_2 string
+@attribute phrase2_3 string
+@attribute phrase2_4 string
+@attribute phrase2_5 string
+@attribute phrase2_6 string
+@attribute phrase2_7 string
+@attribute phrase2_8 string
+@attribute phrase2_9 string
+@attribute phrase2_10 string
+@attribute phrase3_1 string
+@attribute phrase3_2 string
+@attribute phrase3_3 string
+@attribute phrase3_4 string
+@attribute phrase3_5 string
+@attribute phrase3_6 string
+@attribute phrase3_7 string
+@attribute phrase3_8 string
+@attribute phrase3_9 string
+@attribute phrase3_10 string
+@attribute pos_verb numeric
+@attribute pos_conj numeric
+@attribute pos_adj numeric
+@attribute pos_pronoun numeric
+@attribute pos_number numeric
+@attribute pos_noun numeric
+@attribute pos_to numeric
+@attribute pos_prep numeric
+@attribute pos_adv numeric
+@attribute pos_interj numeric
+@attribute pos_other numeric
+@attribute pos_foreign numeric
+@attribute pos_wh numeric
+@attribute week date "yyyy-MM-dd"
+@attribute rank numeric
+
+
+
+
+
+
+
+
+
+
+
+
+
+@data
+"All The Things She Said",322.0,0.40062111801242234,"the","she","said","you","all","be","to","things","me","i","she said","said she","all the","the things","things she","of all","to the","look back","never look","in the","she said she","said she said","all the things","the things she","things she said","of all the","you know i'll","know i'll still","i'll still be","still be waiting",82,5,7,57,0,54,8,27,27,0,48,0,7,"1986-05-31",28
+"All The Things She Said",506.0,0.22529644268774704,"the","all","things","she","said","my","head","runnin","through","i","all the","the things","things she","she said","said all","my head","runnin through","through my","head runnin","head all","the things she","things she said","all the things","she said all","said all the","runnin through my","through my head","my head runnin","head runnin through","my head all",90,8,14,102,0,112,3,38,35,0,98,0,6,"2003-03-15",20
+"All The Way Turnt Up",630.0,0.28095238095238095,"up","the","all","turnt","way","i","turn","and","be","on","turnt up","all the","the way","up all","way turnt","turn up","up turn","to the","i be","no mo","all the way","the way turnt","way turnt up","up all the","turnt up all","up turn up","turn up turn","'til you can't","we all the","and shawty we",82,13,11,70,1,175,8,89,25,0,151,0,5,"2010-03-20",46
+"All This Love",394.0,0.2563451776649746,"you","love","all","my","and","i","baby","is","for","me","and all","love is","is waiting","waiting for","for you","my baby","all this","really love","my love","this love","love is waiting","is waiting for","waiting for you","all this love","this love is","all my love","my baby and","my love is","for you my","and all that",88,22,7,88,0,63,9,36,20,0,58,0,3,"1983-07-09",17
+"All This Time",18.0,1.0,"our","agreement","does","not","allow","us","to","display","these","lyrics","ow our","licensing agreement","agreement does","does not","not allow","allow us","us to","to display","display these","these lyrics","baby ow our","our licensing agreement","licensing agreement does","agreement does not","does not allow","not allow us","allow us to","us to display","to display these","display these lyrics",4,0,0,2,0,5,1,2,1,0,3,0,0,"1991-03-16",5
+
+

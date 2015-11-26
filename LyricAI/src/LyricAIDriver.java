@@ -1,17 +1,25 @@
-import java.io.File;
-import java.io.IOException;
+
 
 public class LyricAIDriver {
 
 	public static void main(String[] args) {
 		// TODO Get There
+		
+		
+		
+		
+		
+		
+		
+		
 		String s = "You used to call me on my, you used to, you used to You used to call me on my cell phone Late night when you need my love";
 		
 		
 		POSProcessor fp = new POSProcessor();
 		fp.resetLyric(s);
 		fp.processLyric();
-		System.out.println(fp.toJSON());
+		//System.out.println(fp.posMap.toJSON());
+		System.out.println(fp.getPOSinMap(POSProcessor.SPEECH.VERB));
 //		fp.processLine();
 //		fp.processLine();
 //		fp.processLine();
