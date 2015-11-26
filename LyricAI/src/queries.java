@@ -98,7 +98,7 @@ public class queries {
 		        // read the result set
 		    	try {
 		    		rank = rs.getInt("rank");
-		    		System.out.println(rank);
+		    		//System.out.println(rank);
 		    		
 	    			
 				} catch (Exception e) {
@@ -150,7 +150,7 @@ public class queries {
 		        // read the result set
 		    	try {
 		    		week = rs.getString("week");
-		    		System.out.println(week);
+		    		//System.out.println(week);
 		    		
 	    			
 				} catch (Exception e) {
@@ -202,7 +202,7 @@ public class queries {
 		        // read the result set
 		    	try {
 		    		lyrics = rs.getString("lyrics");
-		    		System.out.println(lyrics);
+		    		//System.out.println(lyrics);
 		    		
 	    			
 				} catch (Exception e) {

@@ -69,8 +69,31 @@ public class POSProcessor extends LyricProcessor {
 		
 	}
 	
+	public int[] getPOSFrqInArffOrder(){
+		int[] ret = new int[13];
+		//see arff header.txt in repo for why the go in this order
+		ret[0] = getPOSinMap(SPEECH.VERB);
+		ret[1] = getPOSinMap(SPEECH.CONJUNCTION);
+		ret[2] = getPOSinMap(SPEECH.ADJECTIVE);
+		ret[3] = getPOSinMap(SPEECH.PRONOUN);
+		ret[4] = getPOSinMap(SPEECH.NUMBER);
+		ret[5] = getPOSinMap(SPEECH.NOUN);
+		ret[6] = getPOSinMap(SPEECH.TO);
+		ret[7] = getPOSinMap(SPEECH.PREPOSITION);
+		ret[8] = getPOSinMap(SPEECH.ADVERB);
+		ret[9] = getPOSinMap(SPEECH.INTERJECTION);
+		ret[10] = getPOSinMap(SPEECH.OTHER);
+		ret[11] = getPOSinMap(SPEECH.FOREIGN);
+		ret[12] = getPOSinMap(SPEECH.INTERROGATIVE);
+		return ret;
+	}
+	
 	public int getPOSinMap(SPEECH pos){
-		return posMap.get(pos.toString());
+		try{
+			return posMap.get(pos.toString());
+		} catch(NullPointerException e){
+			return 0;
+		}
 	}
 	
 	public String toJSON(){
@@ -119,7 +142,6 @@ public class POSProcessor extends LyricProcessor {
 			return SPEECH.PRONOUN;
 		case "PRP$":
 			return SPEECH.PRONOUN;
-				
 		case "RB":
 			return SPEECH.ADVERB;
 		case "RBR":
