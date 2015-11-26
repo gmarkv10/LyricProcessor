@@ -69,7 +69,7 @@ public class Lyrics2005 {
 			String[] top10_3, int[] POS, String date, int rank
 			){
 		String arff = "";
-		arff += (song + ",");
+		arff += ("\'" + song + "',");
 		
 		double words = numWords;
 		double distinct = distinctWords;
@@ -78,20 +78,20 @@ public class Lyrics2005 {
 		
 		int i = 0;
 		for(i =  0; i < 10; i++){
-			arff += top10_1[i] + ","; //add 1 word phrases
+			arff += "\'" + top10_1[i] + "',"; //add 1 word phrases
 		}
 		for(i =  0; i < 10; i++){
-			arff += top10_2[i] + ","; //add 2 word phrases
+			arff += "\'" + top10_2[i].trim() + "',"; //add 2 word phrases
 		}
 		for(i =  0; i < 10; i++){
-			arff += top10_3[i] + ","; //add 3 word phrases
+			arff += "\'" + top10_3[i].trim() + "',"; //add 3 word phrases
 		}
 		
 		for(i = 0; i < 13; i ++){
 			arff += POS[i] + ",";    //add parts of speech in order
 		}
 		
-		arff += date + "," + rank;
+		arff += "\"" + date + "\"," + rank + "\n";
 		
 		return arff;
 	}
