@@ -16,7 +16,7 @@ public class Lyrics2005 {
 		String[][] songsnartists = q.songsANDartists();
 		
 		//for([Songname, artist] in that object):
-		for(int i = 300; i < 301; i++ ){
+		for(int i = 300; i < 305; i++ ){
 			//	song = songname
 			String song = songsnartists[i][0];
 			// 	art = artist
@@ -69,7 +69,7 @@ public class Lyrics2005 {
 			String[] top10_3, int[] POS, String date, int rank
 			){
 		String arff = "";
-		arff += ("\'" + song + "',");
+		arff += ("\"" + song + "\",");
 		
 		double words = numWords;
 		double distinct = distinctWords;
@@ -78,13 +78,13 @@ public class Lyrics2005 {
 		
 		int i = 0;
 		for(i =  0; i < 10; i++){
-			arff += "\'" + top10_1[i] + "',"; //add 1 word phrases
+			arff += "\"" + top10_1[i] + "\","; //add 1 word phrases
 		}
 		for(i =  0; i < 10; i++){
-			arff += "\'" + top10_2[i].trim() + "',"; //add 2 word phrases
+			arff += "\"" + top10_2[i].trim() + "\","; //add 2 word phrases
 		}
 		for(i =  0; i < 10; i++){
-			arff += "\'" + top10_3[i].trim() + "',"; //add 3 word phrases
+			arff += "\"" + top10_3[i].trim() + "\","; //add 3 word phrases
 		}
 		
 		for(i = 0; i < 13; i ++){
