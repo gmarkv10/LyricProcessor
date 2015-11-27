@@ -6,7 +6,6 @@ public class LyricAIDriver {
 		// TODO Get There
 		
 		
-		
 		String s = "You used to call me on my, you used to, you used to";
 		String s1 = "You used to call me on my cell phone Late night when you need my love";
 		String s3 = "You used to call me on my, you used to, you used to You used to call me on my cell phone Late night when you need my love";
@@ -21,9 +20,11 @@ public class LyricAIDriver {
 		fp1.processLyric();
 		fp3.processLyric();
 		
-		MyMap[] a = {fp.getMap(), fp1.getMap() };
+		MyMap[] a = {fp.getMap(), null, fp1.getMap() };
 		System.out.println(MyMap.merge(a).toJSON());
 		System.out.println(fp3.toJSon());
+		
+		
 //		fp.processLine();
 //		fp.processLine();
 //		fp.processLine();

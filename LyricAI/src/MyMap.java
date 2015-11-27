@@ -65,7 +65,9 @@ public class MyMap<K,V> implements Map<K,V> {
 	public static MyMap merge(MyMap[] m){
 		MyMap<String, Integer> ret = new MyMap();
 		for(int i = 0; i < m.length; i++){
+			System.out.println("Merging: " + i);
 			MyMap map = m[i];
+			if(map == null) continue;
 			Node ptr = map.KList.head;
 			for(int j = 0;j < map.size(); j++ ){
 				String key = ptr.getValueS();
