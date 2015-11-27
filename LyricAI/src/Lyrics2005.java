@@ -1,22 +1,25 @@
 import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 
 public class Lyrics2005 {
 
 	public static void main(String[] args) throws Exception{
-		
+		String path = "thousandEntries.arff";
+		File file = new File(".");
 		queries q                        = new queries();
 		FrequencyProcessor oneWordFreq   = new FrequencyProcessor();
 		FrequencyProcessor twoWordFreq   = new FrequencyProcessor(2);
 		FrequencyProcessor threeWordFreq = new FrequencyProcessor(3);
 		POSProcessor       pos           = new POSProcessor();
 		
-		BufferedWriter writer;
+		BufferedWriter writer = new BufferedWriter(new FileWriter(file.getCanonicalPath() + "\\Data\\"+path ));
 		
 		//query the db for [Songname, artist] from 'lyrics' pair and store in an array
 		String[][] songsnartists = q.songsANDartists();
 		
 		//for([Songname, artist] in that object):
-		for(int i = 700; i < 710; i++ ){
+		for(int i = 0; i < 1000; i++ ){
 			//	song = songname
 			String song = songsnartists[i][0];
 			// 	art = artist
@@ -46,7 +49,9 @@ public class Lyrics2005 {
 			
 			//contruct a line for an aarf file
 			String arffLine = constructARFFLine(song, totalWords, distinctWords, top10words, top10phrases2, top10phrases3, posArr, bestWeek, rankClass);
-			System.out.println(arffLine);
+			writer.write(arffLine);
+			writer.newLine();
+			System.out.println(song + " " + i + "/1000" );
 			//write that line to an aarf file
 		}
 
