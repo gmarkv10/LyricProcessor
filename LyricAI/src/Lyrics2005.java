@@ -54,6 +54,7 @@ public class Lyrics2005 {
 			System.out.println(song + " " + i + "/1000" );
 			//write that line to an aarf file
 		}
+		writer.close();
 
 	}
 	
