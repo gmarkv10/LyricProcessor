@@ -16,34 +16,33 @@ public class Lyrics3005 {
 		
 		//query the db for [Songname, artist] from 'lyrics' pair and store in an array
 		String[][] songsnartists = q.songsANDartists();
-		MyMap[] maps = new MyMap[76];
+		MyMap[] maps = new MyMap[152];
 		int mapsIdx = 0;
 
-		for(int i = 0; i < songsnartists.length; i++){
+		//for(int i = 0; i < songsnartists.length; i++){
+		for(int i = 0; i < 200; i++){
 			String song   = songsnartists[i][0];
 			String artist = songsnartists[i][1];
 			String lyr = q.getLyrics(song, artist);
 			if(i == 0){
 				oneWordFreq.resetLyric(lyr);
-				oneWordFreq.processLyric();
 			}
 			else{
-				if(i % 100 == 0){
+				if(i % 50 == 0){
 					maps[mapsIdx++] = oneWordFreq.getMap();
 					oneWordFreq.resetLyric(lyr);
-
 				}
 				else{
-					oneWordFreq.processLyric();
+					oneWordFreq.setLyric(lyr);	
 				}
-
 			}
+			oneWordFreq.processLyric();
 			System.out.println("done with " + i);
 		}
 		MyMap totalFreqs = MyMap.merge(maps);
 		writer.write(totalFreqs.toJSON());
+		System.out.println("DONE");
 		writer.close();
-
 	}
 
 }
