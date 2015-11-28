@@ -27,7 +27,8 @@ public class POSProcessor extends LyricProcessor {
 		file = new File("."); 
 		try {
 			//System.out.println(new File(file.getCanonicalPath() + "\\Lyrics\\" + f + ".lyr").exists());
-			String net = file.getCanonicalPath()+"\\OpenNLP\\en-pos-maxent.bin";
+			//String net = file.getCanonicalPath()+"\\OpenNLP\\en-pos-maxent.bin"; //gabe's path
+			String net = file.getCanonicalPath()+"/OpenNLP/en-pos-maxent.bin"; //tony path
 			posMap = new MyMap();
 			model = new FileInputStream(new File(net));
 			nModel = new POSModel(model);

@@ -16,18 +16,32 @@ public class Lyrics2005 {
 		BufferedWriter writer = new BufferedWriter(new FileWriter(file.getCanonicalPath() + "\\Data\\"+path ));
 		
 		//query the db for [Songname, artist] from 'lyrics' pair and store in an array
-		String[][] songsnartists = q.songsANDartists();
+		//String[][] songsnartists = q.songsANDartists();
+		
+		//combined best week, best rank, and song/artists into 1 query to increase speed
+		String[][] songnartistsnweeknrank = q.songANDartistANDbestweekANDbestrank();
 		
 		//for([Songname, artist] in that object):
 		for(int i = 0; i < 1000; i++ ){
 			//	song = songname
-			String song = songsnartists[i][0];
+			//String song = songsnartists[i][0];
+		
 			// 	art = artist
-			String artist = songsnartists[i][1];
+			//String artist = songsnartists[i][1];
+			
 			//  week = select [Songname, artist] order anscending, take the first
-			String bestWeek = q.bestWeek(song, artist);
+			//String bestWeek = q.bestWeek(song, artist);
+			
 			//	rank
-			int bestRank = q.bestRanking(song, artist);
+			//int bestRank = q.bestRanking(song, artist);
+			
+			//combined the 3 queries into 1 query to increase speed
+			String song = songnartistsnweeknrank[i][0];
+			String artist = songnartistsnweeknrank[i][1];
+			String bestWeek = songnartistsnweeknrank[i][2];
+			int bestRank = Integer.parseInt(songnartistsnweeknrank[i][3]);
+			
+			
 			String rankClass = rankClass(bestRank);
 			//	lyric = query the db by [Songname, artist] for lyrics store in a string
 			String lyrics =  q.getLyrics(song, artist);

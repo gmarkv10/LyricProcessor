@@ -8,7 +8,79 @@ import java.util.ArrayList;
 
 public class queries {
 	//"\\LyricAI\\src\\DataDB\\lyricproject.db"
-	public String path = "LyricAI\\src\\DataDB\\lyricproject.db";
+	//public String path = "LyricAI\\src\\DataDB\\lyricproject.db"; //gabe's path
+	public String path = "LyricAI/src/DataDB/lyricproject.db"; //tony's path
+	
+	public String[][] songANDartistANDbestweekANDbestrank() throws ClassNotFoundException{
+		Class.forName("org.sqlite.JDBC");
+	 	
+	 	String[][] songArtists = null;
+	 	
+	    Connection connection = null;
+	    try
+	    {
+	      // create a database connection
+	      connection = DriverManager.getConnection("jdbc:sqlite:"+path);
+	      Statement statement = connection.createStatement();
+	      statement.setQueryTimeout(30);  // set timeout to 30 sec.
+	      
+	      
+	      ResultSet count = statement.executeQuery("SELECT count(*) AS count FROM (SELECT DISTINCT song, artist FROM rankdata)");
+	      count.next();
+	      int numSongs = count.getInt("count");
+	      songArtists = new String[numSongs][4];
+	      
+	      //all songs we have lyrics from
+	      ResultSet rs = statement.executeQuery("SELECT song, artist, week, min(rank) as rank FROM rankdata GROUP BY song, artist");
+
+	      //ArrayList<String> songs = new ArrayList<String>();
+	      //ArrayList<String> artists = new ArrayList<String>();
+	      int index = 0;
+	      while(rs.next())
+	      {
+	        // read the result set
+	    	try {
+	    		String artist = rs.getString("artist");
+	    		String song = rs.getString("song");
+	    		String week = rs.getString("week");
+	    		String rank = rs.getString("rank");
+	    		songArtists[index][0] = song;
+	    		songArtists[index][1] = artist;
+	    		songArtists[index][2] = week;
+	    		songArtists[index][3] = rank;
+	    		index++;
+    			
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	      }
+	    }
+	    catch(SQLException e)
+	    {
+	      // if the error message is "out of memory", 
+	      // it probably means no database file is found
+	      System.err.println(e.getMessage());
+	    }
+	    finally
+	    {
+	      try
+	      {
+	        if(connection != null)
+	          connection.close();
+	      }
+	      catch(SQLException e)
+	      {
+	        // connection close failed.
+	        System.err.println(e);
+	      }
+	    }
+	   /* for (int i =0;i<songArtists.length;i++){
+	    	System.out.println("Song: "+songArtists[i][0]+" || Artist: "+songArtists[i][1]+" || week = "+songArtists[i][2]+" || rank = "+songArtists[i][3]);
+	    }*/
+	    //System.out.println("returned "+songArtists.length+" distinct songs");
+	    return songArtists;
+	}
 	
 	//returns multidimentional array of song, artist strings for all songs which lyrics are not null (lyrics we've found)
 	public String[][] songsANDartists() throws ClassNotFoundException{
@@ -31,7 +103,7 @@ public class queries {
 		      songArtists = new String[numSongs][2];
 		      
 		      //all songs we have lyrics from
-		      ResultSet rs = statement.executeQuery("SELECT * FROM lyrics WHERE lyrics NOT NULL");
+		      ResultSet rs = statement.executeQuery("SELECT song, artist FROM lyrics WHERE lyrics NOT NULL");
 
 		      //ArrayList<String> songs = new ArrayList<String>();
 		      //ArrayList<String> artists = new ArrayList<String>();
