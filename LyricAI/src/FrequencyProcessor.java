@@ -41,6 +41,10 @@ public class FrequencyProcessor extends LyricProcessor {
 		lyric = l;
 		frqMap = new MyMap<String, Integer>();
 	}
+	
+	public void setLyric(String l){
+		lyric = l;
+	}
 
 	@Override
 	public int processLyric(){
