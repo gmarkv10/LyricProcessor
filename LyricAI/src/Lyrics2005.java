@@ -5,7 +5,7 @@ import java.io.FileWriter;
 public class Lyrics2005 {
 
 	public static void main(String[] args) throws Exception{
-		String path = "entrieswithnarcandyearclass.arff";
+		String path = "garbo.arff";
 		File file = new File(".");
 		queries q                        = new queries();
 		FrequencyProcessor oneWordFreq   = new FrequencyProcessor();
@@ -23,7 +23,7 @@ public class Lyrics2005 {
 		
 		
 		//for([Songname, artist] in that object):
-		for(int i = 999; i < 1000; i++ ){
+		for(int i = 1000; i < 1100; i++ ){
 			//	song = songname
 			//String song = songsnartists[i][0];
 		
@@ -40,7 +40,6 @@ public class Lyrics2005 {
 			String song = songnartistsnweeknrank[i][0];
 			String artist = songnartistsnweeknrank[i][1];
 			String bestWeek = songnartistsnweeknrank[i][2];
-			System.out.println(bestWeek);
 			int bestRank = Integer.parseInt(songnartistsnweeknrank[i][3]);
 			
 			
