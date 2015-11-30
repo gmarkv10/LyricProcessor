@@ -5,8 +5,12 @@ public class LyricAIDriver {
 	public static void main(String[] args) {
 		// TODO Get There
 		
+		String d = "1999-07-24";
+		String s = d.substring(0, 3) + "0s";
+		System.out.println(getYearClass(d));
 		
-		String s = "You used to call me on my, you used to, you used to";
+		
+/*		String s = "You used to call me on my, you used to, you used to";
 		String s1 = "You used to call me on my cell phone Late night when you need my love";
 		String s3 = "You used to call me on my, you used to, you used to You used to call me on my cell phone Late night when you need my love";
 		
@@ -22,7 +26,7 @@ public class LyricAIDriver {
 		
 		MyMap[] a = {fp.getMap(), null, fp1.getMap() };
 		System.out.println(MyMap.merge(a).toJSON());
-		System.out.println(fp3.toJSon());
+		System.out.println(fp3.toJSon());*/
 		
 		
 //		fp.processLine();
@@ -99,6 +103,23 @@ public class LyricAIDriver {
 		//fp.exportJSON();
 	
 
+	}
+	
+	private static String getYearClass(String week){
+		String ret;
+		String decade = week.substring(0, 3) + "0s"; //get the decade
+		int decYear = Integer.parseInt(week.substring(3, 4)); //get the year in the decade
+		if(decYear >= 0 && decYear < 4 ){
+			ret = "early";
+		}
+		else if( decYear >= 4 && decYear < 7){
+			ret = "mid";
+		}
+		else{
+			ret = "late";
+		}
+		
+		return ret + decade;
 	}
 
 }

@@ -16,6 +16,14 @@ public class POSProcessor extends LyricProcessor {
 	MyMap<String, Integer> posMap;
 	String lyric = null;
 	
+	//Narcissism scores
+	private int fSing = 0; //first person singular
+	private int sSing = 0; //second person singular
+	private int tSing = 0; //third person singular
+	private int fPlur = 0;
+	//private int sPlur = 0; //not used
+	private int tPlur = 0;
+	int totalPronouns = 0;
 	
 	//NLP Objects
 	InputStream model;
@@ -58,10 +66,16 @@ public class POSProcessor extends LyricProcessor {
 		if(lyric == null) return -1;
 		else{
 			String[] words = lyric.split(" ");
+			for(String s: words){
+				s = processWord(s); //take away those commas, periods, newlines, etc 
+			}
 			String[] posTags = tagger.tag(words); //give raw tags from https://javaextreme.wordpress.com/category/java-part-of-speech-tagging/
 			String tag;
 			for(int i = 0; i < posTags.length; i++){
 				tag = this.simplifyPOS(posTags[i]).toString();
+				if(tag.equals("PRONOUN")){
+					classifyPronoun(words[i]); //update narcissism score
+				}
 				Integer freq = posMap.get(tag);
 				posMap.put(tag, (freq == null) ? 1 : freq + 1);
 			}
@@ -95,6 +109,39 @@ public class POSProcessor extends LyricProcessor {
 		} catch(NullPointerException e){
 			return 0;
 		}
+	}
+	
+	public double getNarcissismScore(){
+		double spread = fSing - fPlur; //straight up, is it narcissistic or communal?
+		
+		double scale = Math.max(sSing, tPlur); //these two lines
+		scale = Math.max(scale, tSing);        //find the max of the other pronouns
+		scale = scale/totalPronouns;           //then this one scales it by the total number of pronouns used
+		
+		if(spread > 0){ //we are leaning towards being narc
+			return spread * (1- scale); //so we scale back if theres a mix of pron's
+		}
+		else{
+			return spread * (1 + scale); //otherwise were communal anyway so we scale up if there was a good mix
+		}
+	}
+	
+	public void classifyPronoun(String s){
+		totalPronouns++;
+		if(s.equals("i") || s.equals("i'm") || s.equals("me") || s.equals("my") || s.equals("mine") || s.equals("myself")) {
+			fSing++; return;
+		}
+		if(s.equals("you") ||s.equals("you're") ||s.equals("yours") ||s.equals("yourself") ||s.equals("yours") || s.equals("yourselves")){
+			sSing++; return; //well include yourselves even though its plural, judgement call
+		}
+		if(s.equals("we") ||s.equals("us") ||s.equals("our") ||s.equals("ours") || s.equals("ourselves")){
+			fPlur++; return;
+		}
+		if(s.equals("they") ||s.equals("they're") ||s.equals("them") ||s.equals("their") ||s.equals("theirs") ||s.equals("themselves")){
+			tPlur++; return;
+		}
+		tSing++;
+		
 	}
 	
 	public String toJSON(){

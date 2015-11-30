@@ -9,8 +9,8 @@ import java.util.HashMap;
 
 public class queries {
 	//"\\LyricAI\\src\\DataDB\\lyricproject.db"
-	//public String path = "LyricAI\\src\\DataDB\\lyricproject.db"; //gabe's path
-	public String path = "LyricAI/src/DataDB/lyricproject.db"; //tony's path
+	public String path = "LyricAI\\src\\DataDB\\lyricproject.db"; //gabe's path
+	//public String path = "LyricAI/src/DataDB/lyricproject.db"; //tony's path
 	
 	public String[][] songANDartistANDbestweekANDbestrank() throws ClassNotFoundException{
 		Class.forName("org.sqlite.JDBC");
