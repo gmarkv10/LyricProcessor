@@ -1,0 +1,53 @@
+@relation lyrics383.small
+
+@attribute song string
+@attribute numWords numeric
+@attribute distinctWRatio numeric
+@attribute word_1 string
+@attribute word_2 string
+@attribute word_3 string
+@attribute word_4 string
+@attribute word_5 string
+@attribute word_6 string
+@attribute word_7 string
+@attribute word_8 string
+@attribute word_9 string
+@attribute word_10 string
+@attribute phrase2_1 string
+@attribute phrase2_2 string
+@attribute phrase2_3 string
+@attribute phrase2_4 string
+@attribute phrase2_5 string
+@attribute phrase2_6 string
+@attribute phrase2_7 string
+@attribute phrase2_8 string
+@attribute phrase2_9 string
+@attribute phrase2_10 string
+@attribute phrase3_1 string
+@attribute phrase3_2 string
+@attribute phrase3_3 string
+@attribute phrase3_4 string
+@attribute phrase3_5 string
+@attribute phrase3_6 string
+@attribute phrase3_7 string
+@attribute phrase3_8 string
+@attribute phrase3_9 string
+@attribute phrase3_10 string
+@attribute pos_verb numeric
+@attribute pos_conj numeric
+@attribute pos_adj numeric
+@attribute pos_pronoun numeric
+@attribute pos_number numeric
+@attribute pos_noun numeric
+@attribute pos_to numeric
+@attribute pos_prep numeric
+@attribute pos_adv numeric
+@attribute pos_interj numeric
+@attribute pos_other numeric
+@attribute pos_foreign numeric
+@attribute pos_wh numeric
+@attribute narcScore numeric
+@attribute period {early1980s,mid1980s,late1980s,early1990s,mid1990s,late1990s,early2000s,mid2000s,late2000s,early2010s,mid2010s}
+@attribute rank {top10,top20,top30,top40,top50,notTop}
+
+@data

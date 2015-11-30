@@ -5,7 +5,7 @@ import java.io.FileWriter;
 public class Lyrics2005 {
 
 	public static void main(String[] args) throws Exception{
-		String path = "thousandEntries.arff";
+		String path = "entrieswithnarcandyearclass.arff";
 		File file = new File(".");
 		queries q                        = new queries();
 		FrequencyProcessor oneWordFreq   = new FrequencyProcessor();
@@ -21,8 +21,9 @@ public class Lyrics2005 {
 		//combined best week, best rank, and song/artists into 1 query to increase speed
 		String[][] songnartistsnweeknrank = q.songANDartistANDbestweekANDbestrank();
 		
+		
 		//for([Songname, artist] in that object):
-		for(int i = 0; i < 1000; i++ ){
+		for(int i = 999; i < 1000; i++ ){
 			//	song = songname
 			//String song = songsnartists[i][0];
 		
@@ -39,6 +40,7 @@ public class Lyrics2005 {
 			String song = songnartistsnweeknrank[i][0];
 			String artist = songnartistsnweeknrank[i][1];
 			String bestWeek = songnartistsnweeknrank[i][2];
+			System.out.println(bestWeek);
 			int bestRank = Integer.parseInt(songnartistsnweeknrank[i][3]);
 			
 			
@@ -60,9 +62,10 @@ public class Lyrics2005 {
 			pos.resetLyric(lyrics);
 			pos.processLyric();
 			int[] posArr = pos.getPOSFrqInArffOrder();
+			double narc = pos.getNarcissismScore();
 			
 			//contruct a line for an aarf file
-			String arffLine = constructARFFLine(song, totalWords, distinctWords, top10words, top10phrases2, top10phrases3, posArr, bestWeek, rankClass);
+			String arffLine = constructARFFLine(song, totalWords, distinctWords, top10words, top10phrases2, top10phrases3, posArr, narc, getYearClass(bestWeek), rankClass);
 			writer.write(arffLine);
 			writer.newLine();
 			System.out.println(song + " " + i + "/1000" );
@@ -74,7 +77,7 @@ public class Lyrics2005 {
 	
 	private static String constructARFFLine(String song, int numWords,
 			int distinctWords, String[] top10_1, String[] top10_2,
-			String[] top10_3, int[] POS, String date, String rank
+			String[] top10_3, int[] POS, double narcissism, String date, String rank
 			){
 		String arff = "";
 		arff += ("\"" + song + "\",");
@@ -99,7 +102,9 @@ public class Lyrics2005 {
 			arff += POS[i] + ",";    //add parts of speech in order
 		}
 		
-		arff += "\"" + date + "\"," + rank;
+		arff += narcissism + ",";
+		
+		arff +=  date + "," + rank;
 		
 		return arff;
 	}
@@ -122,6 +127,23 @@ public class Lyrics2005 {
 		}
 		return "notTop";
 		
+	}
+	
+	private static String getYearClass(String week){
+		String ret;
+		String decade = week.substring(0, 3) + "0s"; //get the decade
+		int decYear = Integer.parseInt(week.substring(3, 4)); //get the year in the decade
+		if(decYear >= 0 && decYear < 4 ){
+			ret = "early";
+		}
+		else if( decYear >= 4 && decYear < 7){
+			ret = "mid";
+		}
+		else{
+			ret = "late";
+		}
+		
+		return ret + decade;
 	}
 
 }
