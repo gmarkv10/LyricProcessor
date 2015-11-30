@@ -58,7 +58,9 @@ public class tonyTestDriver {
 		
 	
 		String testLyrics = "";
-		Scanner sc = new Scanner(new File("testLyrics.txt"));
+		File f = new File("Lyrics\\hello.lyr");
+		System.err.println(f.exists());
+		Scanner sc = new Scanner(f);
 		while (sc.hasNextLine()){
 			testLyrics+=sc.nextLine()+" ";
 		}

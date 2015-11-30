@@ -16,11 +16,11 @@ public class Lyrics3005 {
 		
 		//query the db for [Songname, artist] from 'lyrics' pair and store in an array
 		String[][] songsnartists = q.songsANDartists();
-		MyMap[] maps = new MyMap[152];
+		MyMap[] maps = new MyMap[160];
 		int mapsIdx = 0;
 
 		//for(int i = 0; i < songsnartists.length; i++){
-		for(int i = 0; i < 200; i++){
+		for(int i = 0; i < songsnartists.length; i++){
 			String song   = songsnartists[i][0];
 			String artist = songsnartists[i][1];
 			String lyr = q.getLyrics(song, artist);
