@@ -113,7 +113,6 @@ public class POSProcessor extends LyricProcessor {
 	
 	public double getNarcissismScore(){
 		double spread = fSing - fPlur; //straight up, is it narcissistic or communal?
-		System.out.print("SPREAD: " + spread);
 		double scale = Math.max(sSing, tPlur); //these two lines
 		scale = Math.max(scale, tSing);        //find the max of the other pronouns
 		scale = scale/totalPronouns;           //then this one scales it by the total number of pronouns used

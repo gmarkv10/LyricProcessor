@@ -6,46 +6,55 @@ public class MapSetList<T> {
 	Node head;
 	Node tail;
 	Node ptr;
+	
+	Comparator comp;
 //	public NodeList(){
 //		head = n;
 //		tail = n;
 //		size =0;
 //	}
 	
+	public MapSetList(Comparator c){
+		comp = c;
+	}
+	
 	public T getPtr(){
 		return (T) ptr.getValue();
 	}
 	public MapSetList(){
 		size = 0;
-	}
-	//CASTS VALUES TO INTEGERS IN ORDER TO COMPARE THEM!
-	//TODO: just rewrite with compareTo for Integer and everything else
-	Comparator comp = new Comparator<T>(){
-
-		@Override
-		public int compare(T o1, T o2) {
-			// TODO Auto-generated method stub
-			try{
-			if( (Integer) o1 < (Integer) o2 ){
-				return -1;
-			}
-			else{
-				if(  (Integer) o1 > (Integer) o2 ){
-					return 1;
+		comp = new Comparator<T>(){
+			
+			@Override
+			public int compare(T o1, T o2) {
+				
+				// TODO Auto-generated method stub
+				 
+				try{
+				if( (Integer) o1 < (Integer) o2 ){
+					return -1;
 				}
 				else{
+					if(  (Integer) o1 > (Integer) o2 ){
+						return 1;
+					}
+					else{
+						return 0;
+					}
+				}
+				}
+				catch(ClassCastException e){
+					System.err.println("Can't compare these entries, specify your own comparator");
 					return 0;
 				}
 			}
-			}
-			catch(ClassCastException e){
-				System.err.println("Can't compare these entries");
-				return 0;
-			}
-		}
-		
-	};
-	public boolean isEmpty(){
+			
+		};
+
+	}
+	//CASTS VALUES TO INTEGERS IN ORDER TO COMPARE THEM!
+	//TODO: just rewrite with compareTo for Integer and everything else
+		public boolean isEmpty(){
 		return size == 0 ? true : false;
 	}
 	public void enq(T i){
@@ -224,10 +233,10 @@ public class MapSetList<T> {
 	
 	
 	public int minisort(){
-		if(isSorted()){
-			return 0;
-		}
-		else{
+//		if(isSorted()){
+//			return 0;
+//		}
+		//else{
 			int comparison = 0;
 			ptr = head;
 			while(ptr != tail){
@@ -251,34 +260,32 @@ public class MapSetList<T> {
 			}
 			return comparison;
 			
-		}
+		//}
 	}
-	
+
 	public boolean isSorted(){
-		if(isEmpty()){
+		System.out.println("SIZE" + size);
+		if(isEmpty() || size == 1){
 			return true;
 		}
 		else{
-			if(size == 1 || size == 0){
-				return true;
-			}
-			else{
-				ptr = head;
-				T comparison = (T) ptr.getValue();
-				while(ptr != tail){
-					if(comp.compare(comparison, (T) ptr.getNext().getValue()) > 0){
-						advancePtr();
-						comparison = (T) ptr.getValue();
-					}
-					else return false;
+			
+			ptr = head;
+			T comparison = (T) ptr.getValue();
+			while(ptr.getNext() != null){
+				if(comp.compare(comparison, (T) ptr.getNext().getValue()) > 0){
+					advancePtr();
+					comparison = (T) ptr.getValue();
 				}
-				return true;
+				else return false;
 			}
+			return true;
+
 		}
-		
-		
+
+
 	}
-	
+
 	//returns the index of the parameter q
 	public int contains(T q){
 		if(isEmpty()){

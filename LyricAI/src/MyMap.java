@@ -4,9 +4,19 @@ import java.util.Map;
 import java.util.Set;
 
 public class MyMap<K,V> implements Map<K,V> {
+	MapSetList<K> KList;
+	MapSetList<V> VList;
+			
+	public MyMap(){
+		KList = new MapSetList<K>();
+		VList = new MapSetList<V>();
+	}
+	public MyMap(Comparator c){
+		KList = new MapSetList<K>(c);
+		VList = new MapSetList<V>(c);	
+	}
 
-	MapSetList<K> KList = new MapSetList<K>();
-	MapSetList<V> VList = new MapSetList<V>();
+
 	@Override
 	public int size() {
 		// TODO Auto-generated method stub
