@@ -233,10 +233,10 @@ public class MapSetList<T> {
 	
 	
 	public int minisort(){
-//		if(isSorted()){
-//			return 0;
-//		}
-		//else{
+		if(isSorted()){
+			return 0;
+		}
+		else{
 			int comparison = 0;
 			ptr = head;
 			while(ptr != tail){
@@ -260,11 +260,10 @@ public class MapSetList<T> {
 			}
 			return comparison;
 			
-		//}
+		}
 	}
 
 	public boolean isSorted(){
-		System.out.println("SIZE" + size);
 		if(isEmpty() || size == 1){
 			return true;
 		}

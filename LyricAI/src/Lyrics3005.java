@@ -2,6 +2,8 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 
+
+
 public class Lyrics3005 {
 
 	public static void main(String[] args) throws Exception{
@@ -12,37 +14,38 @@ public class Lyrics3005 {
 		FrequencyProcessor threeWordFreq = new FrequencyProcessor(3);
 		POSProcessor       pos           = new POSProcessor();
 		
-		BufferedWriter writer = new BufferedWriter(new FileWriter(new File(".").getCanonicalPath() + "\\Data\\globalwordfreq.merge.json" ));
+		BufferedWriter writer = new BufferedWriter(new FileWriter(new File(".").getCanonicalPath() + "\\Data\\POSandNarcScores.csv" ));
 		
 		//query the db for [Songname, artist] from 'lyrics' pair and store in an array
-		String[][] songsnartists = q.songsANDartists();
-		MyMap[] maps = new MyMap[160];
-		int mapsIdx = 0;
+		String[][] songArtWeek = q.songANDartistANDbestweekANDbestrank();
+
 
 		//for(int i = 0; i < songsnartists.length; i++){
-		for(int i = 0; i < songsnartists.length; i++){
-			String song   = songsnartists[i][0];
-			String artist = songsnartists[i][1];
+		for(int i = 0; i < songArtWeek.length; i++){
+			String song   = songArtWeek[i][0];
+			String artist = songArtWeek[i][1];
+			String year = songArtWeek[i][2].substring(0, 4);
 			String lyr = q.getLyrics(song, artist);
-			if(i == 0){
-				oneWordFreq.resetLyric(lyr);
-			}
-			else{
-				if(i % 50 == 0){
-					maps[mapsIdx++] = oneWordFreq.getMap();
-					oneWordFreq.resetLyric(lyr);
-				}
-				else{
-					oneWordFreq.setLyric(lyr);	
-				}
-			}
-			oneWordFreq.processLyric();
+			pos.resetLyric(lyr);
+			pos.processLyric();
+			writer.write(createCSVLine(song, year, pos.getPOSFrqInArffOrder(), pos.simpleNarcScore(), pos.getNarcissismScore()));
+			writer.newLine();
 			System.out.println("done with " + i);
 		}
-		MyMap totalFreqs = MyMap.merge(maps);
-		writer.write(totalFreqs.toJSON());
+		
 		System.out.println("DONE");
 		writer.close();
+		
+	}
+	
+	public static String createCSVLine(String song, String year, int[] pos, double simpleNarc, double complexNarc){
+		String ret = song + "," + year + ",";
+		for(int i = 0; i < pos.length; i++){
+			ret += pos[i] + ",";
+		}
+		ret += simpleNarc + "," + complexNarc;
+		
+		return ret;
 	}
 
 }

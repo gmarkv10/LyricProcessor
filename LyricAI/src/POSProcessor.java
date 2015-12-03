@@ -73,6 +73,7 @@ public class POSProcessor extends LyricProcessor {
 			String tag;
 			for(int i = 0; i < posTags.length; i++){
 				tag = this.simplifyPOS(posTags[i]).toString();
+				//System.out.println("WORD: " + words[i] + "  TAG: " + posTags[i]);
 				if(tag.equals("PRONOUN")){
 					classifyPronoun(words[i]); //update narcissism score
 				}
@@ -123,6 +124,10 @@ public class POSProcessor extends LyricProcessor {
 		else{
 			return spread * (1 + scale); //otherwise were communal anyway so we scale up if there was a good mix
 		}
+	}
+	
+	public double simpleNarcScore(){
+		return fSing-fPlur;
 	}
 	
 	public void classifyPronoun(String s){

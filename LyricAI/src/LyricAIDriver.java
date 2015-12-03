@@ -1,32 +1,30 @@
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 
 
 public class LyricAIDriver {
+	File file =  new File(".");
+	static List<WordPrecision> hMap = new ArrayList<WordPrecision>(); 
 	
-	static MyMap<String, WordPrecision> hMap = new MyMap<String, WordPrecision>(WordPrecision.comp); 
 
 	public static void main(String[] args) {
-		// TODO Get There
-		MapSetList<WordPrecision> m = new MapSetList<WordPrecision>(WordPrecision.comp);
-		System.out.println(m.insert(new WordPrecision(2000, 1, 10)));
-		//System.out.println(m.size);
-		System.out.println(m.insert(new WordPrecision(2001, 2, 3)));
-		//System.out.println(m.isSorted());
-		System.out.println(m.insert(new WordPrecision(2002, 3, 5)));
-		//System.out.println(m.isSorted());
-		/*		try {
+
+				try {
 			loadData();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}*/
+		}
 		
 		
 
@@ -37,6 +35,7 @@ public class LyricAIDriver {
 		File file = new File("."); 
 		File dataFile = new File(file.getCanonicalPath()+"/Data/timeData.txt");
 		BufferedReader br = new BufferedReader(new FileReader(dataFile));
+		BufferedWriter writer = new BufferedWriter(new FileWriter( new File(file.getCanonicalPath()+"/Data/globalFreq_StdDev_weights3.txt")));
 		String sCurrentLine;
 		String curLyric;
 		int count = 0;
@@ -44,10 +43,8 @@ public class LyricAIDriver {
 		double std;
 		int freq;
 		ArrayList<Integer> years;
-		int o = 0;
 		while ((sCurrentLine = br.readLine()) != null) {
-			o++;
-			if(0 > 7) break;
+
 			String[] words = sCurrentLine.split(",");
 		
 			curLyric = words[0];
@@ -67,10 +64,16 @@ public class LyricAIDriver {
 			}
 			avgYear = avgYear/freq;
 			double stdDev = getStdDev(avgYear, years);
-			System.out.println("AVG: " + avgYear + " SD: " + stdDev + " FRQ: " + freq);
-			hMap.put(curLyric, new WordPrecision(avgYear, stdDev, freq));
+			hMap.add(new WordPrecision(curLyric, avgYear, stdDev, freq));
 		}
-		System.out.println(hMap.toJSON());
+		Collections.sort(hMap);
+		Iterator<WordPrecision> i = hMap.listIterator();
+		while(i.hasNext()){
+			writer.write(i.next().toString());
+			writer.newLine();
+		}
+		System.out.println("done");
+		writer.close();
 		br.close();
 		
 	}
@@ -89,29 +92,51 @@ public class LyricAIDriver {
 		}
 		return Math.sqrt(variance/(double) pop.size());
 	}
-	public static class WordPrecision{
+	public static class WordPrecision implements Comparable<WordPrecision>{
+		String word;
 		int avgYear;
 		double stdDev;
 		int freq;
-		static Comparator comp;
 		
-		public WordPrecision(int aYear, double sd, int f){
+		double freqScore;
+		double devScore;
+		
+		public WordPrecision(String s, int aYear, double sd, int f){
+			word = s;
 			avgYear = aYear;
 			stdDev = sd;
 			freq = f;
-			comp = new Comparator<WordPrecision>(){
-				@Override
-				public int compare(WordPrecision o1, WordPrecision o2) {
-					// TODO Auto-generated method stub
-					return o1.freq - o2.freq;
-				}
-			};
+			
+			freqScore = f;
+			devScore = sd;
+
 		}
 		@Override
 		public String toString(){
-			return "AVG: " + avgYear + " SD: " + stdDev + " FRQ: " + freq;
+			return word+"," + avgYear + "," + stdDev + "," + freq ;
+		}
+
+		@Override
+		public int compareTo(WordPrecision o) {
+			// TODO Auto-generated method stub
+			this.weightScores();
+			o.weightScores();
+			
+			if(this.freqScore/this.devScore == o.freqScore/o.devScore) return 0;
+			if(this.freqScore/this.devScore > o.freqScore/o.devScore) return 1;
+			else return -1;
 		}
 		
+		private void weightScores(){
+			if(devScore > 3.7 && devScore < 7.2 && freqScore > 650 && freq < 10000){
+				devScore -= devScore*0.01; //shave off quite a bit of denominator
+				freqScore *= 130.0; //90,000, the highest freq, divided by 650
+			}
+			
+//			if(freqScore > 650 && freq < 10000){
+//				freqScore *= 130.0; //90,000, the highest freq, divided by 650
+//			}
+		}
 		
 		
 	}
