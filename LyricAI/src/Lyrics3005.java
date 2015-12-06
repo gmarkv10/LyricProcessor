@@ -28,13 +28,15 @@ public class Lyrics3005 {
 			String lyr = q.getLyrics(song, artist);
 			pos.resetLyric(lyr);
 			pos.processLyric();
-			writer.write(createCSVLine(song, year, pos.getPOSFrqInArffOrder(), pos.simpleNarcScore(), pos.getNarcissismScore()));
+			writer.write(createCSVLine(song.replaceAll(",",""), year, pos.getPOSFrqInArffOrder(), pos.simpleNarcScore(), pos.getNarcissismScore()));
 			writer.newLine();
 			System.out.println("done with " + i);
 		}
 		
 		System.out.println("DONE");
 		writer.close();
+		
+		
 		
 	}
 	
