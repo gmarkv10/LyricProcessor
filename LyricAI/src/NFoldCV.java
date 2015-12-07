@@ -22,15 +22,18 @@ public class NFoldCV {
 	int folds = 0;
 	int foldSize = 0;
 	int permutation = 0;
+	double threshhold = 0.0;
 	String[][] allData;
 	String[][] test;
 	String[][] train;
 	queries  q;
 	BufferedReader reader;
+	BufferedWriter writer;
 	HashMap hMap = new HashMap<String, YearWeight>();
 	
-	public NFoldCV(int folds) throws ClassNotFoundException{
+	public NFoldCV(int folds, double thresh) throws ClassNotFoundException{
 		this.folds = folds;
+		this.threshhold = thresh;
 		q = new queries();
 		allData = q.songANDartistANDbestweekANDbestrank();
 		System.out.print("DB Query Completed Successfully.");
@@ -42,7 +45,9 @@ public class NFoldCV {
 		File dataFile;
 		try {
 			dataFile = new File(file.getCanonicalPath()+"/Data/globalFreq_StdDev.csv");
-			BufferedReader reader = new BufferedReader(new FileReader(dataFile));
+			reader = new BufferedReader(new FileReader(dataFile));
+			dataFile = new File(file.getCanonicalPath()+"/Data/predictionSpread400.csv");
+			writer = new BufferedWriter(new FileWriter(dataFile));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -75,7 +80,7 @@ public class NFoldCV {
 	}
 	
 	public double getWeight(double stdDev, int freq){
-		return freq/stdDev;
+		return stdDev == 0 ? freq : freq/stdDev;
 	}
 	
 	public void train() throws Exception{
@@ -88,17 +93,37 @@ public class NFoldCV {
 			double stdDev = Double.parseDouble(data[2]);
 			int freq =      Integer.parseInt(data[3]);
 			
-			double weight = getWeight(stdDev, freq );
-			hMap.put(word, new YearWeight(year, weight));
+			Double weight = getWeight(stdDev, freq );
+			if(weight > threshhold){
+				hMap.put(word, new YearWeight(year, weight));
+			}			
 		}
+		System.out.println("\nTrained.");
 		
 	}
 	
-	public void test() throws ClassNotFoundException{
-		for (int i=0;i<test.length;i++){
-			String[] words = q.getLyrics(train[i][0], train[i][1]).split(" ");
+	public void test() throws ClassNotFoundException, IOException{
+		int prediction = -1;
+		int actual = -1;
+		double[] yearScore = null;
+		for (int i=0;i<allData.length;i++){
+			
+			String[] words = q.getLyrics(allData[i][0], allData[i][1]).split(" ");
+			
+			yearScore =  new double[36];  //array representing years
+			YearWeight info;
+			for(String word : words){
+				info = (YearWeight) hMap.get(word);
+				if(info != null) yearScore[info.year - 1980] += info.weight;	
+			}
+			
+			prediction = maxIdx(yearScore) + 1980;
+			actual = Integer.parseInt(allData[i][2].substring(0, 4));
+			writer.write(prediction + "," + actual +"," + Math.abs(prediction - actual));
+			writer.newLine();
 		}
-		
+		System.out.println("Tested.");
+		writer.close();
 	}
 	
 	class YearWeight{
@@ -134,6 +159,18 @@ public class NFoldCV {
 		}catch(StringIndexOutOfBoundsException e){
 			return s;
 		}
+	}
+	
+	public int maxIdx(double[]  years){
+		int max = 0;
+		double maxVal = -1.0;
+		for(int i = 0; i < years.length; i++){
+			if(years[i] > maxVal){
+				max = i;
+				maxVal = years[i];
+			}
+		}
+		return max;
 	}
 	
 	
