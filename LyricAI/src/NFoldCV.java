@@ -80,7 +80,8 @@ public class NFoldCV {
 	
 	public void train() throws ClassNotFoundException{
 		
-		for (int i=0;i<train.length;i++){ 
+		for (int i=0;i<train.length;i++){
+			String[] words = q.getLyrics(train[i][0], train[i][1]).split(" ");
 		}
 		
 	}
