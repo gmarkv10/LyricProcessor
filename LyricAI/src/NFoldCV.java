@@ -78,9 +78,18 @@ public class NFoldCV {
 		return freq/stdDev;
 	}
 	
-	public void train() throws ClassNotFoundException{
-		
-		for (int i=0;i<train.length;i++){ 
+	public void train() throws Exception{
+		String line;
+		String[] data;
+		while((line = reader.readLine()) != null){
+			data = line.split(",");
+			String word = data[0]; 
+			int year =      Integer.parseInt(data[1]);
+			double stdDev = Double.parseDouble(data[2]);
+			int freq =      Integer.parseInt(data[3]);
+			
+			double weight = getWeight(stdDev, freq );
+			hMap.put(word, new YearWeight(year, weight));
 		}
 		
 	}

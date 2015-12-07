@@ -127,6 +127,8 @@ public class LyricAIDriver {
 			else return -1;
 		}
 		
+		
+		//moved this duty to our cross validator class
 		private void weightScores(){
 			if(devScore > 3.7 && devScore < 7.2 && freqScore > 650 && freq < 10000){
 				devScore -= devScore*0.01; //shave off quite a bit of denominator
