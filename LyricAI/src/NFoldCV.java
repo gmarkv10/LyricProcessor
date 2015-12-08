@@ -22,7 +22,7 @@ public class NFoldCV {
 	int folds = 0;
 	int foldSize = 0;
 	int permutation = 0;
-	double threshhold = 0.0;
+	//double threshhold = 0.0;
 	String[][] allData;
 	String[][] test;
 	String[][] train;
@@ -31,9 +31,9 @@ public class NFoldCV {
 	BufferedWriter writer;
 	HashMap hMap = new HashMap<String, YearWeight>();
 	
-	public NFoldCV(int folds, double thresh) throws ClassNotFoundException{
+	public NFoldCV(int folds) throws ClassNotFoundException{
 		this.folds = folds;
-		this.threshhold = thresh;
+		//this.threshhold = thresh;
 		q = new queries();
 		allData = q.songANDartistANDbestweekANDbestrank();
 		System.out.print("DB Query Completed Successfully.");
@@ -46,7 +46,7 @@ public class NFoldCV {
 		try {
 			dataFile = new File(file.getCanonicalPath()+"/Data/globalFreq_StdDev.csv");
 			reader = new BufferedReader(new FileReader(dataFile));
-			dataFile = new File(file.getCanonicalPath()+"/Data/predictionSpread"+threshhold+".csv");
+			dataFile = new File(file.getCanonicalPath()+"/Data/predictionSpread.csv");
 			writer = new BufferedWriter(new FileWriter(dataFile));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -80,7 +80,12 @@ public class NFoldCV {
 	}
 	
 	public double getWeight(double stdDev, int freq){
-		return stdDev == 0 ? freq : freq/stdDev;
+		if(stdDev < 3.29){ //average is 3.29
+			System.out.println(Math.ceil(3.29-stdDev) + ","+Math.log10(freq)/Math.log10(2));
+			return Math.ceil(3.29 - stdDev) * Math.log10(freq)/Math.log10(2);
+			
+		}
+		else return 0;
 	}
 	
 	public void train() throws Exception{
@@ -94,7 +99,8 @@ public class NFoldCV {
 			int freq =      Integer.parseInt(data[3]);
 			
 			Double weight = getWeight(stdDev, freq );
-			if(weight > threshhold){
+			
+			if(weight > 0.0){
 				hMap.put(word, new YearWeight(year, weight));
 			}			
 		}
