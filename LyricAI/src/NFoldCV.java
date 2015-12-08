@@ -46,7 +46,7 @@ public class NFoldCV {
 		try {
 			dataFile = new File(file.getCanonicalPath()+"/Data/globalFreq_StdDev.csv");
 			reader = new BufferedReader(new FileReader(dataFile));
-			dataFile = new File(file.getCanonicalPath()+"/Data/predictionSpread400.csv");
+			dataFile = new File(file.getCanonicalPath()+"/Data/predictionSpread"+threshhold+".csv");
 			writer = new BufferedWriter(new FileWriter(dataFile));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -106,6 +106,7 @@ public class NFoldCV {
 		int prediction = -1;
 		int actual = -1;
 		double[] yearScore = null;
+		writer.write("prediction,actual,diff,predSCore,actScore"); writer.newLine();
 		for (int i=0;i<allData.length;i++){
 			
 			String[] words = q.getLyrics(allData[i][0], allData[i][1]).split(" ");
@@ -119,7 +120,8 @@ public class NFoldCV {
 			
 			prediction = maxIdx(yearScore) + 1980;
 			actual = Integer.parseInt(allData[i][2].substring(0, 4));
-			writer.write(prediction + "," + actual +"," + Math.abs(prediction - actual));
+			writer.write(prediction + "," + actual +"," + Math.abs(prediction - actual)
+			                +"," + yearScore[prediction - 1980] + "," +yearScore[actual - 1980]);
 			writer.newLine();
 		}
 		System.out.println("Tested.");
