@@ -54,7 +54,7 @@ public class NFoldCV {
 		test = new String[foldSize][4];
 		train =  new String[allData.length - foldSize][4];
 		
-		File file = new File("."); 
+/*		File file = new File("."); 
 		File dataFile;
 		try {
 			dataFile = new File(file.getCanonicalPath()+"/Data/globalFreq_StdDev.csv");
@@ -62,7 +62,7 @@ public class NFoldCV {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		
 		
 	}
@@ -72,9 +72,14 @@ public class NFoldCV {
 	}
 	public void writeDataFile(int fold) throws ClassNotFoundException, IOException{
 		File file = new File("."); 
-		String filePath = file.getCanonicalPath()+"/Data/timeData"+fold+".txt";
-		File outputFile = new File(filePath);
-		PrintWriter pw = new PrintWriter(outputFile);
+		String filePath = file.getCanonicalPath()+"/Data/freqStdDev"+fold+".csv";
+		BufferedWriter pw = new BufferedWriter(new FileWriter(filePath));
+		ArrayList<Integer> years;
+		String curLyric;
+		int count = 0;
+		int avgYear;
+		double std;
+		int freq;
 		
 		//load and process the data
 		populateMap();
@@ -84,35 +89,49 @@ public class NFoldCV {
 		Iterator<Entry<String, ArrayList<weekCount>>> it = processedLyricWeeks.entrySet().iterator();
 	    while (it.hasNext()) {
 	        Map.Entry<String, ArrayList<weekCount>> pair = (Map.Entry<String, ArrayList<weekCount>>)it.next();
-	        pw.write(pair.getKey());
-	        for (int i=0;i<pair.getValue().size();i++){
-	        	pw.write("," + pair.getValue().get(i).week+","+pair.getValue().get(i).count);
-	        }
-	        pw.write("\n");
-	        it.remove(); // avoids a ConcurrentModificationException
+	        
+	        curLyric = pair.getKey();
+			avgYear = 0;
+			std = 0.0;
+			freq  = 0;
+			years = new ArrayList<Integer>();
+			int avgDenom = 0;
+			for (int i=0;i<pair.getValue().size();i++){
+				int year = extractYear(pair.getValue().get(i).week);
+				freq++;
+				avgYear += year;
+				years.add(year);
+			}
+			avgYear = avgYear/freq;
+			double stdDev = getStdDev(avgYear, years);
+	        pw.write(curLyric + "," + avgYear + "," + stdDev + "," + freq );
+	        pw.newLine();
 	    }
+	        
+
 		pw.close();
 	}
-	
-		public Set<String> findUniqueWords(String lyrics){
-			Set<String> uniques = new HashSet<String>();
-			//removes non-alphanumeric characters, judgement call
-			lyrics = lyrics.replaceAll("[^A-Za-z0-9 ]", "");
-			String[] words = lyrics.split(" ");
-			for (String word : words){
-				word = word.toLowerCase();
-				uniques.add(word);
-			}
-			return uniques;
+
+	public Set<String> findUniqueWords(String lyrics){
+		Set<String> uniques = new HashSet<String>();
+		//removes non-alphanumeric characters, judgement call
+		lyrics = lyrics.replaceAll("[^A-Za-z0-9 ]", "");
+		String[] words = lyrics.split(" ");
+		for (String word : words){
+			word = word.toLowerCase();
+			uniques.add(word);
 		}
+		return uniques;
+	}
+	
 	public void processWeeklyCount(){
 		Iterator<Entry<String, ArrayList<String>>> it = lyricWeeks.entrySet().iterator();
-	    while (it.hasNext()) {
-	        Map.Entry<String, ArrayList<String>> pair = (Map.Entry<String, ArrayList<String>>)it.next();
-	        ArrayList<String> weeks = pair.getValue();
+		while (it.hasNext()) {
+			Map.Entry<String, ArrayList<String>> pair = (Map.Entry<String, ArrayList<String>>)it.next();
+			ArrayList<String> weeks = pair.getValue();
 	        ArrayList<weekCount> convertedWeeks = convertWeekList(weeks);
 	        processedLyricWeeks.put(pair.getKey(), convertedWeeks);
-	        System.out.println(pair.getKey() + " = " + pair.getValue());
+	        //System.out.println(pair.getKey() + " = " + pair.getValue());
 	        it.remove(); // avoids a ConcurrentModificationException
 	    }
 	}
@@ -137,23 +156,23 @@ public class NFoldCV {
 			}
 		}
 		result.add(new weekCount(currentWeek, count));
-		System.out.println("--- converted ---");
+		/*System.out.println("--- converted ---");
 		for (int i =0;i<result.size();i++){
 			System.out.println(result.get(i).week+" | "+result.get(i).count);
-		}
+		}*/
 		return result;
 	}
 	
 	//for adding a lyric found in a given song to our hashmap based on the weeks that song was popular
-		public void addLyricNWeek(String lyric, ArrayList<String> weeks){
-			if (lyricWeeks.get(lyric)==null){
-				lyricWeeks.put(lyric, new ArrayList<String>());
-			}
-			for (int i=0;i<weeks.size();i++){
-				lyricWeeks.get(lyric).add(weeks.get(i));
-			}
+	public void addLyricNWeek(String lyric, ArrayList<String> weeks){
+		if (lyricWeeks.get(lyric)==null){
+			lyricWeeks.put(lyric, new ArrayList<String>());
 		}
-		
+		for (int i=0;i<weeks.size();i++){
+			lyricWeeks.get(lyric).add(weeks.get(i));
+		}
+	}
+
 	public void permuteTestTrain(int perm) throws ClassNotFoundException, IOException{
 		//re initialize structures
 		lyricWeeks = new HashMap<String, ArrayList<String>>();
@@ -176,7 +195,7 @@ public class NFoldCV {
 		writeDataFile(perm);
 	}
 	
-//initial population
+	//initial population
 	public void populateMap() throws ClassNotFoundException{
 		//String[][] sNa = q.songsANDartists();
 		int totalSongs = train.length;
@@ -197,6 +216,7 @@ public class NFoldCV {
 	public void crossValidate() throws ClassNotFoundException, IOException{
 		for(int i  = 0; i < folds; i++){
 			permuteTestTrain(i);
+			
 		}
 	}
 	
@@ -280,6 +300,18 @@ public class NFoldCV {
 		}
 	}
 	
+	
+	
+	public double getStdDev(double avg, ArrayList<Integer> pop){
+		int variance = 0;
+		Iterator yr = pop.iterator();
+		while(yr.hasNext()){
+			Integer v = (Integer) yr.next();
+			variance += ((int)v - (int) avg)*((int)v - (int) avg);
+		}
+		return Math.sqrt(variance/(double) pop.size());
+	}
+	
 	public int maxIdx(double[]  years){
 		int max = 0;
 		double maxVal = -1.0;
@@ -293,7 +325,10 @@ public class NFoldCV {
 	}
 	
 	
-	
+	int extractYear(String s){
+		String y = s.substring(0,4);
+		return Integer.parseInt(y);
+	}
 	
 	
 
