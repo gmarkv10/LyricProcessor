@@ -13,7 +13,7 @@ public class tonyTestDriver {
 	public static void main(String[] args) throws ClassNotFoundException, IOException{
 		queries q = new queries();
 		timePrediction tp = new timePrediction();
-		tp.init();
+		//tp.init();
 		//String[][] alldata = q.songANDartistANDbestweekANDbestrank();
 		/*String lyrics = q.getLyrics("Hotline Bling", "Drake");
 		System.out.println(lyrics);
@@ -57,7 +57,7 @@ public class tonyTestDriver {
 		System.out.println(distWeeks.size());*/
 		
 	
-		String testLyrics = "";
+		/*String testLyrics = "";
 		File f = new File("Lyrics\\hello.lyr");
 		System.err.println(f.exists());
 		Scanner sc = new Scanner(f);
@@ -65,8 +65,11 @@ public class tonyTestDriver {
 			testLyrics+=sc.nextLine()+" ";
 		}
 		sc.close();
-		System.out.println("predicting testLyrics are from year: "+tp.predictYear(testLyrics));
-		tp.testAllData();
+		System.out.println("predicting testLyrics are from year: "+tp.predictYear(testLyrics));*/
+		//tp.testAllData();
+		NFoldCV nfcv = new NFoldCV(2);
+		nfcv.crossValidate();
+		
 	}
 	
 	

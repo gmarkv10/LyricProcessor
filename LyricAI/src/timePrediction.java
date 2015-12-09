@@ -318,7 +318,7 @@ public class timePrediction {
 		return uniques;
 	}
 	
-	private class weekCount{
+/*	public class weekCount{
 		public String week;
 		public int count;
 		
@@ -327,7 +327,7 @@ public class timePrediction {
 			this.count = count;
 		}
 		
-	}
+	}*/
 	private class songPredictedActual{
 		public String song;
 		public String artist;
