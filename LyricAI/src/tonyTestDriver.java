@@ -10,7 +10,7 @@ import java.util.Set;
 public class tonyTestDriver {
 
 	
-	public static void main(String[] args) throws ClassNotFoundException, IOException{
+	public static void main(String[] args) throws Exception{
 		queries q = new queries();
 		timePrediction tp = new timePrediction();
 		//tp.init();
@@ -67,7 +67,7 @@ public class tonyTestDriver {
 		sc.close();
 		System.out.println("predicting testLyrics are from year: "+tp.predictYear(testLyrics));*/
 		//tp.testAllData();
-		NFoldCV nfcv = new NFoldCV(2);
+		NFoldCV nfcv = new NFoldCV(2, false);
 		nfcv.crossValidate();
 		
 	}

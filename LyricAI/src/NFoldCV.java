@@ -36,16 +36,18 @@ public class NFoldCV {
 	String[][] allData;
 	String[][] test;
 	String[][] train;
+	boolean makeFiles = false;
 	queries  q;
 	BufferedReader reader;
 	BufferedWriter writer;
-	HashMap hMap = new HashMap<String, YearWeight>();
+	HashMap<String, YearWeight> hMap = new HashMap<String, YearWeight>();
 	
 	public HashMap<String, ArrayList<String>> lyricWeeks = new HashMap<String, ArrayList<String>>();
 	public HashMap<String, ArrayList<weekCount>> processedLyricWeeks = new HashMap<String, ArrayList<weekCount>>();
 	
-	public NFoldCV(int folds) throws ClassNotFoundException{
+	public NFoldCV(int folds, boolean make) throws ClassNotFoundException{
 		this.folds = folds;
+		makeFiles = make;
 		//this.threshhold = thresh;
 		q = new queries();
 		allData = q.songANDartistANDbestweekANDbestrank();
@@ -54,20 +56,20 @@ public class NFoldCV {
 		test = new String[foldSize][4];
 		train =  new String[allData.length - foldSize][4];
 		
-/*		File file = new File("."); 
+		File file = new File("."); 
 		File dataFile;
 		try {
-			dataFile = new File(file.getCanonicalPath()+"/Data/globalFreq_StdDev.csv");
-			reader = new BufferedReader(new FileReader(dataFile));
+			dataFile = new File(file.getCanonicalPath()+"/Data/crossval.csv");
+			writer = new BufferedWriter(new FileWriter(dataFile));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}*/
+		}
 		
 		
 	}
 	
-	public void arrangeData(){
+	public void sampleLine(){
 		
 	}
 	public void writeDataFile(int fold) throws ClassNotFoundException, IOException{
@@ -97,10 +99,12 @@ public class NFoldCV {
 			years = new ArrayList<Integer>();
 			int avgDenom = 0;
 			for (int i=0;i<pair.getValue().size();i++){
-				int year = extractYear(pair.getValue().get(i).week);
-				freq++;
-				avgYear += year;
-				years.add(year);
+				for(int j = 0; j < pair.getValue().get(i).count; j++){
+					int year = extractYear(pair.getValue().get(i).week);
+					freq++;
+					avgYear += year;
+					years.add(year);
+				}
 			}
 			avgYear = avgYear/freq;
 			double stdDev = getStdDev(avgYear, years);
@@ -192,7 +196,7 @@ public class NFoldCV {
 			}
 		}
 		//populate process write
-		writeDataFile(perm);
+		if(makeFiles) writeDataFile(perm);
 	}
 	
 	//initial population
@@ -213,11 +217,13 @@ public class NFoldCV {
 		}
 	}
 	
-	public void crossValidate() throws ClassNotFoundException, IOException{
+	public void crossValidate() throws Exception{
 		for(int i  = 0; i < folds; i++){
 			permuteTestTrain(i);
-			
+			train(i);
+			test(i);
 		}
+		writer.close();
 	}
 	
 	public double getWeight(double stdDev, int freq){
@@ -230,23 +236,38 @@ public class NFoldCV {
 	}
 	
 
-	public void train() throws ClassNotFoundException{
-		
-		for (int i=0;i<train.length;i++){
-			String[] words = q.getLyrics(train[i][0], train[i][1]).split(" ");
+	public void train(int perm) throws Exception{
+		hMap = new HashMap<String, YearWeight>();
+
+		reader = new BufferedReader(new FileReader("Data/freqStdDev"+perm+".csv"));
+		String line;
+		String[] data;
+		while((line = reader.readLine()) != null){
+			data = line.split(",");
+			String word = data[0]; 
+			int year =      Integer.parseInt(data[1]);
+			double stdDev = Double.parseDouble(data[2]);
+			int freq =      Integer.parseInt(data[3]);
+			Double weight = getWeight(stdDev, freq );
+
+			if(weight < 0){
+				hMap.put(word, new YearWeight(year, weight));
+			}
 		}
+		reader.close();
 		System.out.println("\nTrained.");
-		
+
+
 	}
-	
-	public void test() throws ClassNotFoundException, IOException{
+
+	public void test(int perm) throws Exception{
 		int prediction = -1;
 		int actual = -1;
 		double[] yearScore = null;
 		writer.write("prediction,actual,diff,predSCore,actScore"); writer.newLine();
-		for (int i=0;i<allData.length;i++){
+		for (int i=0;i<train.length;i++){
 			
-			String[] words = q.getLyrics(allData[i][0], allData[i][1]).split(" ");
+			String[] words = q.getLyrics(train[i][0], train[i][1]).split(" ");
 			
 			yearScore =  new double[36];  //array representing years
 			YearWeight info;
@@ -262,7 +283,7 @@ public class NFoldCV {
 			writer.newLine();
 		}
 		System.out.println("Tested.");
-		writer.close();
+		
 	}
 	
 	class YearWeight{

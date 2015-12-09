@@ -55,19 +55,38 @@ public class BagOfWords{
 	}
 	
 	public void playSong(int i) throws ClassNotFoundException, IOException{
-		lyric = q.getLyrics(SONGINFO[i][0], SONGINFO[i][1]);
+		//lyric = q.getLyrics(SONGINFO[i][0], SONGINFO[i][1]);
+		if(i == 1) lyric  = "0, 0z 0";
+		if(i ==2) lyric = "0 1 0";
 		String[] words = lyric.split(" ");
+		
 		for(String 	w : words){
-			Integer freq =  map.get(w);
-			map.put(w,++freq);
+			String word = processWord(w);
+			
+			Integer freq =  map.get(word);
+			if(word.equals("0")){
+				System.out.println("word: " + word + " freq: "+ freq);	
+			}
+			
+			//map.put(word, (freq == null ? 1 : freq++));
+			map.put(word, freq++);
 		}
 		Iterator it = sortedKeys.iterator();
-		while(it.hasNext()){
-			writer.write(map.get(it.next()) +",");
-		//	writer.write();
-		}
+		System.out.println(map.get(it.next()) + "," + map.get(it.next()) + "," + map.get(it.next()) + "," + map.get(it.next()));
+//		while(it.hasNext()){
+//			Integer f = map.get(it.next());
+//			if(f == null){
+//				f = 0;
+//			}
+//			writer.write(f +",");
+//			
+//			writer.write(year);
+//			writer.newLine();
+//		}
 		
 	}
+	
+//0 0z 1
 	
 	
 	
@@ -93,6 +112,31 @@ public class BagOfWords{
 		}
 		
 		
+	}
+	
+	public String processWord(String s){
+		
+		try{
+
+			if(s.charAt(0) == '\"' || s.charAt(0) == '('){
+				s = s.substring(1);
+				s = processWord(s);
+			}
+
+			if(s.charAt(s.length() - 1) == ','  ||
+					s.charAt(s.length() - 1) == '\'' ||
+					s.charAt(s.length() - 1) == '\n' ||
+					s.charAt(s.length() - 1) == '.'  ||
+					s.charAt(s.length() - 1) == '\"'  ||
+					s.charAt(s.length() - 1) == ')')
+			{
+				s = s.substring(0, s.length() - 1);
+				s = processWord(s);
+			}
+			return s.toLowerCase();
+		}catch(StringIndexOutOfBoundsException e){
+			return s;
+		}
 	}
 
 }
