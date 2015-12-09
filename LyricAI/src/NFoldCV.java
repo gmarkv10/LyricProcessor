@@ -69,9 +69,7 @@ public class NFoldCV {
 		
 	}
 	
-	public void sampleLine(){
-		
-	}
+	
 	public void writeDataFile(int fold) throws ClassNotFoundException, IOException{
 		File file = new File("."); 
 		String filePath = file.getCanonicalPath()+"/Data/freqStdDev"+fold+".csv";
@@ -228,7 +226,7 @@ public class NFoldCV {
 	
 	public double getWeight(double stdDev, int freq){
 		if(stdDev < 3.29){ //average is 3.29
-			System.out.println(Math.ceil(3.29-stdDev) + ","+Math.log10(freq)/Math.log10(2));
+			//System.out.println(Math.ceil(3.29-stdDev) + ","+Math.log10(freq)/Math.log10(2));
 			return Math.ceil(3.29 - stdDev) * Math.log10(freq)/Math.log10(2);
 			
 		}
@@ -250,7 +248,7 @@ public class NFoldCV {
 			int freq =      Integer.parseInt(data[3]);
 			Double weight = getWeight(stdDev, freq );
 
-			if(weight < 0){
+			if(weight > 0){
 				hMap.put(word, new YearWeight(year, weight));
 			}
 		}
@@ -265,15 +263,16 @@ public class NFoldCV {
 		int actual = -1;
 		double[] yearScore = null;
 		writer.write("prediction,actual,diff,predSCore,actScore"); writer.newLine();
-		for (int i=0;i<train.length;i++){
+		for (int i=0;i<test.length;i++){
 			
-			String[] words = q.getLyrics(train[i][0], train[i][1]).split(" ");
+			String[] words = q.getLyrics(test[i][0], test[i][1]).split(" ");
 			
 			yearScore =  new double[36];  //array representing years
 			YearWeight info;
 			for(String word : words){
 				info = (YearWeight) hMap.get(word);
-				if(info != null) yearScore[info.year - 1980] += info.weight;	
+				if(info != null) yearScore[info.year - 1980] += info.weight;
+				
 			}
 			
 			prediction = maxIdx(yearScore) + 1980;
