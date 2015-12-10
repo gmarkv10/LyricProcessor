@@ -25,28 +25,31 @@ public class FinalCrossValidator {
 		this.h = new Helpers();
 		
 		q = new queries();
-		allData = q.songsANDartists();
-		
+		allData = q.get100songsANDartists();
 		foldSize = allData.length/folds;
+		test = new String[foldSize][2];
+		//System.out.println(allData.length - foldSize);
+		train =  new String[allData.length - foldSize][2];
+//		System.out.println("ALL: " + allData.length);
+//		System.out.println("TRAIN: " + train.length);
+//		System.out.println("TEST: " + test.length);
+		
+		
 		
 		writer = new BufferedWriter(new FileWriter("Data/results.csv"));
 	}
 	
-	public void permuteTestTrain(int perm){
-		testIdx = foldSize * perm;
-/*		for(int i = 0; i < allData.length; i++){
-			if(i >= testIdxSTART && i < testIdxEND){
-				test[i - testIdxSTART] = allData[i];
-			}
-			else{
-				train[trainIdx] = allData[i];
-				trainIdx++;
-			}
-		}*/
+	public void permuteTestTrain(int fold){
+		testIdx = foldSize * fold;
+		int trainIdx = 0;
+		for(int i = 0; i < allData.length; i++){
+			if(i >= testIdx && i < testIdx + foldSize) test[i-testIdx] = allData[i];
+			else train[trainIdx++] = allData[i];
+		}
 		
 	}
 	
-	public void populateMap(){
+	public void populateMap(int fold){
 		
 	}
 	
@@ -59,16 +62,16 @@ public class FinalCrossValidator {
 		writer.close();
 	}
 	
-	public void test(int i){
+	public void test(int fold){
 		
 	}
 	
-	public void train(int i){
+	public void train(int fold){
 		
 	}
 	
 	public double getWeight(double stdDev, int freq){
-		if(stdDev < 3.29){ //average is 3.29
+		if(stdDev < 3.29 && freq > 1){ //average is 3.29, if a word only appears in one songs, its useless to test on.
 			//System.out.println(Math.ceil(3.29-stdDev) + ","+Math.log10(freq)/Math.log10(2));
 			return Math.ceil(3.29 - stdDev) * Math.log10(freq)/Math.log10(2);
 			
