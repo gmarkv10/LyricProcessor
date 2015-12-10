@@ -2,6 +2,7 @@ package Final;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -40,7 +41,7 @@ public class FinalCrossValidator {
 		writer = new BufferedWriter(new FileWriter("Data/results.csv"));
 	}
 	
-	public void permuteTestTrain(int fold){
+	public void permuteTestTrain(int fold) throws Exception{
 		testIdx = foldSize * fold;
 		int trainIdx = 0;
 		for(int i = 0; i < allData.length; i++){
@@ -48,7 +49,7 @@ public class FinalCrossValidator {
 			else train[trainIdx++] = allData[i];
 		}
 		
-		reader = new BufferedReader(new FileReader("Data/trainingData"+fold+".csv"))
+		reader = new BufferedReader(new FileReader("Data/trainingData"+fold+".csv"));
 		
 	}
 	
@@ -65,13 +66,15 @@ public class FinalCrossValidator {
 		writer.close();
 	}
 	
+	public void train(){
+		
+	}
+	
 	public void test(){
 		
 	}
 	
-	public void train(){
-		
-	}
+
 	
 	public double getWeight(double stdDev, int freq){
 		if(stdDev < 3.29 && freq > 1){ //average is 3.29, if a word only appears in one songs, its useless to test on.

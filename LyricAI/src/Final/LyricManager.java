@@ -17,7 +17,7 @@ public class LyricManager {
 	
 	
 	public void makeFoldFile(int fold) throws Exception{
-		writer = new BufferedWriter(new FileWriter("Data/trainingData" + fold + ".csv"));
+		writer = new BufferedWriter(new FileWriter("Data/trainingData"+fold+".csv"));
 	}
 	
 	public void makeFoldFiles(int folds) throws Exception{ //replaces writeDataFile

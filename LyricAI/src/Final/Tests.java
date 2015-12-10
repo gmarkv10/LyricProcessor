@@ -15,7 +15,7 @@ public class Tests {
 	}
 
 	//PASSING - tests sizes throughout permutations
-	public static void testPermute(){
+	public static void testPermute() throws Exception{
 		System.out.println("TOTAL: " + f.allData.length );
 		for(int i = 0; i < f.folds; i ++){
 			f.permuteTestTrain(i);
@@ -26,7 +26,7 @@ public class Tests {
 	}
 	
 	//PASSING - test that the arrays are filled properly at the edges
-	public static void testPermute2(){
+	public static void testPermute2() throws Exception{
 		f.permuteTestTrain(1);
 		System.out.println("testI " + f.testIdx );
 		System.out.println("train0 " + f.train[0][0]);
