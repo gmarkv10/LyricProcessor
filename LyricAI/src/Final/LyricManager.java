@@ -1,12 +1,29 @@
 package Final;
 
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Set;
 
 public class LyricManager {
+	int folds = -1;
+	BufferedWriter writer;
 	
-	public void makeFoldFiles(int folds){ //replaces writeDataFile
+	public LyricManager(int folds){
+		
+	}
+	
+	
+	public void makeFoldFile(int fold) throws Exception{
+		writer = new BufferedWriter(new FileWriter("Data/trainingData" + fold + ".csv"));
+	}
+	
+	public void makeFoldFiles(int folds) throws Exception{ //replaces writeDataFile
+		for(int i = 0; i < folds; i++){
+			makeFoldFile(i);
+		}
 		
 	}
 	

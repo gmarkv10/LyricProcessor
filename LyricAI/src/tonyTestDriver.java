@@ -67,12 +67,8 @@ public class tonyTestDriver {
 		sc.close();
 		System.out.println("predicting testLyrics are from year: "+tp.predictYear(testLyrics));*/
 		//tp.testAllData();
-//		NFoldCV nfcv = new NFoldCV(10,false);
-//		nfcv.crossValidate();
-		
-		FML f = new FML(10);
-		f.train();
-		f.test();
+		NFoldCV nfcv = new NFoldCV(10,false);
+		nfcv.crossValidate();
 		
 		
 	}

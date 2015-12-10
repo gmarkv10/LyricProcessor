@@ -2,6 +2,7 @@ package Final;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -47,6 +48,8 @@ public class FinalCrossValidator {
 			else train[trainIdx++] = allData[i];
 		}
 		
+		reader = new BufferedReader(new FileReader("Data/trainingData"+fold+".csv"))
+		
 	}
 	
 	public void populateMap(int fold){
@@ -56,17 +59,17 @@ public class FinalCrossValidator {
 	public void crossValidate() throws Exception{
 		for(int i  = 0; i < folds; i++){
 			permuteTestTrain(i);
-			train(i);
-			test(i);
+			train();
+			test();
 		}
 		writer.close();
 	}
 	
-	public void test(int fold){
+	public void test(){
 		
 	}
 	
-	public void train(int fold){
+	public void train(){
 		
 	}
 	
