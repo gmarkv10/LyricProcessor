@@ -41,16 +41,19 @@ public class FinalCrossValidator {
 		writer = new BufferedWriter(new FileWriter("Data/results.csv"));
 	}
 	
-	public void permuteTestTrain(int fold) throws Exception{
+	public void permuteTestTrain(int fold) {
 		testIdx = foldSize * fold;
 		int trainIdx = 0;
 		for(int i = 0; i < allData.length; i++){
 			if(i >= testIdx && i < testIdx + foldSize) test[i-testIdx] = allData[i];
 			else train[trainIdx++] = allData[i];
 		}
-		
-		reader = new BufferedReader(new FileReader("Data/trainingData"+fold+".csv"));
-		
+		try{
+			reader = new BufferedReader(new FileReader("Data/trainingData"+fold+".csv"));
+		} catch(FileNotFoundException e){
+			System.out.println("Please run makeFoldFiles and try again");
+		}
+
 	}
 	
 	public void populateMap(int fold){

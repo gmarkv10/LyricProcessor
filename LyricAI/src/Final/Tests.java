@@ -11,7 +11,7 @@ public class Tests {
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		f = new FinalCrossValidator(10);
-		testPermute2();
+		testPermute();
 	}
 
 	//PASSING - tests sizes throughout permutations
