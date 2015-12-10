@@ -9,18 +9,40 @@ public class FinalCrossValidator {
 	
 	int folds = 0;
 	Helpers h;
+	String[][] allData;
+	String[][] test;
+	String[][] train;
+	int testIdx = 0;
+	int foldSize = 0;
+	
+	queries q;
 	
 	BufferedWriter writer;
 	BufferedReader reader;
 	
-	public FinalCrossValidator(int folds) throws IOException{
+	public FinalCrossValidator(int folds) throws Exception{
 		this.folds = folds;
 		this.h = new Helpers();
+		
+		q = new queries();
+		allData = q.songsANDartists();
+		
+		foldSize = allData.length/folds;
 		
 		writer = new BufferedWriter(new FileWriter("Data/results.csv"));
 	}
 	
 	public void permuteTestTrain(int perm){
+		testIdx = foldSize * perm;
+/*		for(int i = 0; i < allData.length; i++){
+			if(i >= testIdxSTART && i < testIdxEND){
+				test[i - testIdxSTART] = allData[i];
+			}
+			else{
+				train[trainIdx] = allData[i];
+				trainIdx++;
+			}
+		}*/
 		
 	}
 	
