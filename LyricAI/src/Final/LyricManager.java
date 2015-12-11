@@ -17,24 +17,50 @@ import Final.queries;
 public class LyricManager {
 	int folds = -1;
 	BufferedWriter writer;
+	FinalCrossValidator cv;
 	
 	//databaseQueries will let us perform the queries on our database, specifically to initialize songsAndArtists
 	//songsAndArtists stores all 7801 song, artist pairs in a multidimensional array from queries.songsANDartists()
 	//lyricWeeks is a helper structure to store lyric data, function described in lyricWeeksPopulate()
 	//processedLyricWeeks is the structure that stores the lyric and weekCount objects, which is created with lyricWeeks in populateProcessedWeeklyCount()
-	public final String[][] songsAndArtists;
+	public String[][] songsAndArtists;
 	public final queries databaseQueries;
 	public final Helpers helperFunctions;
 	public HashMap<String, ArrayList<String>> lyricWeeks = new HashMap<String, ArrayList<String>>();
 	public HashMap<String, ArrayList<weekCount>> processedLyricWeeks = new HashMap<String, ArrayList<weekCount>>();
 	
-	public LyricManager(int folds) throws ClassNotFoundException{
+	public LyricManager(int folds) throws Exception{
 		helperFunctions = new Helpers();
 		databaseQueries = new queries();
-		songsAndArtists = databaseQueries.songsANDartists();
+		cv              = FinalCrossValidator.getInstance(folds);
 	}
 	public void makeFoldFile(int fold) throws Exception{
-		writer = new BufferedWriter(new FileWriter("Data/trainingData"+fold+".csv"));
+		cv.permuteTestTrain(fold);
+		songsAndArtists = cv.train;
+		populateLyricWeeks();
+		populateProcecessedWeeklyCount(); //do all the processing for the training permutation
+		
+		//writer = new BufferedWriter(new FileWriter("Data/trainingData"+fold+".csv")); //we're ready to write
+		//writer.write("Word,1st Year,Nth Year, Avg Year,Frequency,Standard Dev.");
+		ArrayList<weekCount> freqList;
+		System.out.println(processedLyricWeeks.containsKey("facts"));
+		freqList = processedLyricWeeks.get("facts");
+		Object[] result = helperFunctions.getStatsFromWeekCount(freqList);
+		for(int i = 0; i < result.length; i ++){
+			System.out.println(result[i]);
+		}
+		/*
+		Iterator it = processedLyricWeeks.keySet().iterator();
+		while(it.hasNext()){
+			String word = (String) it.next();
+			freqList = processedLyricWeeks.get(word);
+			helperFunctions.getStatsFromWeekCount(freqList);
+			
+			writer.write(word + ",");
+			
+		}
+		*/
+		
 	}
 	
 	public void makeFoldFiles(int folds) throws Exception{ //replaces writeDataFile

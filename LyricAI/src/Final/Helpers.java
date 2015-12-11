@@ -52,7 +52,7 @@ public class Helpers {
 	}
 	
 	
-	public double getStdDev(double avg, ArrayList<Integer> pop){
+	public double getStdDev(int avg, ArrayList<Integer> pop){
 		int variance = 0;
 		Iterator yr = pop.iterator();
 		while(yr.hasNext()){
@@ -60,6 +60,36 @@ public class Helpers {
 			variance += ((int)v - (int) avg)*((int)v - (int) avg);
 		}
 		return Math.sqrt(variance/(double) pop.size());
+	}
+	
+	public Object[] getStatsFromWeekCount(ArrayList<weekCount> list){
+		int minYear   = 2017;
+		int maxYear   = 1979;
+		int avgYear   = 0;
+		int freq      = 0;
+		double stdDev = -1.0; 
+		ArrayList<Integer> years =  new ArrayList<Integer>();
+		//return order:
+		/**
+		 * [0]:minYear
+		 * [1]:maxYear
+		 * [2]:avgYear
+		 * [3]:frequency
+		 * [4]:standard deviation
+		 */
+		for(weekCount data: list){
+			for(int i = 0; i < data.count; i ++){
+				int year = extractYear(data.week);
+				if(year > maxYear) maxYear = year;
+				if(year < minYear) minYear = year;
+				avgYear += year;
+				years.add(year); //for stdDev
+				freq++;
+			}
+		}
+		avgYear = avgYear/freq;
+		stdDev = getStdDev(avgYear, years);
+		return new Object[]{minYear, maxYear, avgYear, freq, stdDev};
 	}
 	
 	public int maxIdx(double[]  years){

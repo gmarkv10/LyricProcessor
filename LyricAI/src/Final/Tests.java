@@ -8,14 +8,16 @@ import java.util.Set;
 //System.out.println("" + );
 public class Tests {
 	
+	private static final int FOLDS = 10;
+	
 	static FinalCrossValidator f; 
 	static LyricManager lm;
 	static Helpers h;
 	public static void main(String[] args) throws Exception {
 		
-		f = FinalCrossValidator.getInstance(10);
+		f = FinalCrossValidator.getInstance(FOLDS);
 		h = new Helpers();
-		lm = new LyricManager(10);
+		lm = new LyricManager(FOLDS);
 		
 			//dummy test data
 			String week1 = "1111-22-22";
@@ -31,15 +33,17 @@ public class Tests {
 		
 		//testPermute();
 		
-		testFindUniques("hey hey wow tony wow hey pie");
-		testSongAndArtistInitialized();
-		testConvertWeeklyList(testListOfWeeks);
-		testDataPopulation();
+		//testFindUniques("hey hey wow tony wow hey pie");
+		//testSongAndArtistInitialized();
+		//testConvertWeeklyList(testListOfWeeks);
+		//testDataPopulation();
+			
+		lm.makeFoldFile(0);
 		
 		
 	}
 	//tests populateLyricWeeks() and populateProcessedWeeklyCounts();
-	public static void testDataPopulation() throws ClassNotFoundException{
+	public static void testDataPopulation() throws Exception{
 		LyricManager testLM = new LyricManager(10); 
 		//step 1 gets all the raw lyric/week data
 		testLM.populateLyricWeeks();
