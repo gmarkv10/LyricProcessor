@@ -9,7 +9,8 @@ import java.io.IOException;
 
 public class FinalCrossValidator {
 	
-	int folds = 0;
+	private static FinalCrossValidator instance;
+	static int folds = 0;
 	Helpers h;
 	String[][] allData;
 	String[][] test;
@@ -22,23 +23,24 @@ public class FinalCrossValidator {
 	BufferedWriter writer;
 	BufferedReader reader;
 	
-	public FinalCrossValidator(int folds) throws Exception{
+	private FinalCrossValidator(int folds) throws Exception{
 		this.folds = folds;
-		this.h = new Helpers();
+		this.h     = new Helpers();
 		
 		q = new queries();
 		allData = q.get100songsANDartists();
 		foldSize = allData.length/folds;
 		test = new String[foldSize][2];
-		//System.out.println(allData.length - foldSize);
 		train =  new String[allData.length - foldSize][2];
-//		System.out.println("ALL: " + allData.length);
-//		System.out.println("TRAIN: " + train.length);
-//		System.out.println("TEST: " + test.length);
-		
-		
 		
 		writer = new BufferedWriter(new FileWriter("Data/results.csv"));
+	}
+	
+	public static FinalCrossValidator getInstance(int folds) throws Exception{
+		if(instance == null || folds != FinalCrossValidator.folds){
+			instance = new FinalCrossValidator(folds);
+		}
+		return instance;
 	}
 	
 	public void permuteTestTrain(int fold) {
@@ -57,6 +59,7 @@ public class FinalCrossValidator {
 	}
 	
 	public void populateMap(int fold){
+		
 		
 	}
 	
@@ -79,14 +82,6 @@ public class FinalCrossValidator {
 	
 
 	
-	public double getWeight(double stdDev, int freq){
-		if(stdDev < 3.29 && freq > 1){ //average is 3.29, if a word only appears in one songs, its useless to test on.
-			//System.out.println(Math.ceil(3.29-stdDev) + ","+Math.log10(freq)/Math.log10(2));
-			return Math.ceil(3.29 - stdDev) * Math.log10(freq)/Math.log10(2);
-			
-		}
-		else return 0;
-	}
 	
 	
 	class YearWeight{

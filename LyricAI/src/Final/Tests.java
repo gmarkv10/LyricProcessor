@@ -13,7 +13,7 @@ public class Tests {
 	static Helpers h;
 	public static void main(String[] args) throws Exception {
 		
-		f = new FinalCrossValidator(10);
+		f = FinalCrossValidator.getInstance(10);
 		h = new Helpers();
 		lm = new LyricManager(10);
 		
@@ -29,7 +29,7 @@ public class Tests {
 			for (String week : testArrayOfWeeks){testListOfWeeks.add(week);}
 		
 		
-		testPermute();
+		//testPermute();
 		
 		testFindUniques("hey hey wow tony wow hey pie");
 		testSongAndArtistInitialized();
