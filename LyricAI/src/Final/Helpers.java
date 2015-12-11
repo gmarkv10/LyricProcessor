@@ -1,7 +1,9 @@
 package Final;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Set;
 
 public class Helpers {
 	
@@ -60,6 +62,18 @@ public class Helpers {
 	int extractYear(String s){
 		String y = s.substring(0,4);
 		return Integer.parseInt(y);
+	}
+	
+	public Set<String> findUniqueWords(String lyrics){
+		Set<String> uniques = new HashSet<String>();
+		//removes non-alphanumeric characters, judgement call
+		lyrics = lyrics.replaceAll("[^A-Za-z0-9 ]", "");
+		String[] words = lyrics.split(" ");
+		for (String word : words){
+			word = word.toLowerCase();
+			uniques.add(word);
+		}
+		return uniques;
 	}
 
 }

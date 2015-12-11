@@ -1,14 +1,4 @@
-/DataDB/
 /nlp/
-/.DS_Store
-/LyricAIDriver$WordPrecision.class
-/LyricAIDriver.class
-/MapSetList$1.class
-/MapSetList.class
-/MyMap.class
-/POSProcessor$SPEECH.class
-/POSProcessor.class
-/CVDriver.class
 /NFoldCV$YearWeight.class
 /NFoldCV.class
-/weekCount.class
+/tonyTestDriver.class
