@@ -9,7 +9,7 @@ public class CVDriver {
 	public static void main(String[] args) throws Exception{
 		FinalCrossValidator fcv = FinalCrossValidator.getInstance(FOLDS);
 		LyricManager lm = new LyricManager(FOLDS);
-		lm.makeFoldFile(0);
+		lm.makeFoldFiles();
 		
 
 		

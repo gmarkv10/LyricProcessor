@@ -45,12 +45,6 @@ public class LyricManager {
 		writer = new BufferedWriter(new FileWriter("Data/trainingData"+fold+".csv")); //we're ready to write
 		writer.write("Word,1st Year,Nth Year, Avg Year,Frequency,Standard Dev,Usage"); writer.newLine();
 		ArrayList<weekCount> freqList;
-//		System.out.println(processedLyricWeeks.containsKey("facts"));
-//		freqList = processedLyricWeeks.get("facts");
-//		Object[] result = helperFunctions.getStatsFromWeekCount(freqList);
-//		for(int i = 0; i < result.length; i ++){
-//			System.out.println(result[i]);
-//		}
 		
 		Iterator it = processedLyricWeeks.keySet().iterator();
 		while(it.hasNext()){
@@ -92,7 +86,6 @@ public class LyricManager {
 			Set<String> uniqueLyrics = helperFunctions.findUniqueWords(lyrics);
 			
 			for (String aLyric : uniqueLyrics){
-				if(aLyric.equals("the")) System.out.println("found." + f++);
 				Integer frq = songFreq.get(aLyric);
 				songFreq.put(aLyric, (frq == null ? 1 : ++frq));
 				if (lyricWeeks.get(aLyric)==null){

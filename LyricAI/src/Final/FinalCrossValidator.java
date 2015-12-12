@@ -107,13 +107,13 @@ public class FinalCrossValidator {
 	public void test(int fold) throws Exception{
 		System.out.println("");
 		permuteTestTrain(fold);
-		writer.write("Song,Actual,TF-IDF,Custom");
-		//for(int i = 0; i < test.length; i ++){
+		writer.write("Song,Actual,TF-IDF,TF-IDF Error,Custom,Custom Err"); writer.newLine();
+		for(int i = 0; i < test.length; i ++){
 			localWordStats =  new HashMap<String, Integer>();
 			
 			//find unique words and their frequencies
-			//String lyric = q.getLyrics(test[i][0], test[i][1]);
-			String lyric = q.getLyrics(test[0][0], test[0][1]);
+			String lyric = q.getLyrics(test[i][0], test[i][1]);
+			
 			lyric = lyric.replaceAll("[^A-Za-z0-9 ]", "");
 			String[] words = lyric.split(" ");
 			for(String word : words){
@@ -122,17 +122,30 @@ public class FinalCrossValidator {
 				localWordStats.put(word, (localFreq == null ? 1 : localFreq++));
 			}
 			
-			int[] customYearScore = new int[36];
-			int[] tfidfYearScore  = new int[36];
+			double[] customYearScore = new double[36];
+			double[] tfidfYearScore  = new double[36];
 			
 			//compute
 			Iterator<String> it = localWordStats.keySet().iterator();
 			while(it.hasNext()){
 				String s = it.next();
-				writer.write(s + "," + getTFIDF(s));
-				writer.newLine();
+				WordStats current = globalWordStats.get(s);
+				double bowScore = getTFIDF(s); //Bag of Words style word importance score
+				double custScore = h.getWeight(current.stdDev, current.freq);
+				
+				customYearScore[current.avgYear - 1980] += custScore;
+				tfidfYearScore[current.avgYear - 1980]  += bowScore;
+				
+				
 			}
-		//}
+			String song = test[i][0].replaceAll(",", "");
+			int year = h.extractYear(q.bestWeek(test[i][0], test[i][1]));
+			int bowPrediction = h.maxIdx(tfidfYearScore) + 1980;
+			int custPrediction = h.maxIdx(customYearScore) + 1980;
+			
+			writer.write(song +","+ year  +","+ bowPrediction  +","+ Math.abs(year-bowPrediction)  +","+ custPrediction  +","+ Math.abs(year- custPrediction));
+			writer.newLine();
+		}
 		writer.close();
 	}
 	
@@ -141,10 +154,11 @@ public class FinalCrossValidator {
 	//Tells how important a word is in a document (song) in the context of a corpus (top50 data)
 	//Increases proportionally to freq in song but offset by global usage in top50 data
 	public double getTFIDF(String word) throws Exception{
-		
-		double globalUse = globalWordStats.get(word).freq + 0.0;
-		double localUse  = localWordStats.get(word) + 0.0;
-		return localUse/globalUse;
+		//from wikipedia
+		double tf = 1 + Math.log(localWordStats.get(word) + 0.0);
+		double N = train.length + 0.0; // the number of songs being considered
+		double idf  = Math.log(1 + (N/globalWordStats.get(word).useage));//globalWordStats.get(word).freq + 0.0;
+		return tf*idf;
 	}
 
 	

@@ -41,9 +41,8 @@ public class Tests {
 			
 		//testTrainingFileCreation();
 		testTrainMethod();
-		System.out.println("Trained");
 		testTestMethod();
-		
+		//testTheWholeThing();
 		
 	}
 	//tests populateLyricWeeks() and populateProcessedWeeklyCounts();
@@ -133,6 +132,10 @@ public class Tests {
 	
 	public static void testTestMethod() throws Exception {
 		f.test(4);
+	}
+	
+	public static void testTheWholeThing() throws Exception {
+		f.crossValidate();
 	}
 
 }
