@@ -28,8 +28,10 @@ public class LyricManager {
 	public final Helpers helperFunctions;
 	public HashMap<String, ArrayList<String>> lyricWeeks = new HashMap<String, ArrayList<String>>();
 	public HashMap<String, ArrayList<weekCount>> processedLyricWeeks = new HashMap<String, ArrayList<weekCount>>();
+	public HashMap<String, Integer> songFreq = new HashMap<String, Integer>();
 	
 	public LyricManager(int folds) throws Exception{
+		this.folds = folds;
 		helperFunctions = new Helpers();
 		databaseQueries = new queries();
 		cv              = FinalCrossValidator.getInstance(folds);
@@ -41,7 +43,7 @@ public class LyricManager {
 		populateProcecessedWeeklyCount(); //do all the processing for the training permutation
 		
 		writer = new BufferedWriter(new FileWriter("Data/trainingData"+fold+".csv")); //we're ready to write
-		writer.write("Word,1st Year,Nth Year, Avg Year,Frequency,Standard Dev."); writer.newLine();
+		writer.write("Word,1st Year,Nth Year, Avg Year,Frequency,Standard Dev,Usage"); writer.newLine();
 		ArrayList<weekCount> freqList;
 //		System.out.println(processedLyricWeeks.containsKey("facts"));
 //		freqList = processedLyricWeeks.get("facts");
@@ -54,9 +56,10 @@ public class LyricManager {
 		while(it.hasNext()){
 			String word = (String) it.next();
 			freqList = processedLyricWeeks.get(word);
+			int songUsage = songFreq.get(word); //number of songs this word appears in
 			Object[] result = helperFunctions.getStatsFromWeekCount(freqList);
 			
-			writer.write(word + "," + result[0] + "," + result[1] + "," + result[2] + "," + result[3] + "," + result[4]);		
+			writer.write(word + "," + result[0] + "," + result[1] + "," + result[2] + "," + result[3] + "," + result[4] + "," + songUsage);		
 			writer.newLine();
 		}
 		
@@ -65,9 +68,10 @@ public class LyricManager {
 		
 	}
 	
-	public void makeFoldFiles(int folds) throws Exception{ //replaces writeDataFile
+	public void makeFoldFiles() throws Exception{ //replaces writeDataFile
 		for(int i = 0; i < folds; i++){
 			makeFoldFile(i);
+			System.out.println("Made training file " + i);
 		}
 		
 	}
@@ -80,11 +84,17 @@ public class LyricManager {
 	 * -------lyricWeeks will be empty after 
 	 */
 	public void populateLyricWeeks() throws ClassNotFoundException{
+		int f = 0;
 		for (int i = 0;i<songsAndArtists.length;i++){
 			String lyrics = databaseQueries.getLyrics(songsAndArtists[i][0], songsAndArtists[i][1]);
 			ArrayList<String> weeks = databaseQueries.allWeeks(songsAndArtists[i][0], songsAndArtists[i][1]);
+			
 			Set<String> uniqueLyrics = helperFunctions.findUniqueWords(lyrics);
+			
 			for (String aLyric : uniqueLyrics){
+				if(aLyric.equals("the")) System.out.println("found." + f++);
+				Integer frq = songFreq.get(aLyric);
+				songFreq.put(aLyric, (frq == null ? 1 : ++frq));
 				if (lyricWeeks.get(aLyric)==null){
 					lyricWeeks.put(aLyric, new ArrayList<String>());
 				}

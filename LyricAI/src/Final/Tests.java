@@ -1,5 +1,6 @@
 package Final;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Set;
@@ -38,7 +39,10 @@ public class Tests {
 		//testConvertWeeklyList(testListOfWeeks);
 		//testDataPopulation();
 			
-		lm.makeFoldFile(1);
+		//testTrainingFileCreation();
+		testTrainMethod();
+		System.out.println("Trained");
+		testTestMethod();
 		
 		
 	}
@@ -111,6 +115,24 @@ public class Tests {
 		System.out.println("trainN " + f.train[f.train.length -1][0]);
 		System.out.println("test0 " + f.test[0][0]);
 		System.out.println("testN " + f.test[f.test.length-1][0]);
+	}
+	
+	//PASSING
+	public static void testTrainingFileCreation() throws Exception{
+		lm.makeFoldFile(1);
+		System.out.println("Training file in Data/trainingData1.csv exists: " + new File("Data/trainingData1.csv").exists());
+	}
+	
+	public static void testTrainMethod() throws Exception{
+		f.train(4);
+		int highfrq = f.globalWordStats.get("the").freq;
+		int lowfrq = f.globalWordStats.get("champion").freq;
+		System.out.println("Word 'the' occurs: " + highfrq + " times, should be: " + 1033);
+		System.out.println("Word 'champion' occurs:" + lowfrq+ " times, should be: " + 1 );
+	}
+	
+	public static void testTestMethod() throws Exception {
+		f.test(4);
 	}
 
 }

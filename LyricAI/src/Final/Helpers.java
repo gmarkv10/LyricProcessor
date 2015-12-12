@@ -22,8 +22,9 @@ public class Helpers {
 					s.charAt(s.length() - 1) == '\'' ||
 					s.charAt(s.length() - 1) == '\n' ||
 					s.charAt(s.length() - 1) == '.'  ||
-					s.charAt(s.length() - 1) == '\"'  ||
-					s.charAt(s.length() - 1) == ')')
+					s.charAt(s.length() - 1) == '\"' ||
+					s.charAt(s.length() - 1) == ')'  ||
+					s.charAt(s.length() - 1) == '?'   )
 			{
 				s = s.substring(0, s.length() - 1);
 				s = processWord(s);
@@ -33,15 +34,7 @@ public class Helpers {
 			return s;
 		}
 	}
-	
-	//Weight method for a BagOfWords classifier
-	//Tells how important a word is in a document (song) in the context of a corpus (top50 data)
-	//Increases proportionally to freq in song but offset by global usage in top50 data
-	public int getTFIDF(String word) throws Exception{
-		int globalUse = FinalCrossValidator.getInstance(FOLDS).globalWordStats.get(word).freq;
-		int localUse = FinalCrossValidator.getInstance(FOLDS).localWordStats.get(word).freq;
-		return localUse/globalUse;
-	}
+
 	
 	public double getWeight(double stdDev, int freq){
 		if(stdDev < 3.29 && freq > 1){ //average is 3.29, if a word only appears in one songs, its useless to test on.
@@ -117,7 +110,7 @@ public class Helpers {
 		lyrics = lyrics.replaceAll("[^A-Za-z0-9 ]", "");
 		String[] words = lyrics.split(" ");
 		for (String word : words){
-			word = word.toLowerCase();
+			word = processWord(word);
 			uniques.add(word);
 		}
 		return uniques;
