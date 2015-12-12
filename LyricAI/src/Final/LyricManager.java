@@ -40,26 +40,28 @@ public class LyricManager {
 		populateLyricWeeks();
 		populateProcecessedWeeklyCount(); //do all the processing for the training permutation
 		
-		//writer = new BufferedWriter(new FileWriter("Data/trainingData"+fold+".csv")); //we're ready to write
-		//writer.write("Word,1st Year,Nth Year, Avg Year,Frequency,Standard Dev.");
+		writer = new BufferedWriter(new FileWriter("Data/trainingData"+fold+".csv")); //we're ready to write
+		writer.write("Word,1st Year,Nth Year, Avg Year,Frequency,Standard Dev."); writer.newLine();
 		ArrayList<weekCount> freqList;
-		System.out.println(processedLyricWeeks.containsKey("facts"));
-		freqList = processedLyricWeeks.get("facts");
-		Object[] result = helperFunctions.getStatsFromWeekCount(freqList);
-		for(int i = 0; i < result.length; i ++){
-			System.out.println(result[i]);
-		}
-		/*
+//		System.out.println(processedLyricWeeks.containsKey("facts"));
+//		freqList = processedLyricWeeks.get("facts");
+//		Object[] result = helperFunctions.getStatsFromWeekCount(freqList);
+//		for(int i = 0; i < result.length; i ++){
+//			System.out.println(result[i]);
+//		}
+		
 		Iterator it = processedLyricWeeks.keySet().iterator();
 		while(it.hasNext()){
 			String word = (String) it.next();
 			freqList = processedLyricWeeks.get(word);
-			helperFunctions.getStatsFromWeekCount(freqList);
+			Object[] result = helperFunctions.getStatsFromWeekCount(freqList);
 			
-			writer.write(word + ",");
-			
+			writer.write(word + "," + result[0] + "," + result[1] + "," + result[2] + "," + result[3] + "," + result[4]);		
+			writer.newLine();
 		}
-		*/
+		
+		writer.close();
+		
 		
 	}
 	

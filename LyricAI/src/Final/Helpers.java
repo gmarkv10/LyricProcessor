@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class Helpers {
 	
-
+	public static final int FOLDS = 10;
 	
 	public String processWord(String s){
 		
@@ -37,9 +37,10 @@ public class Helpers {
 	//Weight method for a BagOfWords classifier
 	//Tells how important a word is in a document (song) in the context of a corpus (top50 data)
 	//Increases proportionally to freq in song but offset by global usage in top50 data
-	public int getTFIDF(String word){
-		
-		return 0;
+	public int getTFIDF(String word) throws Exception{
+		int globalUse = FinalCrossValidator.getInstance(FOLDS).globalWordStats.get(word).freq;
+		int localUse = FinalCrossValidator.getInstance(FOLDS).localWordStats.get(word).freq;
+		return localUse/globalUse;
 	}
 	
 	public double getWeight(double stdDev, int freq){

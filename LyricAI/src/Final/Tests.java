@@ -38,7 +38,7 @@ public class Tests {
 		//testConvertWeeklyList(testListOfWeeks);
 		//testDataPopulation();
 			
-		lm.makeFoldFile(0);
+		lm.makeFoldFile(1);
 		
 		
 	}
