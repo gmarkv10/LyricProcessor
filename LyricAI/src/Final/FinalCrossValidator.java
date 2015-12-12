@@ -86,7 +86,7 @@ public class FinalCrossValidator {
 		
 		globalWordStats = new HashMap<String, WordStats>();
 		reader =  new BufferedReader(new FileReader("Data/trainingData"+fold+".csv"));
-		System.out.println(reader.readLine()); //waste the first line, it has the column labels
+		String waste = reader.readLine(); //waste the first line, it has the column labels
 		while((line = reader.readLine()) != null){
 			data = line.split(",");
 			min  = Integer.parseInt(data[1]);
@@ -105,9 +105,11 @@ public class FinalCrossValidator {
 
 	
 	public void test(int fold) throws Exception{
-		System.out.println("");
+		System.out.println("Testing fold: " + fold);
 		permuteTestTrain(fold);
-		writer.write("Song,Actual,TF-IDF,TF-IDF Error,Custom,Custom Err"); writer.newLine();
+		if(fold == 0){
+			writer.write("Song,Actual,TF-IDF,TF-IDF Error,Custom,Custom Err"); writer.newLine();
+		}
 		for(int i = 0; i < test.length; i ++){
 			localWordStats =  new HashMap<String, Integer>();
 			
@@ -130,6 +132,7 @@ public class FinalCrossValidator {
 			while(it.hasNext()){
 				String s = it.next();
 				WordStats current = globalWordStats.get(s);
+				if(current == null) continue; //the word is in the test data only, so we can't reason about it.
 				double bowScore = getTFIDF(s); //Bag of Words style word importance score
 				double custScore = h.getWeight(current.stdDev, current.freq);
 				
@@ -146,7 +149,7 @@ public class FinalCrossValidator {
 			writer.write(song +","+ year  +","+ bowPrediction  +","+ Math.abs(year-bowPrediction)  +","+ custPrediction  +","+ Math.abs(year- custPrediction));
 			writer.newLine();
 		}
-		writer.close();
+		
 	}
 	
 	
@@ -157,7 +160,7 @@ public class FinalCrossValidator {
 		//from wikipedia
 		double tf = 1 + Math.log(localWordStats.get(word) + 0.0);
 		double N = train.length + 0.0; // the number of songs being considered
-		double idf  = Math.log(1 + (N/globalWordStats.get(word).useage));//globalWordStats.get(word).freq + 0.0;
+		double idf  = Math.log(1 + (N/globalWordStats.get(word).useage));
 		return tf*idf;
 	}
 

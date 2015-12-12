@@ -40,9 +40,12 @@ public class Tests {
 		//testDataPopulation();
 			
 		//testTrainingFileCreation();
-		testTrainMethod();
-		testTestMethod();
-		//testTheWholeThing();
+		//testTrainMethod();
+		//testTestMethod();
+		System.out.println("Start");
+		testTheWholeThing();
+		System.out.println("End");
+		
 		
 	}
 	//tests populateLyricWeeks() and populateProcessedWeeklyCounts();
