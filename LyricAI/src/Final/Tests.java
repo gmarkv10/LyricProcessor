@@ -32,7 +32,8 @@ public class Tests {
 			for (String week : testArrayOfWeeks){testListOfWeeks.add(week);}
 		
 		
-		//testPermute();
+		testPermute();
+		//testPermute2();
 		
 		//testFindUniques("hey hey wow tony wow hey pie");
 		//testSongAndArtistInitialized();
@@ -42,9 +43,10 @@ public class Tests {
 		//testTrainingFileCreation();
 		//testTrainMethod();
 		//testTestMethod();
-		System.out.println("Start");
-		testTheWholeThing();
-		System.out.println("End");
+		
+		//System.out.println("Start");
+		//testTheWholeThing();
+		//System.out.println("End");
 		
 		
 	}
@@ -139,6 +141,15 @@ public class Tests {
 	
 	public static void testTheWholeThing() throws Exception {
 		f.crossValidate();
+	}
+	
+	public void testYearCountClass(){
+//		yearCount a = new yearCount("1980",1);
+//		yearCount b = new yearCount("1980",1);
+//		yearCount c = new yearCount("1981",2);
+//		yearCount d = new yearCount("1983",1);
+//		yearCount e = new yearCount("1984",3);
+		
 	}
 
 }

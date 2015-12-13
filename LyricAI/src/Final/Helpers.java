@@ -10,29 +10,8 @@ public class Helpers {
 	public static final int FOLDS = 10;
 	
 	public String processWord(String s){
-		
-		try{
-
-			if(s.charAt(0) == '\"' || s.charAt(0) == '('){
-				s = s.substring(1);
-				s = processWord(s);
-			}
-
-			if(s.charAt(s.length() - 1) == ','  ||
-					s.charAt(s.length() - 1) == '\'' ||
-					s.charAt(s.length() - 1) == '\n' ||
-					s.charAt(s.length() - 1) == '.'  ||
-					s.charAt(s.length() - 1) == '\"' ||
-					s.charAt(s.length() - 1) == ')'  ||
-					s.charAt(s.length() - 1) == '?'   )
-			{
-				s = s.substring(0, s.length() - 1);
-				s = processWord(s);
-			}
-			return s.toLowerCase();
-		}catch(StringIndexOutOfBoundsException e){
-			return s;
-		}
+		s = s.replaceAll("[^A-Za-z0-9 ]", "");
+		return s.toLowerCase();
 	}
 
 	
@@ -60,6 +39,12 @@ public class Helpers {
 		int minYear   = 2017;
 		int maxYear   = 1979;
 		int avgYear   = 0;
+		int topYear1  = 0;
+		int topYear2  = 0;
+		int topYear3  = 0;
+		int topYear4 =  0;
+		int topYear5  = 0;
+		
 		int freq      = 0;
 		double stdDev = -1.0; 
 		ArrayList<Integer> years =  new ArrayList<Integer>();
@@ -70,6 +55,9 @@ public class Helpers {
 		 * [2]:avgYear
 		 * [3]:frequency
 		 * [4]:standard deviation
+		 * [5]:top year
+		 * [6]:2nd top year
+		 * [7]:3rd top year
 		 */
 		for(weekCount data: list){
 			for(int i = 0; i < data.count; i ++){
@@ -86,6 +74,13 @@ public class Helpers {
 		return new Object[]{minYear, maxYear, avgYear, freq, stdDev};
 	}
 	
+	public int[] top5Years(ArrayList<Integer> yrs){
+		int[] yrfrq = new int[36];
+		for(Integer y: yrs){
+		}
+		return null;
+	}
+	
 	public int maxIdx(double[]  years){
 		int max = 0;
 		double maxVal = -1.0;
@@ -99,7 +94,7 @@ public class Helpers {
 	}
 	
 	
-	int extractYear(String s){
+	public static int extractYear(String s){
 		String y = s.substring(0,4);
 		return Integer.parseInt(y);
 	}
@@ -107,7 +102,7 @@ public class Helpers {
 	public Set<String> findUniqueWords(String lyrics){
 		Set<String> uniques = new HashSet<String>();
 		//removes non-alphanumeric characters, judgement call
-		lyrics = lyrics.replaceAll("[^A-Za-z0-9 ]", "");
+		
 		String[] words = lyrics.split(" ");
 		for (String word : words){
 			word = processWord(word);

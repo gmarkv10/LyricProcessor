@@ -108,18 +108,17 @@ public class FinalCrossValidator {
 		System.out.println("Testing fold: " + fold);
 		permuteTestTrain(fold);
 		if(fold == 0){
-			writer.write("Song,Actual,TF-IDF,TF-IDF Error,Custom,Custom Err"); writer.newLine();
+			writer.write("Song,Actual,TF-IDF,TF-IDF Error,Custom,Custom Err, ,1980"); writer.newLine();
 		}
 		for(int i = 0; i < test.length; i ++){
 			int year = h.extractYear(q.bestWeek(test[i][0], test[i][1]));
-			if(year < 1997) continue;
+			//if(year < 1990 ) continue;
 			localWordStats =  new HashMap<String, Integer>();
 			
 			//find unique words and their frequencies
 			String lyric = q.getLyrics(test[i][0], test[i][1]);
 			
 			
-			lyric = lyric.replaceAll("[^A-Za-z0-9 ]", "");
 			String[] words = lyric.split(" ");
 			for(String word : words){
 				word = h.processWord(word);
@@ -136,6 +135,7 @@ public class FinalCrossValidator {
 				String s = it.next();
 				WordStats current = globalWordStats.get(s);
 				if(current == null) continue; //the word is in the test data only, so we can't reason about it.
+				
 				double bowScore = getTFIDF(s); //Bag of Words style word importance score
 				double custScore = h.getWeight(current.stdDev, current.freq);
 				
@@ -149,7 +149,10 @@ public class FinalCrossValidator {
 			int bowPrediction = h.maxIdx(tfidfYearScore) + 1980;
 			int custPrediction = h.maxIdx(customYearScore) + 1980;
 			
-			writer.write(song +","+ year  +","+ bowPrediction  +","+ Math.abs(year-bowPrediction)  +","+ custPrediction  +","+ Math.abs(year- custPrediction));
+			writer.write(song +","+ year  +","+ bowPrediction  +","+ Math.abs(year-bowPrediction)  +","+ custPrediction  +","+ Math.abs(year- custPrediction) + ", ,");
+			for(int j =0; j < tfidfYearScore.length; j++){
+				writer.write(tfidfYearScore[j] + ",");
+			}
 			writer.newLine();
 		}
 		
@@ -165,6 +168,7 @@ public class FinalCrossValidator {
 		double N = train.length + 0.0; // the number of songs being considered
 		double idf  = Math.log(1 + (N/globalWordStats.get(word).useage));
 		return tf*idf;
+
 	}
 
 	
