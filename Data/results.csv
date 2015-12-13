@@ -1,101 +1,3771 @@
 Song,Actual,TF-IDF,TF-IDF Error,Custom,Custom Err
-3,2009,1999,10,2000,9
-7,1993,1999,6,1994,1
-17,1984,1999,15,1983,1
-19,1985,1998,13,2003,18
-22,2013,1998,15,2004,9
-23,2014,2000,14,2000,14
-23,2013,2000,13,2000,13
-23,2013,2000,13,2000,13
-23,2013,2000,13,2000,13
-23,2014,2000,14,2000,14
-99,1980,1998,18,1989,9
-679,2015,2015,0,2015,0
-808,1999,1999,0,1999,0
-911,2000,2000,0,2000,0
-1979,1996,1996,0,1996,0
-1985,2004,2004,0,2004,0
-1999,1983,1983,0,2011,28
-#1,2001,2006,5,1980,21
-#Beautiful,2013,2006,7,1980,33
-#SELFIE,2014,2014,0,2014,0
+3,2009,1998,11,1980,29
+22,2013,1998,15,2010,3
+23,2014,1998,16,1993,21
+23,2013,1998,15,1993,20
+23,2013,1998,15,1993,20
+23,2013,1998,15,1993,20
+23,2014,1998,16,1993,21
+679,2015,1998,17,2015,0
+808,1999,1998,1,1991,8
+911,2000,1998,2,2002,2
+1985,2004,1999,5,2002,2
+#1,2001,1998,3,1980,21
+#Beautiful,2013,1998,15,1980,33
+#SELFIE,2014,1998,16,1988,26
 #thatPOWER,2013,2004,9,1980,33
-' 03 Bonnie & Clyde,2002,2002,0,2002,0
-' 65 Love Affair,1982,1982,0,1982,0
-' Til My Baby Comes Home,1985,1985,0,1985,0
-' Til You Do Me Right,1995,1995,0,1995,0
-(Baby Tell Me) Can You Dance,1987,1987,0,2000,13
-(Can't Live Without Your) Love And Affection,1990,1990,0,1990,0
-(Everything I Do) I Do It For You,1991,1991,0,1991,0
-(Forever) Live And Die,1986,1995,9,1986,0
-(God Must Have Spent) A Little More Time On You,1999,1998,1,1998,1
-(Hot S**t) Country Grammar,2000,2000,0,2000,0
-(How To Be A) Millionaire,1986,1986,0,1986,0
-(I Just) Died In Your Arms,1987,1987,0,1987,0
-(I Know I Got) Skillz,1993,1993,0,1993,0
-(I've Had) The Time Of My Life,1987,1988,1,1987,0
-(I've Had) The Time Of My Life,1987,1988,1,1987,0
-(I've Had) The Time Of My Life,2010,1988,22,2002,8
-(If There Was) Any Other Way,1991,1999,8,1991,0
-(It's Just) The Way That You Love Me,1989,1989,0,1989,0
-(It) Feels So Good,2011,2011,0,2012,1
-(Just Like) Starting Over,1980,1980,0,1980,0
-(Keep Feeling) Fascination,1983,1983,0,1983,0
-(Kissed You) Good Night,2012,2012,0,2012,0
-(Lay Your Head On My) Pillow,1994,1994,0,1994,0
-(Meet) The Flintstones,1994,1994,0,1994,0
-(Oh) Pretty Woman,1982,1982,0,1982,0
-(Pride) In The Name Of Love,1984,1984,0,1984,0
-(She's) Sexy + 17,1983,1983,0,1983,0
-(She's) Some Kind Of Wonderful,1994,1994,0,1994,0
-(Sittin' On) The Dock Of The Bay,1988,1988,0,1988,0
-(There's Gotta Be) More To Life,2003,2003,0,2003,0
-(What) In The Name Of Love,1984,2000,16,2000,16
-(When You Gonna) Give It Up To Me,2006,2006,0,2006,0
-(You Drive Me) Crazy,1999,1999,0,1999,0
-(You Gotta) Fight For Your Right (To Party),1987,1987,0,1987,0
-(You Want To) Make A Memory,2007,2007,0,2007,0
-(You're My One And Only) True Love,1989,1989,0,1989,0
-(You're So Square) Baby I Don't Care,1982,1982,0,1982,0
-*** Flawless,2014,2014,0,2000,14
-... Baby One More Time,1999,1998,1,1998,1
-0 To 100/The Catch Up,2014,2014,0,2014,0
-1 Thing,2005,2005,0,2005,0
-1 2 Step,2005,2004,1,2004,1
-1234,2007,2007,0,2007,0
-1234,2009,2009,0,2009,0
-1234 (Sumpin' New),1996,1996,0,1996,0
-1-2-3,1988,1988,0,1988,0
-10-9-8,1984,1984,0,1984,0
-100 Years,2004,2004,0,2004,0
-100% Pure Love,1994,1994,0,1994,0
-15 Minutes,1999,1999,0,1999,0
-18 And Life,1989,1989,0,1989,0
-19 Somethin',2003,2002,1,2002,1
-19 You + Me,2014,2014,0,2011,3
-1st Of Tha Month,1995,1995,0,1995,0
-2 Become 1,1997,1997,0,1997,0
-2 Legit 2 Quit,1992,1991,1,1991,1
-2 On,2014,2014,0,2014,0
-2 Reasons,2012,2012,0,2012,0
-2 Step,2007,2007,0,2007,0
-20/20,1985,2004,19,1980,5
-2012 (It Ain't The End),2010,2010,0,2010,0
-21 Guns,2009,2009,0,2009,0
-21 Questions,2003,2003,0,2003,0
-24/7,1989,2004,15,1980,9
+' 03 Bonnie & Clyde,2002,1998,4,2006,4
+(God Must Have Spent) A Little More Time On You,1999,1998,1,1999,0
+(Hot S**t) Country Grammar,2000,2002,2,2002,2
+(I've Had) The Time Of My Life,2010,1998,12,2010,0
+(It) Feels So Good,2011,1998,13,1989,22
+(Kissed You) Good Night,2012,1998,14,1980,32
+(There's Gotta Be) More To Life,2003,1998,5,1980,23
+(When You Gonna) Give It Up To Me,2006,1998,8,2004,2
+(You Drive Me) Crazy,1999,1998,1,1980,19
+(You Want To) Make A Memory,2007,1998,9,1980,27
+*** Flawless,2014,1998,16,2002,12
+... Baby One More Time,1999,1998,1,1980,19
+0 To 100/The Catch Up,2014,1998,16,2013,1
+1 Thing,2005,1998,7,1996,9
+1 2 Step,2005,1999,6,2005,0
+1234,2007,1998,9,1991,16
+1234,2009,1998,11,1980,29
+100 Years,2004,1998,6,1999,5
+15 Minutes,1999,1998,1,1997,2
+19 Somethin',2003,2000,3,2010,7
+19 You + Me,2014,1998,16,2000,14
+2 Become 1,1997,1997,0,1980,17
+2 On,2014,2000,14,2000,14
+2 Reasons,2012,1998,14,2000,12
+2 Step,2007,1998,9,2014,7
+2012 (It Ain't The End),2010,1998,12,1988,22
+21 Guns,2009,1998,11,1980,29
+21 Questions,2003,1998,5,1996,7
 24/7,1999,2004,5,1980,19
-25 Or 6 To 4,1986,1986,0,2012,26
-3 A.M. Eternal,1991,1991,0,1991,0
-32 Flavors,1998,1998,0,1998,0
-3am,2009,2009,0,2012,3
-4 Ever,2003,2003,0,2003,0
-4 Minutes,2008,2008,0,2008,0
-4 Seasons Of Loneliness,1997,1997,0,1997,0
-456,1999,1999,0,1999,0
-5 Miles To Empty,1997,1997,0,1997,0
-5 O'Clock,1996,1996,0,1996,0
-5 O'Clock,2011,2011,0,2011,0
-5-1-5-0,2012,2012,0,2012,0
-50 Ways To Say Goodbye,2012,2012,0,2012,0
-6 Foot 7 Foot,2011,2011,0,2011,0
+32 Flavors,1998,1998,0,2002,4
+3am,2009,1998,11,2004,5
+4 Ever,2003,1998,5,1995,8
+4 Minutes,2008,1998,10,1980,28
+4 Seasons Of Loneliness,1997,1998,1,1989,8
+456,1999,1998,1,2004,5
+5 Miles To Empty,1997,1997,0,1980,17
+5 O'Clock,2011,1998,13,2011,0
+5-1-5-0,2012,1999,13,1992,20
+50 Ways To Say Goodbye,2012,1998,14,2004,8
+6 Foot 7 Foot,2011,1998,13,2012,1
+6 Underground,1997,1998,1,1994,3
+7 Days,2002,1998,4,2014,12
+7 Things,2008,1998,10,1985,23
+7 Things,2008,1998,10,1985,23
+7/11,2014,1998,16,2002,12
+8th World Wonder,2004,1998,6,1980,24
+99 Problems,2004,1999,5,2006,2
+A Bay Bay,2007,2000,7,2005,2
+A Little Bit Longer,2008,1998,10,1980,28
+A Little Bit Stronger,2011,1998,13,1980,31
+A Little Less Conversation,2002,1997,5,1982,20
+A Little More Country Than That,2010,1998,12,1980,30
+A Little Past Little Rock,1998,1998,0,2002,4
+A Long Walk,2001,1998,3,1986,15
+A Milli,2008,1998,10,2008,0
+A Moment Like This,2002,1998,4,1980,22
+A New Day Has Come,2002,1997,5,1980,22
+A Night To Remember,1999,1998,1,1993,6
+A Public Affair,2006,1998,8,2008,2
+A Puro Dolor (Purest Of Pain),2000,2001,1,2003,3
+A Real Fine Place To Start,2005,1998,7,2004,1
+A Rose Is Still A Rose,1998,1998,0,2006,8
+A Sky Full Of Stars,2014,1998,16,1980,34
+A Song For Mama,1998,1998,0,1980,18
+A Thousand Miles,2002,1998,4,1980,22
+A Thousand Years,2012,1998,14,1980,32
+A Woman Like You,2012,1998,14,1998,14
+A Woman's Worth,2002,1998,4,1991,11
+A Year Without Rain,2010,1998,12,1990,20
+AM To PM,2001,1999,2,2004,3
+ATLiens,1997,1998,1,2002,5
+Aaron's Party (Come Get It),2000,1998,2,2006,6
+About The Money,2014,1998,16,2010,4
+About Us,2006,1998,8,2009,3
+About You Now,2009,1998,11,1980,29
+Absolutely (Story Of A Girl),2000,1997,3,1980,20
+Accidentally In Love,2004,1998,6,1986,18
+According To You,2010,1998,12,1980,30
+Across The Universe,2005,1997,8,2009,4
+Act A Fool,2003,1998,5,2004,1
+Addicted,2008,1998,10,1980,28
+Addicted,2003,1998,5,1980,23
+Addictive,2002,1998,4,1989,13
+Adia,1998,1998,0,1996,2
+Adore You,2014,1997,17,1980,34
+Adorn,2012,1998,14,2000,12
+Afire Love,2014,1998,16,1983,31
+After Party,2001,1998,3,1980,21
+Again,2005,1998,7,2010,5
+Again,2015,1998,17,2015,0
+Again,2001,1998,3,1980,21
+Ain't Back Yet,2010,1998,12,2003,7
+Ain't I,2009,1998,11,1990,19
+Ain't It Fun,2014,1998,16,1996,18
+Ain't It Funny,2002,1998,4,2002,0
+Ain't No Other Man,2006,1998,8,1980,26
+Ain't No Sunshine,2009,1999,10,1980,29
+Ain't Nobody,1997,1998,1,1995,2
+Ain't Nothing 'Bout You,2001,1998,3,1980,21
+Ain't Worth The Whiskey,2015,1998,17,1980,35
+Air Force Ones,2003,1998,5,2003,0
+Airplanes,2010,1998,12,1994,16
+Alcohol,2005,1999,6,1980,25
+Alejandro,2010,1997,13,2001,9
+Alive,2013,1998,15,1980,33
+Alive,2002,1998,4,1980,22
+All About That Bass,2014,1998,16,1980,34
+All About Tonight,2010,1998,12,2001,9
+All Around Me,2008,1998,10,1980,28
+All Around The World,2012,1998,14,2007,5
+All Bad,2013,1998,15,2007,6
+All By Myself,1997,1998,1,1991,6
+All Cried Out,1997,1998,1,2005,8
+All Day,2015,1998,17,2011,4
+All Eyes On You,2015,1998,17,2003,12
+All Falls Down,2004,1998,6,2001,3
+All For You,2001,1998,3,2006,5
+All For You,1997,1998,1,1980,17
+All Gold Everything,2013,1999,14,2012,1
+All I Do,1998,1999,1,1986,12
+All I Do Is Win,2010,1998,12,2005,5
+All I Have,2003,1998,5,2007,4
+All I Have To Give,1999,1998,1,1980,19
+All I Want,1997,1998,1,1980,17
+All I Want For Christmas Is You,2013,1998,15,1985,28
+All I Want To Do,2008,1998,10,1980,28
+All Jacked Up,2005,1998,7,2015,10
+All Me,2013,1998,15,2010,3
+All My Life,2002,1991,11,1980,22
+All My Life,1998,1998,0,1980,18
+All My Love,1998,1998,0,2012,14
+All Night Long,1999,1998,1,2005,6
+All Of Me,2014,1999,15,1999,15
+All Of The Lights,2011,1998,13,2006,5
+All Or Nothing,2001,1998,3,1991,10
+All Star,1999,1998,1,2004,5
+All Summer Long,2008,1998,10,2008,0
+All Summer Long,2008,1998,10,2008,0
+All Summer Long,2008,1998,10,2008,0
+All That I Can Say,1999,1998,1,1998,1
+All That Matters,2013,1998,15,1980,33
+All The Above,2009,1998,11,2008,1
+All The Places (I Will Kiss You),1998,1998,0,2005,7
+All The Right Moves,2010,1998,12,1980,30
+All The Small Things,2000,1998,2,1980,20
+All The Things She Said,2003,1998,5,1980,23
+All The Way Turnt Up,2010,1998,12,2013,3
+All You Wanted,2002,1998,4,2003,1
+All Your Life,2011,1998,13,2007,4
+All-American Girl,2008,1998,10,2011,3
+Almost,2005,1998,7,2000,5
+Almost Doesn't Count,1999,1998,1,1980,19
+Alone,1997,1998,1,1980,17
+Alone With You,2012,1998,14,1980,32
+Already Gone,2009,1998,11,1980,29
+Already Gone,2008,1998,10,2012,4
+Alright,2009,1998,11,2007,2
+Always On Time,2002,1998,4,1980,22
+Always On Your Side,2006,1998,8,2003,3
+Am I Dreaming,1998,1998,0,1995,3
+Am I The Only One,2011,1998,13,2002,9
+Am I Wrong,2014,1998,16,1980,34
+Amazed,2000,1998,2,1980,20
+American Baby,2005,1998,7,1980,25
+American Boy,2008,1998,10,2006,2
+American Child,2002,1998,4,1998,4
+American Honey,2010,1997,13,1980,30
+American Kids,2014,1998,16,1995,19
+American Life,2003,1998,5,2008,5
+American Pie,2000,1998,2,2015,15
+American Ride,2009,1998,11,2005,4
+American Soldier,2004,1998,6,1983,21
+American Woman,1999,1998,1,1980,19
+Amnesia,2014,1998,16,1980,34
+Anaconda,2014,1998,16,1998,16
+Angel,2003,1998,5,1980,23
+Angel,1999,1998,1,1980,19
+Angel,2001,1998,3,1999,2
+Angel Eyes,2012,1999,13,1980,32
+Angel Of Mine,1999,1998,1,2012,13
+Angry All The Time,2001,1998,3,1980,21
+Animal,2010,1998,12,1980,30
+Animals,2014,1998,16,2002,12
+Animals,2014,2000,14,1980,34
+Anonymous,2007,1998,9,1990,17
+Another Dumb Blonde,2000,1998,2,1985,15
+Antidote,2015,2000,15,1998,17
+Anyone Else,1999,1998,1,2004,5
+Anything,2002,1998,4,2006,4
+Anything But Down,1999,1998,1,2001,2
+Anything But Mine,2005,1998,7,1982,23
+Anything Could Happen,2012,1998,14,1984,28
+Anything Like Me,2010,1998,12,2005,5
+Anyway,2007,1998,9,1980,27
+Anywhere,1999,1998,1,2006,7
+Anywhere With You,2013,1998,15,2012,1
+Apologize,2007,1998,9,1980,27
+Applause,2013,1998,15,1995,18
+Are U Still Down,1998,1998,0,1997,1
+Are You Gonna Be My Girl,2004,1998,6,1980,24
+Are You Gonna Kiss Me Or Not,2011,1998,13,1980,31
+Are You Happy Now?,2003,1998,5,1980,23
+Are You Jimmy Ray?,1998,1998,0,1980,18
+Are You That Somebody?,1998,1998,0,1999,1
+Area Codes,2001,1998,3,1998,3
+Around The World (La La La La La),2001,1998,3,1980,21
+As Good As I Once Was,2005,1998,7,2000,5
+As Long As You Love Me,2012,1998,14,1999,13
+As She's Walking Away,2010,1998,12,1991,19
+Ashes By Now,2001,1998,3,1980,21
+Ass Back Home,2012,1998,14,2007,5
+Ass Back Home,2012,1998,14,2007,5
+Aston Martin Music,2011,1998,13,2011,0
+At The Beginning,1998,1997,1,1980,18
+Auld Lang Syne,2000,1998,2,2011,11
+Austin,2001,1998,3,1983,18
+Automatic,2014,1998,16,1994,20
+Ava Adore,1998,1998,0,1980,18
+Avenues,1997,1998,1,1991,6
+Avenues,1997,1998,1,1991,6
+Aw Naw,2013,1998,15,2007,6
+Awful Beautiful Life,2005,1998,7,1991,14
+Axel F,2005,2002,3,1991,14
+Ayo,2015,1999,16,2007,8
+Ayo Technology,2007,1998,9,1982,25
+B**** Better Have My Money,2015,1999,16,2011,4
+B.Y.O.B.,2005,1998,7,2005,0
+Baby,2002,1998,4,1980,22
+Baby,2011,1998,13,2010,1
+Baby,2010,1998,12,1980,30
+Baby Boy,2003,1998,5,1990,13
+Baby By Me,2009,2000,9,2001,8
+Baby Don't Go,2007,1998,9,1998,9
+Baby Don't Lie,2014,1998,16,1980,34
+Baby Girl,2005,1998,7,1983,22
+Baby I,2013,1998,15,1980,33
+Baby I'm Back,2005,1998,7,1998,7
+Baby It's You,2004,1998,6,2004,0
+Baby Come Over (This Is Our Night),2001,1998,3,1980,21
+Back 2 Good,1999,1998,1,1980,19
+Back 2 Good,1999,1998,1,1980,19
+Back At One,2000,1998,2,1980,20
+Back At One,2000,1998,2,1980,20
+Back Here,2000,1998,2,1980,20
+Back In Time,2012,2001,11,1991,21
+Back That Thang Up,1999,2000,1,2007,8
+Back Then,2005,1999,6,2008,3
+Back To Back,2015,1999,16,2013,2
+Back To December,2010,1998,12,1982,28
+Back When,2004,1998,6,1993,11
+Backseat,2011,1998,13,2011,0
+Backyard Boogie,1997,1998,1,1993,4
+Bad,2013,1998,15,2008,5
+Bad,2013,1998,15,2008,5
+Bad Blood,2015,1998,17,1989,26
+Bad Boy For Life,2001,1998,3,2001,0
+Bad Boy This Bad Boy That,2003,1998,5,2005,2
+Bad Day,2006,1998,8,1980,26
+Bad Romance,2010,1999,11,2014,4
+Badd,2005,1998,7,2005,0
+Bag Lady,2000,1998,2,1994,6
+Baggage Claim,2011,1998,13,2011,0
+Bailamos,1999,1998,1,2004,5
+Bailando,2014,2001,13,2004,10
+Ball,2012,2001,11,2012,0
+Balla Baby,2004,1999,5,2003,1
+Bandz A Make Her Dance,2012,2000,12,2008,4
+Bang Bang,2014,1998,16,2011,3
+Bang Bang Pow Pow,2011,2002,9,2008,3
+Barbie Girl,1997,1998,1,1988,9
+Barefoot Blue Jean Night,2011,1998,13,2010,1
+Barely Breathing,1997,1998,1,1995,2
+Barrel Of A Gun,1997,2003,6,1980,17
+Bartender,2014,1998,16,1980,34
+Bartender,2007,1998,9,2008,1
+Battlefield,2009,1998,11,1980,29
+Be Like That,2001,1998,3,1980,21
+Be On You,2009,1998,11,2007,2
+Be Real,2015,1998,17,2008,7
+Be With You,2000,1998,2,1980,20
+Be Without You,2006,1998,8,2006,0
+Be Yourself,2005,1998,7,2010,5
+Beachin',2014,1998,16,2008,6
+Beamer Benz Or Bentley,2010,1998,12,2005,5
+Beat It,2008,1998,10,1980,28
+Beat Of The Music,2014,1998,16,1980,34
+Beat This Summer,2013,1998,15,1982,31
+Beautiful,2008,1998,10,1989,19
+Beautiful,2003,1998,5,1980,23
+Beautiful,2009,1998,11,2013,4
+Beautiful,2003,1998,5,2001,2
+Beautiful Day,2010,1998,12,2002,8
+Beautiful Day,2001,1998,3,2002,1
+Beautiful Girls,2007,1996,11,1980,27
+Beautiful Liar,2007,1998,9,2004,3
+Beautiful Mess,2002,1998,4,1980,22
+Beautiful People,2011,1998,13,1980,31
+Beautiful Soul,2005,1998,7,1980,25
+Beautiful Stranger,1999,1998,1,2000,1
+Beauty And A Beat,2013,1998,15,2010,3
+Because I Got High,2001,1998,3,2012,11
+Because Of You,1998,1997,1,1980,18
+Because Of You,2005,1998,7,1980,25
+Because Of You,2007,1998,9,1980,27
+Because Of You,2007,1998,9,1980,27
+Bed,2007,1998,9,2001,6
+BedRock,2010,1998,12,2004,6
+BedRock,2010,1998,12,2004,6
+Been Around The World,1998,1998,0,1998,0
+Been Around The World,1998,1998,0,1998,0
+Been Around The World,1998,1998,0,1998,0
+Been There,2000,1998,2,1980,20
+Beep,2006,1999,7,1980,26
+Beer For My Horses,2003,1998,5,1998,5
+Beez In The Trap,2012,2001,11,2012,0
+Before He Cheats,2007,1998,9,2010,3
+Beg For It,2015,1999,16,2014,1
+Begin Again,2012,1998,14,1980,32
+Behind These Hazel Eyes,2005,1998,7,2003,2
+Believe,1999,1998,1,1980,19
+Believe,2015,1998,17,1980,35
+Believe Me,2014,1998,16,2011,3
+Belly Dancer (Bananza),2005,1998,7,2006,1
+Beneath Your Beautiful,2013,1998,15,1980,33
+Bent,2000,1998,2,1984,16
+Berzerk,2013,1998,15,2009,4
+Best Day Of My Life,2014,1998,16,1986,28
+Best Days Of Your Life,2009,1998,11,2003,6
+Best Friend,2006,1998,8,2009,3
+Best I Ever Had,2009,1998,11,2011,2
+Best Love Song,2011,1998,13,2012,1
+Best Mistake,2014,1998,16,2000,14
+Best Of Intentions,2000,1997,3,1980,20
+Best Of Me,2000,1998,2,2008,8
+Best Of You,2005,1998,7,1980,25
+Best Song Ever,2013,1998,15,2013,0
+Best Thing I Never Had,2011,1998,13,2014,3
+Bet On It,2007,1998,9,1980,27
+Better As A Memory,2008,1998,10,2015,7
+Better Days,2005,1998,7,1980,25
+Better Days (And The Bottom Drops Out),1999,1998,1,1995,4
+Better Dig Two,2013,1998,15,1996,17
+Better In Time,2008,1996,12,1980,28
+Better Life,2005,1998,7,1980,25
+Better Off Alone,2000,1996,4,1980,20
+Better Than Me,2007,1998,9,1980,27
+Better With The Lights Off,2011,1998,13,2008,3
+Between Me And You,2000,1998,2,1980,20
+Beverly Hills,2005,1998,7,2007,2
+Beware,2013,1998,15,2015,2
+Beware Of The Boys (Mundian To Bach Ke),2003,2001,2,2009,6
+Big Chips,2004,1998,6,2006,2
+Big Daddy,1997,1998,1,2006,9
+Big Deal,2000,1998,2,1980,20
+Big Girls Don't Cry,2007,1998,9,1980,27
+Big Green Tractor,2009,1998,11,2006,3
+Big Pimpin',2000,2000,0,1996,4
+Big Star,2003,1998,5,1998,5
+Big Things Poppin' (Do It),2007,1998,9,2005,2
+Big Yellow Taxi,2003,1991,12,1980,23
+Bigger Than My Body,2003,1998,5,1980,23
+Billie Jean,2008,1991,17,1980,28
+Billionaire,2010,1998,12,2007,3
+Billionaire,2010,1998,12,2007,3
+Bills Bills Bills,1999,1998,1,2005,6
+Bills Bills Bills,2011,1998,13,2005,6
+Birthday,2014,1998,16,2002,12
+Birthday Cake,2012,1998,14,2012,0
+Birthday Sex,2009,1998,11,2010,1
+Birthday Song,2012,1999,13,2008,4
+Bitch,1997,1998,1,1986,11
+Bitch Don't Kill My Vibe,2013,1998,15,2012,1
+Bitter Sweet Symphony,1998,1999,1,1980,18
+Bizounce,2001,2001,0,2001,0
+Black And Yellow,2011,2000,11,2007,4
+Black Balloon,1999,1998,1,1980,19
+Black Horse & The Cherry Tree,2006,1998,8,2012,6
+Black Ice (Sky High),1998,1998,0,2006,8
+Black Widow,2014,1998,16,1985,29
+Blackbird,2011,1997,14,2010,1
+Blackout,2012,1998,14,2012,0
+Blackout,2012,1998,14,2010,2
+Blah Blah Blah,2010,1998,12,2009,1
+Blame,2014,1998,16,1980,34
+Blame It,2009,1998,11,2008,1
+Blank Space,2014,1998,16,1990,24
+Bleeding Love,2008,1998,10,1985,23
+Bless The Broken Road,2005,1998,7,1980,25
+Blessed,2002,1998,4,2000,2
+Blessings,2015,1998,17,2013,2
+Bling Bling,1999,2002,3,2012,13
+Blood On The Dance Floor,1997,1999,2,1984,13
+Blow,2011,1998,13,1990,21
+Blow Me (One Last Kiss),2012,1998,14,2002,10
+Blowin' Me Up (With Her Love),2003,1998,5,1980,23
+Blown Away,2012,1998,14,1980,32
+Blue (Da Ba Dee),2000,1998,2,1980,20
+Blue Orchid,2005,1991,14,1980,25
+Blunt Blowin,2011,2011,0,2006,5
+Blurred Lines,2013,1998,15,2013,0
+Blurry,2002,1998,4,2004,2
+Bo$$,2014,2001,13,2010,4
+Body Bumpin Yippie-Yi-Yo,1998,1998,0,1998,0
+Body Bumpin' Yippie-Yi-Yo,1998,1998,0,1998,0
+Body Language,2009,2009,0,2009,0
+Body On Me,2008,1998,10,2005,3
+Body Party,2013,1998,15,1980,33
+Boom Boom Pow,2009,2009,0,2009,0
+Boom Clap,2014,1998,16,2014,0
+Boondocks,2006,1998,8,2000,6
+Booty,2014,1998,16,2014,0
+Booty Wurk (One Cheek At A Time),2011,1999,12,2004,7
+Bootylicious,2001,1998,3,2001,0
+Born This Way,2011,2011,0,2014,3
+Born This Way,2011,1998,13,1980,31
+Born To Fly,2000,1996,4,1989,11
+Bossy,2006,2000,6,2006,0
+Boston,2007,1998,9,1991,16
+Both Of Us,2012,1998,14,1999,13
+Bottoms Up,2014,1998,16,2014,0
+Bottoms Up,2010,1999,11,2011,1
+Boulevard Of Broken Dreams,2005,1997,8,2004,1
+Bounce With Me,2000,1998,2,1996,4
+Bouncin' Back (Bumpin' Me Against the Wall),2002,1998,4,2001,1
+Bound 2,2013,2013,0,2004,9
+Bow Chicka Wow Wow,2011,1998,13,2011,0
+Bow Wow (That's My Name),2001,2000,1,2000,1
+Boyfriend,2005,1997,8,1997,8
+Boyfriend,2012,1998,14,2013,1
+Boyfriend #2,2009,1998,11,2008,1
+Boys 'Round Here,2013,1998,15,2010,3
+Boys 'Round Here,2013,1998,15,2010,3
+Boyz-N-The-Hood,2015,1999,16,2012,3
+Brand New Girlfriend,2006,1998,8,2006,0
+Brave,2014,1998,16,2013,1
+Break Free,2014,1998,16,1980,34
+Break It Off,2007,2007,0,2007,0
+Break The Ice,2008,1998,10,1989,19
+Break Up,2009,1998,11,2009,0
+Break Up In A Small Town,2015,1998,17,1987,28
+Break Up With Him,2015,1998,17,2012,3
+Break Ya Neck,2002,2001,1,2001,1
+Break Your Heart,2010,1998,12,2010,0
+Breakaway,2004,1998,6,2004,0
+Breakeven,2010,1998,12,2010,0
+Breaking All The Rules,1997,1998,1,1980,17
+Breaking Free,2006,1998,8,2010,4
+Breaking The Habit,2004,1998,6,2004,0
+Breathe,2004,2004,0,2004,0
+Breathe,2000,1998,2,1980,20
+Breathe,2003,1998,5,1980,23
+Breathe (2 AM),2006,1998,8,2012,6
+Breathe Stretch Shake,2004,1998,6,2004,0
+Breathless,2001,1998,3,1980,21
+Bright,2015,1997,18,2009,6
+Bright Lights,2003,1998,5,1991,12
+Brighter Than The Sun,2012,1998,14,2012,0
+Bring 'Em Out,2005,1998,7,2004,1
+Bring It All To Me,2000,1998,2,2001,1
+Bring Me To Life,2003,1998,5,1980,23
+Bring On The Rain,2002,1998,4,1980,22
+Broadway,2000,1998,2,1980,20
+Broken,2004,1998,6,1991,13
+Brokenhearted,2012,1998,14,2012,0
+Brokenheartsville,2003,1998,5,2003,0
+Bubbly,2007,1998,9,2007,0
+Bubbly,2007,1998,9,2007,0
+Budapest,2015,1998,17,2015,0
+Buddy,2007,1998,9,2007,0
+Bug A Boo,1999,1999,0,1999,0
+Bugatti,2013,2013,0,2013,0
+Building A Mystery,1997,1998,1,1999,2
+Bulletproof,2010,1998,12,2010,0
+Bump Bump Bump,2003,2002,1,2002,1
+Burn,2014,1998,16,1980,34
+Burn,2013,1998,15,1980,33
+Burn,2001,1997,4,1986,15
+Burn,2004,1998,6,2004,0
+Burn It Down,2012,1998,14,2004,8
+Burnin' It Down,2014,1998,16,2014,0
+Burnin' Up,2008,1998,10,2008,0
+Burning House,2015,1998,17,2013,2
+Bust It Baby Part 2,2008,1998,10,2008,0
+Bust Your Windows,2008,1998,10,2008,0
+Busy Man,1999,1998,1,1999,0
+But For The Grace Of God,2001,1998,3,2001,0
+Butta Love,1997,1999,2,2006,9
+Butterflies,2002,1998,4,1981,21
+Butterfly,2001,2000,1,2005,4
+Butterfly Kisses,1997,1998,1,1997,0
+Butterfly Kisses,1997,1998,1,1997,0
+Buttons,2006,1998,8,2006,0
+Buy Me A Boat,2015,2001,14,2015,0
+Buy Me A Rose,2000,1998,2,1980,20
+Buy U A Drank (Shawty Snappin'),2007,2007,0,2007,0
+Buzzin',2008,1998,10,2000,8
+By The Way,2002,2002,0,2002,0
+Bye Bye,1998,1998,0,1998,0
+Bye Bye,2008,1998,10,2014,6
+Bye Bye Bye,2000,1998,2,1980,20
+C U When U Get There,1997,1998,1,1997,0
+C'Mon,2013,2013,0,2013,0
+C'est La Vie,1999,1998,1,1999,0
+Calabria 2008,2008,1998,10,1980,28
+California Gurls,2010,1998,12,2010,0
+California King Bed,2011,1999,12,1980,31
+Call Me,1997,1997,0,1997,0
+Call Me,2002,1998,4,2008,6
+Call Me Maybe,2012,1999,13,1980,32
+Call Me When You're Sober,2006,1998,8,2012,6
+Call On Me,2006,1998,8,1980,26
+Callin' Me,2000,2000,0,2000,0
+Calling All Angels,2003,1998,5,2009,6
+Can I Get A...,1999,1998,1,1998,1
+Can I Have It Like That,2005,2005,0,2006,1
+Can U Feel It,1997,1997,0,1980,17
+Can't Be Friends,2010,2010,0,2010,0
+Can't Be Tamed,2010,2000,10,2010,0
+Can't Believe It,2008,1998,10,2008,0
+Can't Deny It,2001,2001,0,2001,0
+Can't Feel My Face,2015,1998,17,2004,11
+Can't Fight The Moonlight,2002,1998,4,1980,22
+Can't Get Enough,1998,1998,0,1997,1
+Can't Get You Out Of My Head,2002,1998,4,1980,22
+Can't Help But Wait,2007,1998,9,2004,3
+Can't Hold Us,2013,1998,15,2013,0
+Can't Hold Us Down,2003,1998,5,2001,2
+Can't Leave 'Em Alone,2007,1998,9,2005,2
+Can't Let You Go,2003,1998,5,2003,0
+Can't Nobody Hold Me Down,1997,1997,0,1997,0
+Can't Remember To Forget You,2014,1998,16,2002,12
+Can't Stop Won't Stop,2003,2003,0,2003,0
+Can't Tell Me Nothing,2007,1999,8,2002,5
+Candle In The Wind 1997,1997,1997,0,2012,15
+Candy,1999,1997,2,1999,0
+Candy Shop,2005,1998,7,2006,1
+Candyman,2007,1998,9,2007,0
+Caramel,2002,2001,1,2001,1
+Carlene,2000,2000,0,2000,0
+Carolina,2013,1998,15,1980,33
+Carry On,2013,1998,15,1980,33
+Carry Out,2010,1998,12,2009,1
+Case Of The Ex (Whatcha Gonna Do),2000,1998,2,1999,1
+Cashin Out,2012,2003,9,2012,0
+Cashin' Out,2012,2003,9,2012,0
+Catch My Breath,2013,1998,15,2012,1
+Cater 2 U,2005,1998,7,2005,0
+Caught Up,2005,1998,7,2005,0
+Celebrity,2003,2003,0,2003,0
+Centuries,2015,1998,17,2014,1
+Chain Hang Low,2006,2002,4,2006,0
+Chains,2015,1998,17,2015,0
+Chandelier,2014,1998,16,1980,34
+Change,2008,1998,10,2005,3
+Change Clothes,2003,2003,0,2003,0
+Changes,1999,1998,1,1998,1
+Chante's Got A Man,1999,1999,0,1999,0
+Chariot,2005,1997,8,2014,9
+Charlene,2004,1998,6,2004,0
+Chasing Cars,2006,1998,8,1980,26
+Chasing Pavements,2009,1998,11,2001,8
+Chasing The Sun,2012,1997,15,1980,32
+Check It Out,2010,2010,0,2010,0
+Check It Out,2010,2010,0,2010,0
+Check On It,2006,1998,8,2005,1
+Cheerleader,2015,1998,17,1988,27
+Cheers (Drink To That),2011,2011,0,2011,0
+Cheers 2 U,1998,1998,0,1980,18
+Chemicals React,2006,1998,8,2009,3
+Chicken Fried,2008,2000,8,1980,28
+Chicken Noodle Soup,2006,2006,0,2006,0
+Chillin' It,2014,1998,16,2013,1
+Chinese Democracy,2008,2008,0,2008,0
+Chinese Food,2013,2013,0,2003,10
+Chopped 'N' Skrewed,2008,2008,0,2008,0
+Christmas Lights,2010,1998,12,2012,2
+Circus,2008,1997,11,2008,0
+Clap Back,2003,2003,0,2003,0
+Clarity,2013,1998,15,2013,0
+Classic,2014,1998,16,2014,0
+Classic Man,2015,1998,17,2015,0
+Cleanin' Out My Closet,2002,2002,0,2002,0
+Cleaning This Gun (Come On In Boy),2008,1998,10,2008,0
+Cleopatra's Theme,1998,1998,0,1998,0
+Climax,2012,1998,14,2012,0
+Clique,2012,1999,13,2012,0
+Clock Strikes,1998,1998,0,1998,0
+Clocks,2003,1998,5,1986,17
+Closer,2008,1998,10,1980,28
+Clothes Off!!,2007,1998,9,2006,1
+Clouds,2013,1998,15,2002,11
+Club Can't Handle Me,2010,1998,12,2010,0
+Clubbin,2003,2003,0,2003,0
+Clumsy,2007,1999,8,2007,0
+CoCo,2015,2004,11,2014,1
+Coco Jamboo,1997,1997,0,1997,0
+Cold Rock A Party,1997,1998,1,1996,1
+Colder Weather,2011,1998,13,2011,0
+Collide,2005,1997,8,1980,25
+Come & Get It,2013,1998,15,2013,0
+Come A Little Closer,2005,1998,7,2002,3
+Come And Get With Me,1998,1998,0,1998,0
+Come Back Song,2010,1998,12,1999,11
+Come Clean,2004,1999,5,2013,9
+Come Get It Bae,2014,1998,16,2015,1
+Come In With The Rain,2009,1998,11,1980,29
+Come On,1997,1998,1,2006,9
+Come On Over Baby (All I Want Is You),2000,1998,2,1992,8
+Come Over,2003,1998,5,1987,16
+Come Over,2012,1998,14,2014,2
+Come See Me,1997,1998,1,1996,1
+Come To Me,2006,1998,8,2006,0
+Come With Me,1998,1991,7,1980,18
+Come With Me Now,2014,1998,16,1980,34
+Coming Home,2011,1998,13,2010,1
+Compass,2014,1998,16,2014,0
+Complicated,2002,1998,4,2002,0
+Concrete Angel,2003,1998,5,2013,10
+Confessions Part II,2004,1999,5,2004,0
+Confident,2015,1998,17,2013,2
+Confident,2013,1998,15,2002,11
+Conqueror,2015,1997,18,1980,35
+Consider Me Gone,2009,1998,11,1980,29
+Contagious,2001,1998,3,2001,0
+Control Myself,2006,1998,8,2006,0
+Cool,2005,1996,9,2005,0
+Cool For The Summer,2015,1998,17,2015,0
+Cool Kids,2014,1999,15,1980,34
+Cooler Than Me,2010,1998,12,2010,0
+Cop Car,2014,1999,15,1991,23
+Corona And Lime,2008,2000,8,2008,0
+Could It Be,2001,2001,0,2000,1
+Couldn't Last A Moment,2000,1998,2,1980,20
+Counting Stars,2014,1998,16,1988,26
+Country Boy,2009,1997,12,1999,10
+Country Girl (Shake It For Me),2011,2000,11,2011,0
+Country Must Be Country Wide,2011,1998,13,2013,2
+Courtesy Of The Red White And Blue,2002,1998,4,2002,0
+Cowboy Casanova,2009,1998,11,2000,9
+Cowboy Take Me Away,2000,1997,3,2000,0
+Cowboys And Angels,2012,1998,14,1980,32
+Cowboys Like Us,2003,1998,5,1980,23
+Cowgirls Don't Cry,2009,1998,11,1986,23
+Crack A Bottle,2009,2009,0,2009,0
+Crank That (Soulja Boy),2007,2007,0,2007,0
+Crash,2006,1998,8,2006,0
+Crash And Burn,2000,1998,2,1980,20
+Crash And Burn,2015,1998,17,1980,35
+Crash My Party,2013,1998,15,1980,33
+Crawling Back To You,2011,1998,13,1980,31
+Crazier,2009,1998,11,1980,29
+Crazy,2006,1998,8,2001,5
+Crazy,2001,1998,3,2000,1
+Crazy For This Girl,2001,1998,3,1980,21
+Crazy Girl,2011,1998,13,2003,8
+Crazy In Love,2003,1999,4,2003,0
+Crazy Kids,2013,2001,12,2013,0
+Criminal,1997,1998,1,2004,7
+Crooked Smile,2013,1998,15,2013,0
+Cruel Summer,1998,1998,0,1980,18
+Cruise,2012,1998,14,2012,0
+Cruise,2012,1998,14,2012,0
+Cruise (Remix),2013,1998,15,2012,1
+Crush,2008,1998,10,2008,0
+Crush,1998,1999,1,1999,1
+Cry,2002,1998,4,1991,11
+Cry Baby/Piece Of My Heart,2005,1998,7,1984,21
+Cry Me A River,2003,1998,5,1980,23
+Crybaby,2000,1998,2,2000,0
+Crying Out For Me,2008,1997,11,2008,0
+Culo,2004,2004,0,2004,0
+Cupid,1997,1998,1,1998,1
+Cupid's Chokehold,2007,1998,9,2007,0
+Cups,2013,1998,15,1980,33
+Cut Her Off,2014,2014,0,2002,12
+Cyanide,2008,1998,10,1999,9
+Cyclone,2007,2003,4,2007,0
+D.O.A. (Death Of Auto-Tune),2009,2009,0,2009,0
+DJ Got Us Fallin' In Love,2010,1998,12,1992,18
+DJ Play A Love Song,2006,1998,8,2002,4
+DONE,2013,1998,15,2013,0
+DONE.,2013,1998,15,2013,0
+Da' Dip,1997,1998,1,1997,0
+Damaged,2008,1998,10,2008,0
+Damn!,2003,2003,0,2003,0
+Dance (A$$),2012,2011,1,2011,1
+Dance Again,2012,1998,14,2010,2
+Dance Tonight,2000,1998,2,2000,0
+Dance With Me,2001,2000,1,1990,11
+Dance With Me,2001,1998,3,2000,1
+Dance With My Father,2003,1998,5,1980,23
+Dance Dance,2006,1998,8,2005,1
+Dancin',2000,1998,2,1980,20
+Dancin' Away With My Heart,2012,1998,14,1980,32
+Danger (Been So Long),2001,2000,1,2000,1
+Dangerous,1998,1998,0,1998,0
+Dangerous,2008,2000,8,2008,0
+Dani California,2006,1998,8,2006,0
+Dare You To Move,2004,1998,6,1980,24
+Dark Horse,2013,1998,15,2013,0
+Dark Horse,2014,1998,16,2013,1
+Dark Side,2012,1998,14,2012,0
+Daughters,2005,1998,7,1990,15
+Day 'N' Nite,2009,1998,11,2009,0
+Day Drinking,2014,1998,16,1995,19
+Daydreamin',1998,1998,0,1998,0
+Daylight,2013,1998,15,2013,0
+Days Go By,2002,1998,4,1980,22
+Days Go By,2004,1998,6,2004,0
+Dead And Gone,2009,1998,11,2009,0
+Dear Future Husband,2015,1998,17,2015,0
+Decode,2009,1998,11,1983,26
+Defying Gravity,2009,1998,11,2010,1
+Deja Vu,2006,1998,8,2006,0
+Deja Vu (Uptown Baby),1998,1998,0,1998,0
+Deja Vu (Uptown Baby),1998,1998,0,1998,0
+Demons,2013,1998,15,2013,0
+Desert Rose,2000,1991,9,1980,20
+Desperately,2004,1998,6,1980,24
+Desperately Wanting,1997,1998,1,2002,5
+Destiny,1998,1998,0,2013,15
+Deuces,2010,1998,12,2010,0
+Dey Know,2008,1998,10,2008,0
+Diamonds,2012,1997,15,2012,0
+Diamonds From Sierra Leone,2005,1998,7,2001,4
+Diana,2013,1998,15,1980,33
+Diary,2004,1998,6,2004,0
+Did It On'em,2011,1997,14,2011,0
+Did My Time,2003,1998,5,1993,10
+Did You Ever Think,1999,1999,0,1999,0
+Die A Happy Man,2015,1998,17,1980,35
+Die Another Day,2002,2002,0,2002,0
+Die In Your Arms,2012,1998,14,1980,32
+Die Young,2012,1998,14,1992,20
+Differences,2001,1999,2,2001,0
+Dig In,2001,1998,3,2011,10
+Dilemma,2002,1998,4,2002,0
+Dip It Low,2004,1998,6,2004,0
+Dip it Low,2004,1998,6,2004,0
+Dirrty,2002,1998,4,2000,2
+Dirt,2014,1999,15,2014,0
+Dirt Off Your Shoulder,2004,2004,0,2004,0
+Dirt Road Anthem,2011,1998,13,2011,0
+Dirty Dancer,2011,1998,13,1993,18
+Dirty Little Secret,2006,1998,8,1980,26
+Disco Inferno,2005,1998,7,2004,1
+Discotheque,1997,1997,0,2011,14
+Disease,2002,1998,4,1980,22
+Disturbia,2008,1998,10,2008,0
+Diva,2009,1998,11,2007,2
+Do For Love,1998,1998,0,1998,0
+Do I,2009,1998,11,1980,29
+Do I Make You Proud,2006,1998,8,1980,26
+Do It Just Like A Rockstar,2007,2007,0,2007,0
+Do It To It,2006,2002,4,2006,0
+Do It Well,2007,1999,8,1984,23
+Do That...,2003,2002,1,2002,1
+Do What U Want,2013,1998,15,2009,4
+Do You,2007,1998,9,1999,8
+Do You Believe Me Now,2008,1998,10,2008,0
+Do You Know (What It Takes),1997,1997,0,1980,17
+Do You Know? (The Ping Pong Song)/Dimelo,2007,1998,9,2010,3
+Do You Like This,1997,1997,0,1980,17
+Do You Remember,2010,1998,12,2009,1
+Do Your Thing,1998,1998,0,1980,18
+Doesn't Really Matter,2000,1998,2,2000,0
+Dog Days Are Over,2010,1998,12,1983,27
+Dog Days Are Over,2010,1998,12,1983,27
+Doin' What She Likes,2014,1999,15,2014,0
+Doing Too Much,2006,1998,8,2006,0
+Domino,2012,1998,14,2012,0
+Don't,2014,1998,16,2008,6
+Don't Be Stupid (You Know I Love You),1998,1997,1,1997,1
+Don't Blink,2007,1998,9,1990,17
+Don't Bother,2005,1998,7,1998,7
+Don't Cha,2005,2005,0,2005,0
+Don't Cry For Me Argentina,1997,1998,1,2003,6
+Don't Drop That Thun Thun!,2013,2013,0,2013,0
+Don't Forget,2009,1997,12,1980,29
+Don't Forget About Us,2005,1998,7,2005,0
+Don't Forget To Remember Me,2006,1998,8,2006,0
+Don't Go Breaking My Heart,2010,1998,12,2010,0
+Don't Happen Twice,2001,1998,3,1980,21
+Don't It,2015,1998,17,1980,35
+Don't Know Why,2003,1998,5,2005,2
+Don't Let Go (Love),1997,1998,1,1996,1
+Don't Let Me Get Me,2002,1998,4,2002,0
+Don't Lie,2005,2005,0,2005,0
+Don't Matter,2007,2000,7,2007,0
+Don't Mess With My Man,2002,2002,0,2002,0
+Don't Phunk With My Heart,2005,1998,7,2005,0
+Don't Say Goodbye,2002,1997,5,2002,0
+Don't Say You Love Me,2000,1998,2,2003,3
+Don't Stop,2014,1999,15,1980,34
+Don't Stop Believin',2009,1999,10,2014,5
+Don't Stop The Music,2008,1990,18,1980,28
+Don't Stop The Party,2013,2012,1,2012,1
+Don't Take Your Love Away,2004,1998,6,2004,0
+Don't Tell 'Em,2014,1999,15,2014,0
+Don't Tell Me,2004,1998,6,1980,24
+Don't Tell Me,2001,1998,3,2000,1
+Don't Think I Don't Think About It,2008,1998,10,1980,28
+Don't Think I'm Not,2000,1998,2,2000,0
+Don't Trust Me,2009,1998,11,2009,0
+Don't Trust Me,2009,1998,11,2009,0
+Don't Wake Me Up,2012,1998,14,1984,28
+Don't Wanna Be A Player,1997,1997,0,1997,0
+Don't Wanna Go Home,2011,1997,14,2003,8
+Don't Wanna Try,2003,2003,0,2003,0
+Don't Ya,2013,1998,15,1980,33
+Don't You Forget It,2002,1998,4,1980,22
+Don't You Wanna Stay,2011,1998,13,1980,31
+Don't You Want Me,2011,1998,13,2010,1
+Don't You Worry Child,2013,1996,17,1980,33
+Doo Wop (That Thing),1998,1998,0,1998,0
+Dope,2013,1998,15,1990,23
+Down,2009,1998,11,1996,13
+Down 4 U,2002,2002,0,2002,0
+Down A** Chick,2002,2000,2,2002,0
+Down On Me,2011,1998,13,2011,0
+Down The Road,2009,1998,11,1991,18
+Downtime,2001,1998,3,1990,11
+Downtown,2013,1998,15,2013,0
+Downtown,2015,2015,0,2015,0
+Drag Me Down,2015,1998,17,1980,35
+Drank In My Cup,2012,1998,14,2012,0
+Dream Big,2008,1998,10,2000,8
+Dream On,2010,1997,13,1980,30
+Dreamer,2008,1999,9,1980,28
+Dreams,2004,1998,6,1980,24
+Dreams,2005,1998,7,2005,0
+Drift Away,2003,1997,6,1980,23
+Drink A Beer,2014,1998,16,1980,34
+Drink In My Hand,2011,2001,10,2011,0
+Drink On It,2012,1998,14,2010,2
+Drink To That All Night,2014,1998,16,1980,34
+Drive,2001,1998,3,1983,18
+Drive (For Daddy Gene),2002,2000,2,2002,0
+Drive By,2012,1998,14,2012,0
+Drive Me Wild,1999,1998,1,1980,19
+Drop It Like It's Hot,2004,2004,0,2004,0
+Drop It Low,2009,2009,0,2009,0
+Drop The World,2010,1998,12,2010,0
+Drops Of Jupiter (Tell Me),2001,2001,0,2001,0
+Drowning,2001,1998,3,1980,21
+Drunk In Love,2014,2014,0,2014,0
+Drunk In Love,2014,2014,0,2014,0
+Drunk Last Night,2013,1998,15,1980,33
+Drunk On A Plane,2014,1998,16,2014,0
+Drunk On You,2012,1997,15,2008,4
+Dude,2004,1998,6,2004,0
+Duffle Bag Boy,2007,1998,9,2007,0
+Dynamite,2010,1998,12,2010,0
+E.I.,2001,2000,1,2000,1
+E.T.,2010,2010,0,2010,0
+E.T.,2011,2010,1,2010,1
+ESPN Presents The Jock Jam,1997,1997,0,1997,0
+EW!,2014,2014,0,2014,0
+Earned It (Fifty Shades Of Grey),2015,1998,17,2006,9
+Easy,2011,1998,13,2011,0
+Eenie Meenie,2010,1998,12,2012,2
+Ego,2009,1998,11,1980,29
+Elastic Heart,2015,1998,17,1980,35
+Elevator,2008,2008,0,2008,0
+Emotion,2001,1998,3,1980,21
+Emotional,2000,1990,10,1980,20
+Emotional Rollercoaster,2003,1997,6,1993,10
+Empire State Of Mind,2010,1999,11,2009,1
+Empire State Of Mind,2009,1999,10,2009,0
+Encore,2005,2004,1,2004,1
+Energy,2015,2015,0,2015,0
+Enough Cryin,2006,1998,8,1992,14
+Erase Me,2010,1998,12,2013,3
+Errtime,2005,2005,0,2005,0
+Escape,2002,1998,4,1980,22
+Evacuate The Dancefloor,2009,1998,11,1991,18
+Even If It Breaks Your Heart,2012,1997,15,2014,2
+Ever The Same,2006,1998,8,1980,26
+Every Day,2008,1998,10,2008,0
+Every Girl,2009,2009,0,2009,0
+Every Mile A Memory,2006,1997,9,1980,26
+Every Morning,1999,1998,1,1999,0
+Every Other Time,2001,1998,3,2001,0
+Every Storm (Runs Out Of Rain),2013,1998,15,1980,33
+Every Teardrop Is A Waterfall,2011,1998,13,2011,0
+Every Time I Close My Eyes,1997,1998,1,2015,18
+Everybody (Backstreet's Back),1998,1999,1,1980,18
+Everybody Talks,2012,1997,15,1998,14
+Everybody Wants To Go To Heaven,2008,1998,10,1990,18
+Everybody's Free (To Wear Sunscreen),1999,1999,0,1999,0
+Everyday Is A Winding Road,1997,1997,0,1997,0
+Everything,1997,1997,0,1989,8
+Everything,2007,1999,8,1980,27
+Everything Has Changed,2013,1998,15,1980,33
+Everything I Didn't Say,2014,1998,16,1980,34
+Everything Is Everything,1999,1999,0,1999,0
+Everything To Me,2010,2000,10,1980,30
+Everything You Want,2000,1998,2,2000,0
+Everything's Gonna Be Alright,1998,1998,0,1998,0
+Everytime,2004,1998,6,1980,24
+Everytime Tha Beat Drop,2006,1999,7,2005,1
+Everytime We Touch,2006,1998,8,1980,26
+Everywhere,2001,1998,3,2001,0
+Ex's & Oh's,2015,1998,17,2015,0
+Ex-Factor,1999,1998,1,1999,0
+Excuse Me Miss,2003,2003,0,2003,0
+Eyes Open,2012,1998,14,1994,18
+F**k It (I Don't Want You Back),2004,1999,5,2004,0
+F**k You (Forget You),2011,1999,12,2010,1
+F**kin Problems,2013,1999,14,2012,1
+F**kin Problems,2012,1999,13,2012,0
+F**kin' Perfect,2011,1998,13,2011,0
+F**kin' Perfect,2011,1998,13,2011,0
+Fabulous,2003,2002,1,2002,1
+Face Down,2007,1997,10,1993,14
+Faded,2000,1998,2,2000,0
+Faded,2012,2012,0,2012,0
+Faded Pictures,1999,1999,0,1999,0
+Faint,2003,1997,6,1980,23
+Faithfully,2010,1998,12,2010,0
+Fall For You,2008,1998,10,1980,28
+Fall For Your Type,2011,1999,12,2002,9
+Fall Into Me,2003,1998,5,1980,23
+Fallen,2004,1998,6,1997,7
+Fallin',2001,1998,3,1980,21
+Fallin' For You,2009,1998,11,1980,29
+Falling In Love (Is Hard On The Knees),1997,1997,0,1997,0
+Falls Apart,2000,1997,3,2000,0
+Falsetto,2008,2000,8,2008,0
+Family Affair,2001,1998,3,2001,0
+Family Portrait,2003,1998,5,2002,1
+Fancy,2010,2000,10,2010,0
+Fancy,2014,1998,16,2014,0
+Far Away,2006,1998,8,2006,0
+Farmer's Daughter,2010,1998,12,2004,6
+Fast Cars And Freedom,2005,1998,7,2013,8
+Fast Lane,2011,2011,0,2011,0
+Fastest Girl In Town,2012,1998,14,2000,12
+Father,1998,1998,0,1998,0
+Favorite Girl,2009,1998,11,1980,29
+Fearless,2008,1998,10,2008,0
+Feedback,2008,1998,10,2011,3
+Feel Again,2012,1998,14,2012,0
+Feel Good Inc,2005,2005,0,2005,0
+Feel It Boy,2002,1998,4,1980,22
+Feel Like A Rock Star,2012,1999,13,1980,32
+Feel So Close,2012,1996,16,1980,32
+Feel So Good,1997,1998,1,1997,0
+Feel That Fire,2009,1998,11,1980,29
+Feel This Moment,2013,1999,14,2013,0
+Feelin' On Yo Booty,2001,1998,3,2001,0
+Feelin' Way Too Damn Good,2004,1998,6,1985,19
+Feeling Myself,2015,2015,0,2015,0
+Feels Like Tonight,2008,1998,10,1980,28
+Felt Good On My Lips,2010,2003,7,2010,0
+Fergalicious,2007,2006,1,2006,1
+Fiesta,2001,2001,0,2001,0
+Fifteen,2009,1998,11,2009,0
+Fight Song,2015,1998,17,2015,0
+Fighter,2003,1998,5,2003,0
+Fill Me In,2001,1998,3,2001,0
+Finally Found You,2012,1999,13,2013,1
+Find Your Love,2010,1998,12,1980,30
+Fine China,2013,1998,15,2013,0
+Fire Burning,2009,1998,11,2009,0
+Fireball,2014,1998,16,2014,0
+Firecracker,2007,2001,6,1980,27
+Fireflies,2009,1997,12,2009,0
+Fireman,2005,1998,7,2005,0
+Firestarter,1997,1997,0,1997,0
+Firework,2011,1998,13,2010,1
+Firework,2010,1998,12,2012,2
+First Time,2007,1998,9,1980,27
+Flashing Lights,2008,2000,8,2007,1
+Flavor Of The Weak,2001,1998,3,1989,12
+Flex (Ooh Ooh Ooh),2015,1998,17,2015,0
+Flowers On The Wall,2000,2000,0,2009,9
+Fly,2011,2011,0,2011,0
+Fly Away,1999,1998,1,1998,1
+Fly Like An Eagle,1997,1996,1,1996,1
+Fly Over States,2012,1998,14,2012,0
+Flying Without Wings,2003,1997,6,2003,0
+Focus,2015,1998,17,2014,1
+Follow Me,2001,1998,3,1980,21
+Foolish,2002,1998,4,1980,22
+Foolish Games/You Were Meant For Me,1997,1990,7,1980,17
+For A Little While,1999,2000,1,1980,19
+For The First Time,2011,1998,13,1982,29
+For You,1997,1998,1,2000,3
+For You I Will,1999,1999,0,2001,2
+For You I Will,1997,1997,0,1980,17
+For You I Will (Confidence),2006,1998,8,2006,0
+Forever,2008,1998,10,2008,0
+Forever,2009,2009,0,2009,0
+Forever & Always,2009,1998,11,1980,29
+Forever And For Always,2003,2003,0,2003,0
+Forget You,2010,1999,11,2010,0
+Forgot About Dre,2000,2000,0,2000,0
+Fortunate,1999,1998,1,1999,0
+FourFiveSeconds,2015,1998,17,2013,2
+Freak The Freak Out,2011,1998,13,2010,1
+Free,2001,1999,2,2000,1
+Free,2010,1998,12,2001,9
+Free And Easy (Down The Road I Go),2007,1998,9,2007,0
+Free Yourself,2005,1998,7,1997,8
+Freek-A-Leek,2004,2004,0,2004,0
+Freeze,2008,1998,10,2008,0
+Fresh Azimiz,2006,2006,0,2006,0
+Friday,2011,2011,0,2009,2
+Friday Night,2014,2000,14,2014,0
+Friend Of Mine,1998,1998,0,1980,18
+From The Bottom Of My Broken Heart,2000,1998,2,1980,20
+From This Moment On,1998,1998,0,1980,18
+Frontin',2003,2003,0,2003,0
+Frozen,1998,1998,0,1998,0
+Full Moon,2002,1998,4,2004,2
+Fun,2015,1998,17,2004,11
+Funhouse,2009,2001,8,2008,1
+Funny The Way It Is,2009,1998,11,1987,22
+G'D Up,2000,2000,0,2000,0
+G.D.F.R.,2015,2015,0,2015,0
+G.H.E.T.T.O.U.T.,1997,1999,2,1997,0
+Gallery,2006,1998,8,2006,0
+Game Over (Flip),2004,2000,4,2004,0
+Gangnam Style,2012,2012,0,2012,0
+Gangnam Style,2012,2012,0,2012,0
+Gangsta Lovin',2002,2002,0,2002,0
+Gangsta Luv,2010,2001,9,2009,1
+Gangsta Nation,2004,2004,0,2004,0
+Gangstas Make The World Go Round,1997,1997,0,1997,0
+Gas Pedal,2013,2013,0,2013,0
+Gas Pedal,2014,2013,1,2013,1
+Gasolina,2005,2005,0,2005,0
+Genie In A Bottle,1999,1998,1,1998,1
+Gentleman,2013,2013,0,2013,0
+Georgia,2006,2005,1,2005,1
+Get At Me Dog,1998,1998,0,1998,0
+Get Back,2008,1997,11,1980,28
+Get Back,2005,2004,1,2004,1
+Get Buck In Here,2007,2007,0,2007,0
+Get Busy,2003,2003,0,2003,0
+Get Drunk And Be Somebody,2006,1998,8,2012,6
+Get Gone,1999,1998,1,1999,0
+Get It On Tonite,2000,1998,2,1980,20
+Get It Poppin',2005,2005,0,2005,0
+Get It Right,2011,1998,13,2010,1
+Get It Shawty,2007,1998,9,2007,0
+Get It Together,1997,1998,1,1980,17
+Get Like Me,2008,2003,5,2008,0
+Get Low,2003,2003,0,2003,0
+Get Lucky,2013,1998,15,2006,7
+Get Me Bodied,2013,1999,14,2013,0
+Get Me Some Of That,2014,1999,15,2014,0
+Get On Your Boots,2009,1999,10,1980,29
+Get Over Yourself,2001,1998,3,1980,21
+Get Right,2005,1998,7,1989,16
+Get Silly,2008,2008,0,2008,0
+Get The Party Started,2001,1998,3,2001,0
+Get Up,2008,1998,10,2008,0
+Get Up,2006,1998,8,2006,0
+Get Ur Freak On,2001,2001,0,2001,0
+Get Your Shine On,2013,1999,14,2013,0
+Get Your Shine On,2013,1999,14,2013,0
+Get it Together,1997,1998,1,1980,17
+Get'cha Head In The Game,2006,1998,8,1980,26
+Gettin' Jiggy Wit It,1998,1998,0,1998,0
+Gettin' Over You,2010,1998,12,2008,2
+Gettin' Some,2006,1998,8,2006,0
+Gettin' You Home (The Black Dress Song),2009,1998,11,2009,0
+Getting' Some,2006,2000,6,2006,0
+Ghetto Cowboy,1998,1998,0,1998,0
+Ghetto Cowboy,1999,1998,1,1998,1
+Ghetto Cowboy,1999,1998,1,1998,1
+Ghetto Love,1997,1997,0,1997,0
+Ghetto Supastar (That Is What You Are),1998,1998,0,1998,0
+Ghetto Supastar (That Is What You Are),1998,1998,0,1998,0
+Ghetto Supastar (That Is What You Are),1998,1998,0,1998,0
+Ghetto Supastar (That Is What You Are),1998,1998,0,1998,0
+Ghetto Supastar (That Is What You Are),1998,1998,0,1998,0
+Ghost,2015,1998,17,1980,35
+Gigolo,2004,2003,1,2003,1
+Gimme More,2007,1998,9,2007,0
+Gimme Some Love,1997,1997,0,1997,0
+Gimme That,2006,1997,9,2006,0
+Gimme The Light,2002,2002,0,2002,0
+Gimmie That Girl,2010,1998,12,2010,0
+Girl,2005,1998,7,1980,25
+Girl,2006,1999,7,2006,0
+Girl Crush,2015,1999,16,2008,7
+Girl Next Door,2006,1998,8,1982,24
+Girl On Fire,2013,1998,15,1980,33
+Girl On Fire,2012,1998,14,1980,32
+Girl On TV,2000,1999,1,1999,1
+Girl Talk,2002,1998,4,2002,0
+Girl Tonite,2005,1999,6,1987,18
+Girlfight,2005,1998,7,2005,0
+Girlfriend,2002,1998,4,1980,22
+Girlfriend,2007,1998,9,2003,4
+Girlfriend,2003,2003,0,2003,0
+Girlfriend,2007,1998,9,2007,0
+Girlfriend/Boyfriend,1999,2004,5,1980,19
+Girls And Boys,2003,1998,5,2011,8
+Girls Lie Too,2004,1998,6,2004,0
+Girls Girls Girls,2001,2001,0,2001,0
+Gitty Up,1998,1998,0,2001,3
+Give A Little Bit,2005,1998,7,1980,25
+Give It 2 U,2013,1998,15,2010,3
+Give It All We Got Tonight,2013,1998,15,1980,33
+Give It Away,2006,2001,5,1981,25
+Give It To Me,2007,2007,0,2007,0
+Give It To You,1999,1998,1,1999,0
+Give It Up To Me,2009,1999,10,2006,3
+Give Me All Your Luvin',2012,1998,14,2012,0
+Give Me Back My Hometown,2014,1998,16,2012,2
+Give Me Everything,2011,1999,12,2011,0
+Give Me Everything,2011,1999,12,2011,0
+Give Me Just One Night (Una Noche),2000,2000,0,2000,0
+Give Me That,2005,1999,6,1997,8
+Give Your Heart A Break,2012,1998,14,2012,0
+Given To Fly,1998,1998,0,1998,0
+Gives You Hell,2010,1998,12,2010,0
+Gives You Hell,2009,1998,11,1980,29
+Glad You Came,2012,1998,14,1980,32
+Glamorous,2007,1999,8,2007,0
+Glitter In The Air,2010,1998,12,2001,9
+Glory,2015,1998,17,2004,11
+Go D.J.,2004,2004,0,2004,0
+Go Getta,2007,1998,9,2007,0
+Go On,2000,1998,2,1999,1
+Go The Distance,1997,1998,1,1997,0
+Go Your Own Way,2011,1998,13,2010,1
+God Bless The U.S.A.,2003,1998,5,1982,21
+God Bless The USA,2001,1997,4,1995,6
+God Gave Me You,2011,1997,14,2003,8
+God Love Her,2009,1998,11,1982,27
+God Must Have Spent A Little More Time On You,1999,1998,1,1998,1
+Goin' Crazy,2005,1998,7,1980,25
+Going Back To Cali,1998,1997,1,1997,1
+Gold Digger,2005,2005,0,2005,0
+Gone,2001,1998,3,2001,0
+Gone,2013,2013,0,2012,1
+Gone Crazy,1999,1998,1,1980,19
+Gone Till November,1998,1998,0,1998,0
+Gone Gone Gone,2013,1997,16,2013,0
+Gonorrhea,2010,2010,0,2008,2
+Good Directions,2007,1998,9,2007,0
+Good Feeling,2012,1997,15,2011,1
+Good Felling,2012,1997,15,2011,1
+Good For You,2015,1998,17,2015,0
+Good Girl,2012,1999,13,1980,32
+Good Girls,2014,1998,16,1996,18
+Good Girls Go Bad,2009,1998,11,1980,29
+Good Life,2007,1998,9,2007,0
+Good Life,2011,1998,13,2011,0
+Good Morning,2009,2009,0,2009,0
+Good Morning Beautiful,2002,1998,4,1980,22
+Good Time,2008,1997,11,2008,0
+Good Time,2012,1998,14,2012,0
+Good Time,2012,1998,14,2012,0
+Good Times,2002,2002,0,2002,0
+Goodbye,2009,1998,11,2010,1
+Goodbye,2009,1998,11,2009,0
+Goodbye,1998,1998,0,1980,18
+Goodbye Earl,2000,2000,0,2000,0
+Goodbye For Now,2006,1998,8,1980,26
+Goodbye In Her Eyes,2012,1998,14,2012,0
+Goodbye To My Homies,1998,1998,0,1998,0
+Goodbye To My Homies,1998,1998,0,1998,0
+Goodbye To You,2002,1998,4,1980,22
+Goodies,2004,2004,0,2004,0
+Gorilla,2013,1998,15,2013,0
+Gossip Folks,2003,2003,0,1981,22
+Got Money,2008,1998,10,2008,0
+Got To Get It,2000,1999,1,2010,10
+Got To Get it,1999,1999,0,2010,11
+Got Your Back,2010,1999,11,2010,0
+Got Your Money,1999,1999,0,1999,0
+Gotham City,1997,1997,0,1997,0
+Gots Ta Be,2002,1998,4,2002,0
+Gotta Be,1998,1998,0,1980,18
+Gotta Be Somebody,2008,1997,11,1980,28
+Gotta Find You,2008,1997,11,1980,28
+Gotta Get Thru This,2002,1998,4,1980,22
+Gotta Go My Own Way,2007,1998,9,2006,1
+Gotta Man,1999,1999,0,1999,0
+Gotta Tell You,2000,1998,2,1980,20
+Graduation (Friends Forever),2000,1998,2,2000,0
+Green Light,2008,1999,9,2008,0
+Grenade,2011,1997,14,1997,14
+Grillz,2006,2005,1,2005,1
+Grind With Me,2005,2000,5,2005,0
+Grindin',2002,2002,0,2002,0
+Grown Men Don't Cry,2001,1998,3,2010,9
+Guts Over Fear,2014,2014,0,1995,19
+H*A*M,2011,2011,0,2011,0
+Habits (Stay High),2014,1999,15,2014,0
+Hair,2011,1998,13,1983,28
+Half Of My Heart,2009,1999,10,2001,8
+Halfway Gone,2010,1998,12,2004,6
+Hall Of Fame,2013,2000,13,2012,1
+Hallelujah,2010,1998,12,2010,0
+Hallelujah,2010,1998,12,2010,0
+Hallelujah,2013,1998,15,2010,3
+Hallelujah,2015,1998,17,1980,35
+Halo,2009,1998,11,2009,0
+Halo/Walking On Sunshine,2009,1998,11,2009,0
+Handlebars,2008,2008,0,2008,0
+Hands,1999,1991,8,1980,19
+Hands Clean,2002,2002,0,2002,0
+Hands Of A Working Man,1999,1997,2,2001,2
+Hanginaround,2000,1999,1,1999,1
+Hanging By A Moment,2001,1997,4,1986,15
+Hangover,2014,2014,0,2003,11
+Happily Ever After,1999,1999,0,1999,0
+Happy,2002,1998,4,2002,0
+Happy,2009,1997,12,1980,29
+Happy,2014,1998,16,1980,34
+Happy Days Are Here Again/Get Happy,2010,1997,13,2010,0
+Happy People,2004,1998,6,2004,0
+Happy Xmas (War Is Over),2006,1998,8,1980,26
+Hard,2010,2001,9,2009,1
+Hard Knock Life (Ghetto Anthem),1999,1998,1,1998,1
+Hard To Love,2012,1998,14,2012,0
+Hard To Say I'm Sorry,1997,1998,1,1980,17
+Harder To Breathe,2003,1998,5,2003,0
+Harlem Shake,2013,2013,0,2013,0
+Hate It Or Love It,2005,1999,6,2005,0
+Hate Me,2006,1998,8,2006,0
+Hate That I Love You,2007,1999,8,1980,27
+Have A Little Mercy,1997,1998,1,1986,11
+Have You Ever?,1999,1998,1,1980,19
+Have You Forgotten?,2003,1998,5,1982,21
+Haven't Met You Yet,2010,1998,12,2004,6
+He Can't Love U,2000,1998,2,1980,20
+He Could Be The One,2009,1998,11,1980,29
+He Didn't Have To Be,1999,1998,1,1980,19
+He Loves U Not,2000,2000,0,2000,0
+He Wasn't Man Enough,2000,1998,2,1997,3
+Head Over Heels,1997,1997,0,1997,0
+Headlights,2014,1998,16,2007,7
+Headlines,2011,1998,13,2011,0
+Headsprung,2004,1999,5,2004,0
+Headstrong,2003,1998,5,1982,21
+Heard 'Em Say,2005,1999,6,2005,0
+Heard It All Before,2001,1998,3,1998,3
+Heart Attack,2013,1998,15,2013,0
+Heart Attack,2012,1997,15,2012,0
+Heart Like Mine,2011,1997,14,1980,31
+Heartbeat,2012,1998,14,1989,23
+Heartbeat Song,2015,1998,17,1980,35
+Heartbreak Hotel,1999,1998,1,1980,19
+Heartbreak Hotel,1999,1998,1,1980,19
+Heartbreak Warfare,2010,1998,12,2009,1
+Heartbreaker,2013,1998,15,1980,33
+Heartbreaker,1999,1999,0,1999,0
+Heartless,2009,1999,10,1980,29
+Heartless,2009,1998,11,1980,29
+Heaven,2002,1991,11,1980,22
+Heaven,2004,1999,5,2004,0
+Heaven,1998,1998,0,1980,18
+Heaven Sent,2008,1998,10,1980,28
+Heaven's What I Feel,1998,1998,0,1990,8
+Helena (So Long & Goodnight),2005,1999,6,2005,0
+Hell Breaks Loose,2010,2010,0,2002,8
+Hell Yeah,2003,2003,0,2003,0
+Hell Yeah,2003,1998,5,2003,0
+Hella Good,2002,1997,5,2002,0
+Hello,2015,1998,17,1980,35
+Hello,2010,1998,12,2010,0
+Hello,2011,1999,12,1980,31
+Hello Good Morning,2010,2010,0,2010,0
+Hello Goodbye,2010,2010,0,1980,30
+Help Pour Out The Rain (Lacey's Song),2003,1998,5,2003,0
+Hemorrhage (In My Hands),2001,1998,3,1980,21
+Her Diamonds,2009,1998,11,2007,2
+Here,2015,2015,0,2015,0
+Here,2008,1997,11,1980,28
+Here (In Your Arms),2007,2007,0,2007,0
+Here Comes Goodbye,2009,1998,11,1980,29
+Here For A Good Time,2011,1998,13,2003,8
+Here For The Party,2004,1998,6,2004,0
+Here I Am,2008,2008,0,2008,0
+Here Is Gone,2002,1998,4,1980,22
+Here It Goes Again,2006,1998,8,2006,0
+Here We Go,2005,1999,6,2001,4
+Here We Go Again,2009,1998,11,2005,4
+Here Without You,2003,1997,6,1980,23
+Here's To Never Growing Up,2013,2013,0,2013,0
+Here's To The Night,2001,1998,3,1980,21
+Here's Your Sign (Get The Picture),1997,1997,0,1997,0
+Hero,2002,1998,4,1980,22
+Hero,2001,1997,4,1980,21
+Hero/Heroine,2008,1998,10,1990,18
+Heroes (We Could Be),2015,1998,17,2001,14
+Hey Baby,2002,1998,4,2001,1
+Hey Baby (Drop IT To The Floor),2011,1998,13,2007,4
+Hey Baby (Drop It To The Floor),2011,1998,13,2007,4
+Hey Brother,2014,1998,16,1987,27
+Hey Daddy (Daddy's Home),2010,1999,11,2010,0
+Hey Girl,2013,1998,15,1980,33
+Hey Leonardo (She Likes Me For Me),1999,1999,0,1999,0
+Hey Ma,2002,2002,0,2002,0
+Hey Mama,2015,2000,15,2015,0
+Hey Mama,2004,2004,0,2004,0
+Hey Now Now,1998,1998,0,1980,18
+Hey Porsche,2013,1998,15,2004,9
+Hey Pretty Girl,2013,1998,15,1980,33
+Hey There Delilah,2007,1998,9,1987,20
+Hey Ya!,2003,2003,0,2003,0
+Hey Soul Sister,2010,1999,11,2009,1
+Hey Soul Sister,2010,2000,10,2009,1
+Higher,2000,1998,2,1980,20
+Higher,2011,1999,12,2011,0
+Highway 20 Ride,2010,1998,12,2002,8
+Highway Don't Care,2013,1998,15,1980,33
+Highway Don't Care,2013,1998,15,1980,33
+Hillbilly Bone,2010,2010,0,2010,0
+Hip Hop Is Dead,2007,1998,9,2002,5
+Hips Don't Lie,2006,1999,7,2006,0
+Hit 'Em Up Style (Oops!),2001,1998,3,2001,0
+Hit The Lights,2011,2001,10,2011,0
+Hit The Quan,2015,2000,15,2014,1
+Hit The Quan,2015,2000,15,2014,1
+Hit The Quan,2015,2000,15,2014,1
+Ho Hey,2012,1998,14,2012,0
+Hoedown Throwdown,2009,2009,0,2009,0
+Hold It Against Me,2011,1998,13,1980,31
+Hold Me,1999,1997,2,1980,19
+Hold My Hand,2011,1998,13,2008,3
+Hold On To Me,1999,1998,1,1980,19
+Hold On We're Going Home,2013,1999,14,1980,33
+Hold Tight,2013,1998,15,2008,5
+Hold Up My Heart,2009,1998,11,1980,29
+Hold You Down,2014,1998,16,2014,0
+Holidae In,2003,2003,0,2003,0
+Holiday,2005,2005,0,2005,0
+Holla Holla,1999,1999,0,1999,0
+Hollaback Girl,2005,1998,7,2009,4
+Holy Grail,2013,1998,15,2013,0
+Home,2008,1998,10,1980,28
+Home,2007,1998,9,1980,27
+Home,2012,1998,14,1980,32
+Home,2012,2012,0,2012,0
+Home,2013,2012,1,2012,1
+Home Sweet Home,2009,1998,11,1980,29
+Home To You,1999,1999,0,1999,0
+Homegrown,2015,1998,17,1980,35
+Honey,1997,1998,1,1997,0
+Honey Bee,2011,1999,12,2005,6
+Honey I'm Good.,2015,1999,16,2009,6
+Honky Tonk Badonkadonk,2006,1999,7,2005,1
+Hood Figga,2007,2007,0,2007,0
+Hope,2005,1999,6,2005,0
+Hope You Get Lonely Tonight,2014,1998,16,2014,0
+Horse & Carriage,1998,1998,0,1998,0
+Horse & Carriage,1998,1998,0,1998,0
+Hot Boy,2014,2014,0,2014,0
+Hot Boyz,2000,1999,1,1999,1
+Hot In Herre,2002,2001,1,1980,22
+Hot N Cold,2008,1999,9,2008,0
+Hot Revolver,2009,1998,11,1981,28
+Hot Tottie,2010,2010,0,2010,0
+Hotel,2004,1998,6,2004,0
+Hotel Room Service,2009,1998,11,2007,2
+Hotline Bling,2015,1998,17,2013,2
+House Party,2015,1998,17,2015,0
+How 'Bout Them Cowgirls,2007,2007,0,2005,2
+How Am I Doin',2004,1998,6,1980,24
+How Come,2004,2000,4,2004,0
+How Country Feels,2013,2000,13,2013,0
+How Deep Is Your Love,2015,1996,19,2004,11
+How Deep Is Your Love,1998,1998,0,1998,0
+How Deep is Your Love,1998,1998,0,1998,0
+How Do I Breathe,2007,1998,9,2008,1
+How Do I Live,1997,1998,1,1980,17
+How Do I Live,1997,1998,1,1980,17
+How Do You Like Me Now?!,2000,1998,2,1980,20
+How Do You Sleep?,2009,1999,10,1980,29
+How Do You Sleep?,2009,1999,10,2006,3
+How Far We've Come,2007,1998,9,2007,0
+How Forever Feels,1999,1998,1,2002,3
+How Low,2010,2001,9,2009,1
+How To Deal,2005,1998,7,1980,25
+How To Love,2011,1998,13,2011,0
+How To Save A Life,2006,1998,8,2006,0
+How We Do,2005,2004,1,2004,1
+How You Gonna Act Like That,2003,1998,5,2003,0
+How You Remind Me,2001,1999,2,1980,21
+How's It Going To Be,1998,1997,1,1997,1
+Human,2014,1998,16,1980,34
+Human,2008,1999,9,2001,7
+Hung Up,2005,1998,7,1980,25
+Hurt,2006,1997,9,1980,26
+Husbands And Wives,1998,2001,3,1984,14
+Hush,2004,2004,0,2004,0
+Hy Hitta,2014,2001,13,2013,1
+Hypnotize,1997,1997,0,1997,0
+Hypnotized,2007,1998,9,2007,0
+I Am Mine,2002,1997,5,2013,11
+I Believe,2003,1997,6,1980,23
+I Believe,2004,1996,8,2002,2
+I Believe In You And Me,1997,1997,0,1980,17
+I Belong To You (Every Time I See Your Face),1997,1998,1,1997,0
+I Bet,2015,1998,17,2009,6
+I Bet My Life,2015,1998,17,1980,35
+I Breathe In I Breathe Out,2002,1998,4,1980,22
+I Can,2003,2003,0,2003,0
+I Can Do That,1998,1998,0,2004,6
+I Can Love You,1997,1997,0,1997,0
+I Can Only Imagine,2012,1999,13,2012,0
+I Can Transform Ya,2009,1998,11,2009,0
+I Can't Wait,2004,2004,0,2004,0
+I Care 'Bout You,1997,1998,1,1994,3
+I Care 4 U,2002,1998,4,1980,22
+I Could Not Ask For More,1999,1997,2,1980,19
+I Could Not Ask For More,2001,1998,3,1980,21
+I Cry,2012,2001,11,2012,0
+I Cry,2001,1998,3,2001,0
+I Do,2011,1998,13,1980,31
+I Do,1998,1997,1,1994,4
+I Do (Cherish You),1999,1997,2,2007,8
+I Do Not Hook Up,2009,1998,11,1980,29
+I Do!!,2001,2001,0,2001,0
+I Don't Care,2008,1998,10,2012,4
+I Don't Dance,2014,1998,16,2014,0
+I Don't Ever Want To See You Again,1998,1997,1,1997,1
+I Don't Ever want To See You Again,1997,1997,0,1997,0
+I Don't F**k With You,2014,1999,15,2014,0
+I Don't Have To Be Me ('Til Monday),2002,2000,2,1980,22
+I Don't Like It I Love It,2015,2001,14,2015,0
+I Don't Mind,2015,1999,16,2014,1
+I Don't Wanna,2000,1999,1,1980,20
+I Don't Wanna Be In Love (Dance Floor Anthem),2008,1997,11,1997,11
+I Don't Wanna Know,2004,1991,13,1980,24
+I Don't Want This Night To End,2011,1998,13,2011,0
+I Don't Want To Be,2005,1998,7,2004,1
+I Don't Want To Miss A Thing,1998,1998,0,1980,18
+I Don't Want To Miss A Thing,2008,1998,10,1980,28
+I Don't Want To Miss A Thing,1999,1998,1,1980,19
+I Don't Want To Wait,1998,1998,0,1997,1
+I Don't Want To/I Love Me Some Him,1997,1998,1,1980,17
+I Dreamed A Dream,2010,1998,12,2001,9
+I Drive Your Truck,2013,1999,14,1980,33
+I Drove All Night,2003,1998,5,1980,23
+I Feel Pretty/Unpretty,2011,1998,13,2010,1
+I Get Lonely,1998,1998,0,1998,0
+I Get Lonely,1998,1998,0,1998,0
+I Get Money,2007,2007,0,2007,0
+I Go Back,2004,1998,6,2004,0
+I Got A Feelin',2004,1999,5,1980,24
+I Got It From My Mama,2007,2007,0,2007,0
+I Got The Hook Up!,1998,1998,0,1998,0
+I Got The Hook Up!,1998,1998,0,1998,0
+I Gotta Feeling,2009,2009,0,2009,0
+I Had No Right,1998,1998,0,1982,16
+I Hate Everything,2004,1998,6,2004,0
+I Hate This Part,2009,1998,11,1985,24
+I Hold On,2014,1999,15,1994,20
+I Hope You Dance,2001,1997,4,2000,1
+I Invented Sex,2010,1998,12,2003,7
+I Just Had Sex,2011,1998,13,2010,1
+I Just Wanna Be Mad,2003,1998,5,2003,0
+I Just Wanna Love U (Give It 2 Me),2000,2000,0,2000,0
+I Keep Looking,2002,1998,4,2002,0
+I Kissed A Girl,2008,1998,10,2008,0
+I Knew I Loved You,2000,1999,1,1999,1
+I Knew You Were Trouble,2013,1998,15,1989,24
+I Know What You Want,2003,1998,5,1980,23
+I Know Where It's At,1998,1998,0,2012,14
+I Know You See It,2006,2001,5,2006,0
+I Know You Want Me (Calle Ocho),2009,2009,0,2009,0
+I Learned From The Best,2000,1998,2,1980,20
+I Like It,2010,1999,11,2010,0
+I Like It,2000,2000,0,2000,0
+I Like It,1997,1997,0,1997,0
+I Like It Like That,2012,1998,14,2011,1
+I Like That,2004,2004,0,2004,0
+I Like Them Girls,2001,2000,1,2000,1
+I Lived,2015,1998,17,1980,35
+I Lost It,2000,1998,2,1980,20
+I Love College,2009,2000,9,2009,0
+I Love It,2013,1998,15,1995,18
+I Love My B****,2006,1998,8,2009,3
+I Love This Bar,2003,2003,0,2003,0
+I Love You,2002,1997,5,1980,22
+I Love You,1999,1999,0,1999,0
+I Love You This Big,2011,1998,13,2011,0
+I Loved Her First,2006,1998,8,2012,6
+I Luv It,2006,1998,8,2006,0
+I Luv This Sh*t,2013,1998,15,2011,2
+I Luv Your Girl,2008,1998,10,2007,1
+I Made It (Cash Money Heroes),2010,2010,0,2010,0
+I Melt,2003,1997,6,1980,23
+I Miss My Friend,2002,1998,4,2002,0
+I Miss My Homies,1997,1997,0,1997,0
+I Miss My Homies,1997,1997,0,1997,0
+I Miss You,2004,1997,7,2004,0
+I Need A Doctor,2011,1998,13,2011,0
+I Need A Girl (Part One),2002,1999,3,2002,0
+I Need A Girl (Part Two),2002,1999,3,2002,0
+I Need To Know,1999,1998,1,1980,19
+I Need You,2000,1998,2,1980,20
+I Need You,2007,1998,9,1989,18
+I Need Your Love,2013,1997,16,1980,33
+I Need Your Love,2013,1997,16,1980,33
+I Never Told You,2010,1998,12,1980,30
+I Really Like You,2015,1998,17,1980,35
+I Remember,2008,1998,10,2008,0
+I Run To You,2009,1997,12,2006,3
+I Saw God Today,2008,1998,10,1981,27
+I Say A Little Prayer,1997,1998,1,1991,6
+I See You,2015,1999,16,2008,7
+I Shot The Sheriff,1997,1997,0,1997,0
+I Should Be Sleeping,2002,1998,4,2002,0
+I Should Be...,2003,1998,5,2009,6
+I Should Have Cheated,2005,1998,7,2012,7
+I Still Believe,1999,1998,1,2000,1
+I Still Haven't Found What I'm Looking For,2008,1998,10,2002,6
+I Still Love You,1998,1998,0,1980,18
+I Still Miss You,2008,1997,11,2008,0
+I Think I'm In Love With You,2000,1998,2,1980,20
+I Think They Like Me,2005,2005,0,2005,0
+I Told You So,2009,1998,11,2009,0
+I Told You So,2007,1997,10,1981,26
+I Tried,2007,1998,9,2007,0
+I Try,2000,1998,2,1980,20
+I Turn To You,2000,1998,2,1981,19
+I Wanna Be Bad,2001,1998,3,1980,21
+I Wanna Be There,1997,1997,0,1980,17
+I Wanna Be With You,2000,1998,2,2008,8
+I Wanna Dance With Somebody,2012,1998,14,1980,32
+I Wanna Do It All,2004,1998,6,2004,0
+I Wanna Go,2011,2011,0,2011,0
+I Wanna Know,2000,1998,2,1980,20
+I Wanna Love You,2006,2006,0,2006,0
+I Wanna Love You Forever,2000,1998,2,1999,1
+I Wanna Rock,2010,2010,0,2010,0
+I Wanna Talk About Me,2001,2001,0,2001,0
+I Want Crazy,2013,1998,15,2013,0
+I Want It All,1999,1999,0,1999,0
+I Want It That Way,1999,1998,1,1980,19
+I Want To Hold Your Hand,2010,1998,12,2008,2
+I Want To Live,2004,1998,6,2004,0
+I Want You,1997,1997,0,1997,0
+I Want You,2003,2003,0,2003,0
+I Want You Back,1998,1998,0,1980,18
+I Want You To Know,2015,1998,17,2015,0
+I Will Come To You,1997,1999,2,1980,17
+I Will Get There,1999,1997,2,1981,18
+I Will Love Again,2000,1997,3,1980,20
+I Will Not Bow,2009,1998,11,1980,29
+I Will Remember You (Live),1999,1998,1,1980,19
+I Will Wait,2013,2000,13,2003,10
+I Will?But,2000,2000,0,2000,0
+I Wish,2000,1998,2,2000,0
+I Wish,2001,2000,1,2000,1
+I Won't Give Up,2012,1998,14,2012,0
+I Won't Let Go,2011,1998,13,1980,31
+I Won't Tell,2008,2001,7,2008,0
+I Would've Loved You Anyway,2001,1998,3,1980,21
+I Write Sins Not Tragedies,2006,2006,0,2006,0
+I'd Come For You,2008,1998,10,1984,24
+I'll Be,1998,1998,0,1998,0
+I'll Be,1997,1997,0,1997,0
+I'll Be Missing You,1997,1998,1,1997,0
+I'll Never Break Your Heart,1998,1998,0,1980,18
+I'll Stand By You,2007,1997,10,1980,27
+I'll Think Of A Reason Later,1999,1999,0,1999,0
+I'm A Believer,2001,1997,4,1980,21
+I'm A Flirt,2007,1998,9,2007,0
+I'm A Hustla,2005,2001,4,2005,0
+I'm A Slave 4 U,2001,1998,3,2001,0
+I'm A Survivor,2001,1999,2,1994,7
+I'm A Thug,2001,2001,0,2001,0
+I'm Alive,2009,1997,12,2009,0
+I'm Already Taken,1999,1999,0,1999,0
+I'm Already There,2001,1998,3,2009,8
+I'm Alright,1998,1998,0,2008,10
+I'm Awesome,2010,2010,0,2010,0
+I'm Back,2010,1999,11,1994,16
+I'm Comin' Over,2015,1998,17,1980,35
+I'm Different,2013,2012,1,2012,1
+I'm Glad,2003,1998,5,2002,1
+I'm Going In,2009,2009,0,2009,0
+I'm Gonna Be Alright,2002,1998,4,1980,22
+I'm Gonna Getcha Good!,2002,1998,4,1980,22
+I'm Gonna Miss Her (The Fishin' Song),2002,1999,3,1994,8
+I'm Into You,2011,1998,13,2015,4
+I'm Just Talkin' About Tonight,2001,1999,2,2005,4
+I'm Like A Bird,2001,1997,4,1980,21
+I'm Movin' On,2002,1998,4,2002,0
+I'm N Luv (Wit A Stripper),2006,2000,6,2006,0
+I'm Not Feeling You,1997,1998,1,1980,17
+I'm Not Giving You Up,1997,1998,1,1980,17
+I'm Not Ready,1999,1998,1,1992,7
+I'm Not The Only One,2014,1998,16,2014,0
+I'm On One,2011,2000,11,2011,0
+I'm Out,2013,2013,0,2013,0
+I'm Real,2001,1998,3,1980,21
+I'm So Hood,2007,2000,7,2007,0
+I'm So Hood,2007,2000,7,2007,0
+I'm So Paid,2008,2001,7,2008,0
+I'm Sprung,2005,1998,7,1987,18
+I'm Still A Guy,2008,2008,0,2008,0
+I'm Still In Love With You,1997,1999,2,1980,17
+I'm Still In Love With You,2004,1998,6,2004,0
+I'm Tryin',2001,1998,3,2001,0
+I'm With You,2003,1998,5,2002,1
+I'm Your Angel,1998,1998,0,1980,18
+I'm Yours,2008,1998,10,2008,0
+Ice Box,2007,1998,9,1994,13
+Ice Cream Paint Job,2009,2009,0,2009,0
+Icky Thump,2007,2001,6,2007,0
+If Everyone Cared,2007,1998,9,1980,27
+If Heaven Wasn't So Far Away,2011,1999,12,2002,9
+If I Ain't Got You,2004,1994,10,2005,1
+If I Could Go!,2002,1998,4,2002,0
+If I Could Teach The World,1997,1997,0,1997,0
+If I Could Turn Back The Hands Of Time,1999,1998,1,1999,0
+If I Didn't Have You,2013,1998,15,1980,33
+If I Die Young,2011,1998,13,2010,1
+If I Fall You're Going Down With Me,2001,1998,3,2001,0
+If I Had Eyes,2008,1998,10,1980,28
+If I Had You,2010,2000,10,2010,0
+If I Were A Boy,2008,1998,10,2000,8
+If It Makes You Happy,1997,1996,1,1996,1
+If It's Love,2010,1998,12,2002,8
+If It's Lovin' That You Want,2005,1998,7,1980,25
+If My Heart Had Wings,2001,1998,3,1990,11
+If This Was A Movie,2011,1998,13,2002,9
+If Today Was Your Last Day,2009,1998,11,1990,19
+If U Seek Amy,2009,1998,11,1980,29
+If We Ever Meet Again,2010,1999,11,1980,30
+If We Were A Movie,2006,1999,7,1980,26
+If You (Lovin' Me),1999,1999,0,1999,0
+If You Ever Stop Loving Me,2004,1998,6,2004,0
+If You Had My Love,1999,2000,1,2005,6
+If You Love Me,1999,1998,1,2012,13
+If You Only Knew,2010,1998,12,2009,1
+If You Think I'm Jiggy,1998,1998,0,1998,0
+If You're Going Through Hell (Before the Devil Ev,2006,1998,8,2006,0
+If You're Going Through Hell (Before the Devil Eve,2006,1998,8,2006,0
+If You're Gone,2001,1998,3,1994,7
+If You're Not The One,2003,1998,5,2003,0
+If You're Reading This,2007,1999,8,1980,27
+Ignition,2003,2002,1,2002,1
+Imagination,1998,1998,0,1998,0
+Imagine,2008,1998,10,2011,3
+Imma Be,2010,1998,12,2009,1
+Impossible,2010,1998,12,2002,8
+In A Real Love,2004,2004,0,2004,0
+In Da Club,2003,2002,1,2003,0
+In Love Wit Chu,2003,1998,5,2006,3
+In Love With A Girl,2008,1998,10,2008,0
+In My Bed,1997,1998,1,1980,17
+In My Daughter's Eyes,2004,1998,6,1980,24
+In My Head,2010,2010,0,2010,0
+In My Life,2004,2004,0,2004,0
+In The Ayer,2008,2000,8,2008,0
+In The Dark,2011,1998,13,2011,0
+In The End,2002,1998,4,1996,6
+In Those Jeans,2003,1998,5,2003,0
+Incomplete,2005,1997,8,1980,25
+Incomplete,2000,1998,2,2006,6
+Independent,2008,2000,8,2008,0
+Independent Women,2000,2000,0,2000,0
+Innocent,2010,1998,12,1980,30
+Inside Out,1998,1998,0,1998,0
+Inside Your Heaven,2005,1996,9,1983,22
+Inside Your Heaven,2005,1996,9,1983,22
+Intergalactic,1998,1998,0,1998,0
+International Love,2012,1999,13,2011,1
+Into The Night,2008,1997,11,1980,28
+Into You,2003,1999,4,2003,0
+Intuition,2003,1991,12,1980,23
+Inventing Shadows,2011,1998,13,1992,19
+Invisible,2006,1998,8,1980,26
+Invisible,2004,1998,6,2004,0
+Invisible,2014,1998,16,1982,32
+Invisible Man,1997,1998,1,1980,17
+Iris,1998,1998,0,1980,18
+Irreplaceable,2006,1999,7,2006,0
+Irresistible,2001,1998,3,2001,0
+It Ain't My Fault 1 & 2,1999,1999,0,1999,0
+It Ends Tonight,2007,1999,8,2006,1
+It Feels So Good,2000,1998,2,2006,6
+It Girl,2011,1999,12,2011,0
+It Goes Like This,2013,1999,14,1980,33
+It Happens,2009,1999,10,2009,0
+It Kills Me,2010,1998,12,1980,30
+It Must Be Love,2000,1998,2,1998,2
+It Must Be Love,1998,1998,0,2002,4
+It Was Always You,2014,1998,16,1980,34
+It Wasn't Me,2001,2000,1,2000,1
+It Will Rain,2011,1998,13,1993,18
+It Won't Be Like This For Long,2009,1998,11,2009,0
+It Won't Stop,2013,2013,0,2013,0
+It's A Great Day To Be Alive,2001,1999,2,2001,0
+It's All About Me,1998,1998,0,1998,0
+It's All About Me,1998,1998,0,1998,0
+It's All About The Benjamins,1998,1997,1,1997,1
+It's All About You (Not About Me),1999,1998,1,1980,19
+It's All Been Done,1999,1999,0,1999,0
+It's America,2009,1999,10,2014,5
+It's Been Awhile,2001,1998,3,2001,0
+It's Five O'Clock Somewhere,2003,1998,5,2003,0
+It's Goin' Down,2006,2000,6,2006,0
+It's Gonna Be Me,2000,1998,2,2000,0
+It's Like That,2005,1998,7,2005,0
+It's My Life,2000,1997,3,1980,20
+It's My Life,2004,1999,5,1980,24
+It's My Life/Confessions Part II,2009,1998,11,1980,29
+It's No Good,1997,1998,1,1992,5
+It's Not My Time,2008,1998,10,1995,13
+It's Not Over,2007,1998,9,1980,27
+It's Not Right But It's Okay,1999,1999,0,1999,0
+It's Over Now,2001,1998,3,1980,21
+It's Time,2013,1997,16,1993,20
+It's Your Body,1997,1998,1,1997,0
+It's Your Love,1997,1998,1,1980,17
+Izzo (H.O.V.A.),2001,2001,0,2001,0
+Jaded,2001,1991,10,1980,21
+Jai Ho! (You Are My Destiny),2009,2009,0,2009,0
+Jamboree,1999,1999,0,1999,0
+Jar Of Hearts,2011,1998,13,1980,31
+Jar Of Hearts,2011,1998,13,2010,1
+Jealous,2015,1998,17,2014,1
+Jenny From The Block,2002,1999,3,2002,0
+Jessie's Girl,2010,1998,12,2013,3
+Jesus Walks,2004,2004,0,2004,0
+Jesus Take The Wheel,2006,1998,8,1980,26
+Jigga My N****,1999,1999,0,1999,0
+John,2011,2001,10,2012,1
+John Cougar John Deere John 3:16,2015,2015,0,2015,0
+Judas,2011,2011,0,2011,0
+Jump Then Fall,2009,1998,11,2005,4
+Jumper,1999,1998,1,1998,1
+Jumpin' Jumpin',2000,1998,2,1998,2
+Jumpman,2015,2015,0,2015,0
+Just A Dream,2008,1999,9,2014,6
+Just A Dream,2010,1999,11,2003,7
+Just A Friend 2002,2002,1998,4,2002,0
+Just A Kiss,2011,1998,13,1980,31
+Just A Lil Bit,2005,1999,6,2005,0
+Just A Little While,2004,1998,6,1996,8
+Just Another Day,1997,1997,0,2003,6
+Just Another Day In Paradise,2000,2001,1,2000,0
+Just Be A Man About It,2000,1999,1,2003,3
+Just Can't Get Enough,2011,2011,0,2011,0
+Just Can't Get Enough,2011,2011,0,2011,0
+Just Dance,2009,2008,1,2008,1
+Just Fine,2008,1998,10,2015,7
+Just Friends (Sunny),2000,1998,2,2000,0
+Just Give Me A Reason,2013,1998,15,2013,0
+Just Got Started Lovin' You,2008,1998,10,2008,0
+Just Like A Pill,2002,1998,4,2002,0
+Just Like Me,2009,1999,10,2002,7
+Just Lose It,2004,2004,0,2004,0
+Just Stand Up!,2008,2008,0,2011,3
+Just The Girl,2005,1998,7,2013,8
+Just The Two Of Us,1998,1998,0,1998,0
+Just The Way You Are,2010,1998,12,2010,0
+Just The Way You Are,2010,1998,12,2010,0
+Karma,2005,1998,7,2005,0
+Karma,2005,1998,7,2004,1
+Keep Holding On,2006,1998,8,1980,26
+Keep Me In Mind,2011,1998,13,1980,31
+Keeps Gettin' Better,2008,1999,9,2009,1
+Kick The Dust Up,2015,2015,0,2015,0
+Killa,2008,2008,0,2008,0
+King Of Anything,2010,1998,12,2004,6
+King Without A Crown,2006,2006,0,2006,0
+Kiss A Girl,2009,1999,10,2009,0
+Kiss Kiss,2007,2007,0,2007,0
+Kiss Me,1999,2000,1,1999,0
+Kiss Me Kiss Me,2014,1998,16,1980,34
+Kiss Me Thru The Phone,2009,1999,10,2011,2
+Kiss The Rain,1998,1998,0,1980,18
+Kiss This,2000,2000,0,2000,0
+Kiss Tomorrow Goodbye,2012,1998,14,1980,32
+Kiss You,2013,2013,0,2013,0
+Knee Deep,2011,1998,13,1999,12
+Knock You Down,2009,1998,11,2009,0
+Knockout,2010,2001,9,2011,1
+Knocks Me Off My Feet,1997,1991,6,1980,17
+Know Your Enemy,2009,2009,0,2009,0
+Krazy,2008,2008,0,2008,0
+Kryptonite,2000,1998,2,2013,13
+Kryptonite (I'm On It),2005,2005,0,2005,0
+Kush,2010,2000,10,2010,0
+Kyrptonite (I'm On It),2006,2006,0,2005,1
+L.A.LOVE (la la),2014,2014,0,2014,0
+L.O.V.E.,2006,2001,5,1980,26
+La La La,2014,1997,17,2014,0
+La Tortura,2005,2005,0,2005,0
+Lady,2005,1998,7,2005,0
+Lady Marmalade,2001,2001,0,2001,0
+Laffy Taffy,2006,2005,1,2005,1
+Landslide,2003,1998,5,2002,1
+Landslide,2011,1998,13,2002,9
+Larger Than Life,1999,1999,0,1999,0
+Last Day Of My Life,2006,1998,8,1981,25
+Last Dollar (Fly Away),2007,1998,9,2007,0
+Last Friday Night (T.G.I.F.),2011,1998,13,1990,21
+Last Kiss,1999,1999,0,1991,8
+Last Name,2008,1998,10,2008,0
+Last Night,2007,1998,9,1980,27
+Last Night's Letter,1997,1998,1,1990,7
+Latch,2014,2014,0,2014,0
+Lately,1998,1998,0,1998,0
+Lay Low,2001,2001,0,1995,6
+Lay Me Down,2015,1998,17,2012,3
+Lean Back,2004,2004,0,2004,0
+Lean Like A Cholo,2007,2007,0,2007,0
+Lean On,2015,1999,16,1980,35
+Lean On Me,2009,1998,11,1998,11
+Lean On Me,2010,1997,13,2005,5
+Lean Wit It Rock Wit It,2006,2006,0,2006,0
+Learn To Fly,2000,1991,9,1980,20
+Leave (Get Out),2004,1998,6,2004,0
+Leave The Night On,2014,1999,15,2007,7
+Leave The Pieces,2006,1998,8,1980,26
+Leavin',2008,1998,10,2008,0
+Legend Of A Cowgirl,1997,1997,0,1997,0
+Lego House,2013,1998,15,1985,28
+Lemme See,2012,2012,0,2012,0
+Lesson In Leavin',1999,1998,1,1999,0
+Lessons Learned,2000,1998,2,2002,2
+Let Her Go,2014,1998,16,1980,34
+Let It Go,2014,1996,18,2014,0
+Let It Go,2014,2014,0,2014,0
+Let It Go,2007,2000,7,2007,0
+Let It Go,1997,1997,0,1997,0
+Let It Go,2008,2001,7,1980,28
+Let It Rock,2008,1999,9,2008,0
+Let Me Blow Ya Mind,2001,2001,0,2001,0
+Let Me Clear My Throat,1997,1997,0,1997,0
+Let Me Down Easy,2011,1998,13,1980,31
+Let Me Go,2005,1999,6,1980,25
+Let Me Hold You,2005,1998,7,2005,0
+Let Me In,2004,2004,0,2004,0
+Let Me Let Go,1998,1999,1,2012,14
+Let Me Love You,2005,1998,7,1980,25
+Let Me Love You (Until You Learn To Love Yourself),2012,1998,14,2012,0
+Let U Go,2006,1998,8,2006,0
+Let's Be Us Again,2004,1998,6,1980,24
+Let's Get Away,2004,2004,0,2004,0
+Let's Get Down,2003,2003,0,2003,0
+Let's Get It Started,2004,2004,0,2004,0
+Let's Get Married,2000,1999,1,2000,0
+Let's Go,2012,1998,14,2011,1
+Let's Go,2004,2002,2,2004,0
+Let's Go (2004),2004,2002,2,2004,0
+Let's Ride,1998,1998,0,1998,0
+Let's Ride,1998,1998,0,1998,0
+Let's Ride,2006,2006,0,2005,1
+Letter To Me,2008,1999,9,2008,0
+Letters From Home,2004,1998,6,1990,14
+Lettin' The Night Roll,2014,1998,16,2002,12
+Letting Go (Dutty Love),2010,2002,8,2012,2
+Levels,2015,1998,17,2015,0
+Liar,2000,2000,0,2000,0
+Life After You,2010,1998,12,1980,30
+Life In A Northern Town,2008,1997,11,1988,20
+Life Is A Highway,2006,1998,8,2006,0
+Life Of The Party,2014,1998,16,1980,34
+Life's What You Make It,2007,1998,9,1980,27
+Lifestyle,2014,2014,0,2014,0
+Lifestyles Of The Rich And Famous,2003,2002,1,2002,1
+Lifetime,2001,1998,3,1980,21
+Light In Your Eyes,1998,1998,0,1992,6
+Light On,2008,1998,10,1980,28
+Light Up The World,2011,2011,0,2010,1
+Lighters,2011,2011,0,2011,0
+Lighters Up,2005,2005,0,2005,0
+Lights,2012,1998,14,2006,6
+Lights And Sounds,2006,2000,6,1993,13
+Lights Camera Action!,2002,2000,2,2001,1
+Like A Boy,2007,2000,7,2001,6
+Like A G6,2010,2010,0,2010,0
+Like A Pimp,2003,2003,0,2003,0
+Like A Prayer,2010,2000,10,1985,25
+Like A Stone,2003,1997,6,2003,0
+Like Glue,2003,2003,0,2003,0
+Like I Love You,2002,2000,2,2002,0
+Like I'm Gonna Lose You,2015,1997,18,1980,35
+Like My Mother Does,2011,1999,12,2000,11
+Like This,2007,1998,9,2007,0
+Like This,2007,1999,8,2007,0
+Like Toy Soldiers,2005,1998,7,2005,0
+Like We Never Loved At All,2005,1998,7,1980,25
+Like You,2005,1998,7,2005,0
+Like You'll Never See Me Again,2008,1997,11,1980,28
+Lil Freak,2010,2010,0,2010,0
+Lip Gloss,2007,2001,6,2007,0
+Lips Are Movin',2014,2014,0,2014,0
+Lips Of An Angel,2006,1998,8,1980,26
+Liquid Dreams,2001,2000,1,2000,1
+Listen,2010,1998,12,1980,30
+Listen To Your Heart,2005,1998,7,1992,13
+Little Bit Of Everything,2013,1998,15,1994,19
+Little Drummer Boy,2013,1999,14,1992,21
+Little Good-Byes,1999,1999,0,1999,0
+Little Lion Man,2011,1998,13,2010,1
+Little Man,1999,1999,0,1999,0
+Little Moments,2004,1998,6,2006,2
+Little Talks,2013,1998,15,2012,1
+Little Talks,2013,1998,15,2012,1
+Little Things,2013,1998,15,2012,1
+Little Toy Guns,2015,2000,15,1992,23
+Live Like We're Dying,2010,1999,11,2009,1
+Live Like You Were Dying,2005,1998,7,2004,1
+Live My Life,2012,2000,12,2011,1
+Live While We're Young,2012,1998,14,2009,3
+Live Your Life,2008,2000,8,2008,0
+Livin' It Up,2001,2001,0,2001,0
+Livin' La Vida Loca,1999,2000,1,1999,0
+Living And Living Well,2002,1999,3,2005,3
+Living In Fast Forward,2006,2000,6,2004,2
+Loca,2010,2010,0,2014,4
+Locked Away,2015,1999,16,2015,0
+Locked Olut Of Heaven,2013,1998,15,1980,33
+Locked Out Of Heaven,2012,1998,14,1980,32
+Locked Up,2004,2001,3,2004,0
+Loco,2004,2000,4,2004,0
+Lolli Lolli (Pop That Body),2008,2000,8,2008,0
+Lollipop,2008,2008,0,2008,0
+Lollipop (Candyman),1998,1999,1,1980,18
+Lolly,2013,2001,12,2013,0
+London Bridge,2006,2000,6,2008,2
+Lonely,2005,1998,7,2005,0
+Lonely And Gone,1999,1998,1,1999,0
+Lonely Eyes,2015,1998,17,2002,13
+Lonely No More,2005,1998,7,1980,25
+Lonely Tonight,2015,1998,17,1980,35
+Long Hot Summer,2011,1998,13,2012,1
+Long Time Gone,2002,2002,0,2002,0
+Look At Me Now,2011,2000,11,2011,0
+Look Into My Eyes,1997,2000,3,1997,0
+Look What You've Done,2005,1998,7,1980,25
+Lookin Boy,2008,2008,0,2006,2
+Lookin' At Me,1998,1998,0,1997,1
+Looking Through Your Eyes,1998,1998,0,1980,18
+Lose Control,2005,2005,0,2005,0
+Lose My Breath,2004,1998,6,2004,0
+Lose My Mind,2015,2000,15,1989,26
+Lose My Mind,2010,2010,0,2010,0
+Lose Yourself,2002,2002,0,2002,0
+Loser Like Me,2011,1998,13,1980,31
+Lost In This Moment,2007,1997,10,1994,13
+Lost In You,1999,1999,0,1999,0
+Lost Without U,2007,2007,0,2007,0
+Lost!,2009,1998,11,1980,29
+Lot Of Leavin' Left To Do,2005,1999,6,2005,0
+Lotus Flower Bomb,2011,1997,14,2011,0
+Love,2006,1998,8,1980,26
+Love,2001,1998,3,1980,21
+Love At 1st Sight,2003,2003,0,2003,0
+Love At First Sight,2002,1998,4,1980,22
+Love Don't Cost A Thing,2001,2000,1,2001,0
+Love Drunk,2009,1999,10,2013,4
+Love Gets Me Every Time,1997,1997,0,1997,0
+Love In This Club,2008,1999,9,2004,4
+Love In This Club Part II,2008,1999,9,2004,4
+Love Is A Beautiful Thing,2008,1997,11,2008,0
+Love Is An Open Door,2014,1998,16,2012,2
+Love Is Blind,2000,1998,2,1991,9
+Love Like Crazy,2010,2010,0,2010,0
+Love Like This,1998,1998,0,1980,18
+Love Like This,2008,1998,10,2007,1
+Love Like Woe,2010,2000,10,2010,0
+Love Lockdown,2008,1998,10,1980,28
+Love Me,1998,1998,0,1998,0
+Love Me,2009,1999,10,1980,29
+Love Me,2013,2013,0,2013,0
+Love Me Again,2014,1998,16,1980,34
+Love Me Harder,2014,1998,16,2001,13
+Love Me If You Can,2007,1998,9,1985,22
+Love Me Like You Do,2015,1997,18,2015,0
+Love Me Like You Mean It,2015,1998,17,1980,35
+Love Me Or Hate Me (F**k You!!!!),2006,2006,0,2004,2
+Love More,2013,1999,14,2013,0
+Love Myself,2015,1998,17,1980,35
+Love Never Felt So Good,2014,1998,16,1980,34
+Love Of A Woman,2001,1998,3,2001,0
+Love Of My Life (An Ode To Hip Hop),2003,1998,5,1980,23
+Love On Top,2011,2000,11,1980,31
+Love Remains The Same,2008,1998,10,2008,0
+Love Runs Out,2014,1998,16,2014,0
+Love Sex Magic,2009,1998,11,2009,0
+Love Somebody,2013,1998,15,1980,33
+Love Song,2008,1998,10,2007,1
+Love Story,2009,1998,11,2013,4
+Love Story,2009,1998,11,2013,4
+Love The Way You Lie,2010,1998,12,2010,0
+Love You Down,1998,1998,0,1980,18
+Love You Down,1998,1998,0,1980,18
+Love You Down,1998,1998,0,1980,18
+Love You Like A Love Song,2012,1997,15,2011,1
+Love You Like That,2015,2000,15,2010,5
+Love You Out Loud,2003,1998,5,1992,11
+Love's The Only House,2000,1998,2,2001,1
+LoveGame,2009,2000,9,2009,0
+LoveStoned,2007,1998,9,2007,0
+Lovebug,2009,1998,11,1994,15
+Lover Lover,2010,1998,12,1980,30
+Loverboy,2001,1998,3,1983,18
+Lovers And Friends,2005,2004,1,2004,1
+Loving You Easy,2015,1998,17,1980,35
+Low,2008,2007,1,2007,1
+Loyal,2014,2001,13,2010,4
+Loyal,2014,2001,13,2010,4
+Loyal,2014,2001,13,2010,4
+Luchini aka (This Is It),1997,1997,0,1997,0
+Lucky,2000,1997,3,2003,3
+Lucky,2010,1997,13,2010,0
+Lucky,2009,1997,12,1980,29
+Lullaby,1999,1998,1,1998,1
+Luv U Better,2002,1999,3,2002,0
+Luxurious,2005,2005,0,2005,0
+Mad,2009,1999,10,1980,29
+Mad Season,2001,1998,3,1980,21
+Mad World,2009,1997,12,1980,29
+Made In America,2011,2002,9,2011,0
+Made You Look,2003,2002,1,2002,1
+Madness,2013,1998,15,2013,0
+Magic,2010,2010,0,2010,0
+Magic,2014,1998,16,1980,34
+Magic Stick,2003,2002,1,2003,0
+Make 'Em Say Uhh!,1998,1998,0,1998,0
+Make 'Em Say Uhh!,1998,1998,0,1998,0
+Make 'Em Say Uhh!,1998,1998,0,1998,0
+Make 'Em Say Uhh!,1998,1998,0,1998,0
+Make Her Feel Good,2005,1998,7,2005,0
+Make Her Say,2009,2009,0,2009,0
+Make It Clap,2003,2003,0,2003,0
+Make It Hot,1998,2000,2,2001,3
+Make It Hot,1998,2000,2,2001,3
+Make It Hot,1998,2000,2,2001,3
+Make It Rain,2014,1997,17,1980,34
+Make It Rain,2007,1998,9,2006,1
+Make Me Better,2007,2000,7,2007,0
+Make Me Proud,2011,2011,0,2011,0
+Make Me Wanna,2015,1998,17,2014,1
+MakeDamnSure,2006,2000,6,1980,26
+Makes Me Wonder,2007,1998,9,1980,27
+Makin' Good Love,2002,1998,4,2012,10
+Making Memories Of Us,2005,1998,7,2005,0
+Mama's Broken Heart,2013,1999,14,2013,0
+Mamacita,2001,1998,3,2008,7
+Mambo No. 5 (A Little Bit Of?),1999,2000,1,2007,8
+Man In The Mirror,2011,2000,11,2010,1
+Man To Man,2003,1999,4,2013,10
+Man! I Feel Like A Woman!,1999,1999,0,1999,0
+Maneater,2006,1999,7,1980,26
+Maps,2014,1999,15,1980,34
+Maria Maria,2000,2000,0,2000,0
+Marry Me,2013,1998,15,1996,17
+Marry Me,2011,1999,12,1980,31
+Marry The Night,2011,2001,10,2005,6
+Marry You,2010,1998,12,2010,0
+Marvin & Chardonnay,2011,2000,11,2011,0
+Marvin Gaye,2015,2015,0,2015,0
+Marvins Room,2011,1999,12,2011,0
+Mary Did You Know?,2014,1998,16,1993,21
+Maybe I Deserve,2001,1998,3,2003,2
+Mayberry,2004,1999,5,2005,1
+Me & U,2006,1998,8,1980,26
+Me Against The Music,2003,2003,0,2003,0
+Me And My Broken Heart,2014,1998,16,1990,24
+Me And My Gang,2006,2006,0,2010,4
+Me Love,2007,1991,16,1980,27
+Me Myself And I,2004,1998,6,1980,24
+Mean,2010,1998,12,2010,0
+Meant To Live,2004,1997,7,1998,6
+Meanwhile,1999,1999,0,1999,0
+Meanwhile Back At Mama's,2014,1998,16,2010,4
+Meet Me Halfway,2009,1999,10,2009,0
+Meet Virginia,2000,1999,1,1999,1
+Memories,2010,1998,12,1980,30
+Mercy,2008,1998,10,2008,0
+Mercy,2012,2012,0,2012,0
+Mercy,2012,2012,0,2012,0
+Mesmerize,2003,2003,0,2003,0
+Miami,1999,1998,1,1998,1
+Midnight,2014,1995,19,1980,34
+Midnight Memories,2013,1998,15,1980,33
+Milkshake,2003,1999,4,2000,3
+Mine,2010,1998,12,2010,0
+Mine Would Be You,2013,1998,15,2013,0
+Mirror,2011,1998,13,2011,0
+Mirrors,2013,1998,15,2013,0
+Misery,2010,1998,12,2010,0
+Misery Business,2008,1999,9,2009,1
+Miss Independent,2003,2003,0,2003,0
+Miss Independent,2008,2000,8,1980,28
+Miss Me,2010,2010,0,2010,0
+Miss Murder,2006,1998,8,2006,0
+Miss You,2003,1998,5,2002,1
+Missing You,2001,1998,3,1985,16
+Mississippi Girl,2005,1998,7,2005,0
+Mistletoe,2011,2000,11,2011,0
+Mmm Yeah,2014,2014,0,2014,0
+Mmmbop,1997,1997,0,1997,0
+Mo Money Mo Problems,1997,1997,0,1997,0
+Mo Money Mo Problems,1997,1997,0,1997,0
+Mockingbird,2005,1999,6,2005,0
+Moment 4 Life,2011,2011,0,2011,0
+Moment 4 Life,2011,2011,0,2011,0
+Money In The Bank,2006,1998,8,2006,0
+Money Maker,2006,1998,8,2006,0
+Money To Blow,2010,1999,11,2009,1
+Money Power & Respect,1998,1998,0,1998,0
+Money Power & Respect,1998,1998,0,1998,0
+Monster,2010,2010,0,2010,0
+Monster,2011,1998,13,2015,4
+More,2011,1998,13,2011,0
+More & More,2003,1998,5,1980,23
+More Than A Woman,2002,2002,0,2002,0
+More Than That,2001,1997,4,1980,21
+More Than This,1997,1995,2,1980,17
+More Than Words,2005,1998,7,1980,25
+Most Girls,2000,2000,0,2000,0
+Motivation,2011,1997,14,2011,0
+Move Along,2006,1998,8,1980,26
+Move B***h,2002,2002,0,2002,0
+Move That Doh,2014,2014,0,2014,0
+Move Ya Body,2004,1999,5,1980,24
+Moves Like Jagger,2011,1998,13,2011,0
+Movin On,1998,2000,2,1997,1
+Movin' On,1998,2000,2,1997,1
+Mr. Brightside,2005,1998,7,2005,0
+Mr. Know It All,2011,1998,13,1980,31
+Mr. Mom,2004,2004,0,2004,0
+Mr. Saxobeat,2011,2011,0,2011,0
+Mrs. Officer,2008,2000,8,1993,15
+Mrs. Steven Rudy,2001,1998,3,2001,0
+Ms. Jackson,2001,2000,1,2000,1
+Ms. New Booty,2006,2006,0,2006,0
+Mud On The Tires,2005,1997,8,2012,7
+Music,2001,1999,2,2010,9
+Music,2000,1997,3,1997,3
+Music Of My Heart,1999,1998,1,1980,19
+Must Be Doin' Somethin' Right,2005,1998,7,2004,1
+Must Be Nice,2005,1998,7,2005,0
+My All,1998,1998,0,1998,0
+My Baby,2004,1998,6,2004,0
+My Baby,2001,2001,0,2001,0
+My Baby Daddy,1997,1997,0,1997,0
+My Baby's Got A Smile On Her Face,2015,1998,17,2001,14
+My Band,2004,2004,0,2004,0
+My Best Friend,2000,1998,2,1980,20
+My Body,1997,1998,1,1997,0
+My Boo,2004,1998,6,1980,24
+My Chick Bad,2010,2010,0,2010,0
+My Drink N' My 2 Step,2007,2002,5,2007,0
+My Everything,2001,1998,3,1980,21
+My Eyes,2014,1998,16,1998,16
+My Favorite Girl,1999,1999,0,2014,15
+My Favorite Mistake,1998,1998,0,1980,18
+My First Kiss,2010,1999,11,1980,30
+My First Love,2000,1998,2,1985,15
+My First Night With You,1999,1998,1,1980,19
+My Front Porch Looking In,2003,2000,3,2003,0
+My Happy Ending,2004,1999,5,2004,0
+My Heart Is Lost To You,2002,1997,5,1981,21
+My Heart Will Go On,1998,1998,0,1980,18
+My Hiita,2014,2000,14,2008,6
+My Hitta,2013,2001,12,2015,2
+My Homies Still,2012,1999,13,2012,0
+My Humps,2005,2005,0,2005,0
+My Immortal,2004,1998,6,2004,0
+My Kinda Party,2010,2004,6,2010,0
+My Last,2011,2003,8,2011,0
+My Life,2012,1999,13,2010,2
+My Life,2008,1998,10,2008,0
+My Life Would Suck Without You,2009,1998,11,2012,3
+My List,2002,1998,4,2002,0
+My Little Girl,2006,1998,8,1980,26
+My Little Secret,1998,1998,0,2005,7
+My Love,2006,1998,8,1980,26
+My Love Is Like... Wo,2003,1998,5,1994,9
+My Love Is The Shhh!,1997,1998,1,1995,2
+My Love Is Your Love,2000,1998,2,2009,9
+My Love is The Shhh!,1997,1998,1,1995,2
+My Name Is,1999,1999,0,1999,0
+My Neck My Back,2002,1999,3,2012,10
+My Next Thirty Years,2000,1998,2,2000,0
+My Place,2004,1998,6,2004,0
+My Sacrifice,2002,1998,4,2001,1
+My Songs Know What You Did In The Dark,2013,1998,15,2013,0
+My Town,2002,1998,4,1980,22
+My Way,2015,1998,17,2015,0
+My Way,1998,1998,0,1997,1
+My Wish,2006,1998,8,1980,26
+Na Na,2014,1999,15,2002,12
+Naked,2005,1998,7,2005,0
+Naked Eye,1997,1997,0,1997,0
+Nasty,2015,2004,11,2004,11
+Nasty Freestyle,2015,2002,13,2015,0
+Nasty Girl,2006,2000,6,2006,0
+Naturally,2010,1998,12,1985,25
+Naughty Girl,2004,1998,6,1980,24
+Need U Bad,2008,2008,0,2008,0
+Need You Now,2010,1998,12,1980,30
+Neighbors Know My Name,2010,2010,0,2010,0
+Neon Light,2014,1998,16,1996,18
+Neon Lights,2014,1997,17,1980,34
+Never Again,2007,1998,9,1980,27
+Never Ever,1998,1998,0,1998,0
+Never Gonna Let You Go,1999,1999,0,1980,19
+Never Had A Dream Come True,2001,1998,3,1980,21
+Never Leave You - Uh Ooh Uh Oooh!,2003,1998,5,1980,23
+Never Let You Go,2010,1998,12,2013,3
+Never Let You Go,2000,1999,1,2000,0
+Never Make A Promise,1997,1998,1,1980,17
+Never Say Never,2011,1999,12,1996,15
+Never Say Never,2009,1998,11,1980,29
+Never Scared,2003,2003,0,2003,0
+Never Wanted Nothing More,2007,1997,10,2007,0
+New Divide,2009,1997,12,2009,0
+New Flame,2014,1998,16,2014,0
+New Soul,2008,1998,10,2009,1
+New York,2005,2004,1,2004,1
+Next To Me,2013,2000,13,1987,26
+Next To You,2011,1998,13,1980,31
+Ni**as In Paris,2012,2003,9,2011,1
+Nice,1998,1998,0,1998,0
+Nice & Slow,1998,1998,0,1998,0
+Night Changes,2014,1998,16,1980,34
+Night Train,2013,1998,15,2000,13
+No Air,2008,1998,10,1980,28
+No Better Love,2004,2004,0,2004,0
+No Boundaries,2009,1997,12,2011,2
+No Flex Zone,2014,2014,0,2014,0
+No Hands,2010,2010,0,2010,0
+No Hands,2011,2010,1,2010,1
+No Hurry,2012,1998,14,2004,8
+No Letting Go,2003,1998,5,2003,0
+No Lie,2012,2001,11,2012,0
+No Love,2010,2010,0,2010,0
+No Mediocre,2014,2000,14,2014,0
+No More,2000,1998,2,2000,0
+No More (Baby I'ma Do Right),2001,2000,1,2000,1
+No More Drama,2002,1998,4,1980,22
+No New Friends,2013,2013,0,2013,0
+No One,2007,1997,10,1980,27
+No Pigeons,1999,1999,0,1999,0
+No Place That Far,1999,1998,1,1980,19
+No Problem,2004,2000,4,2006,2
+No Scrubs,1999,1998,1,1980,19
+No Shoes No Shirt No Problems,2003,1999,4,2010,7
+No Sleep,2011,2001,10,2011,0
+No Such Thing,2002,1991,11,1980,22
+No Surprise,2009,1998,11,2009,0
+No Tengo Dinero,1997,1997,0,1997,0
+No Time,1997,1996,1,1996,1
+No Type,2014,2000,14,2013,1
+No Worries,2013,2012,1,2012,1
+No No No,1998,1997,1,1997,1
+Nobody Does It Better,1998,1998,0,1998,0
+Nobody Else,1998,1998,0,1993,5
+Nobody Wants To Be Lonely,2001,1998,3,1980,21
+Nobody's Home,2005,1998,7,1980,25
+Nobody's Perfect,2007,1998,9,1997,10
+Nobody's Supposed To Be Here,1998,1997,1,1980,18
+Nolia Clap,2004,2004,0,2004,0
+None Of Ur Friends Business,2000,1998,2,2000,0
+Not A Bad Thing,2014,1998,16,1980,34
+Not A Day Goes By,2002,1998,4,1980,22
+Not Afraid,2010,1998,12,2010,0
+Not Myself Tonight,2010,1998,12,2006,4
+Not Over You,2012,1998,14,2011,1
+Not Ready To Make Nice,2007,1998,9,1980,27
+Not Today,2004,1999,5,2002,2
+Not Tonight,1997,1997,0,1997,0
+Not Tonight,1997,1997,0,1997,0
+Note To God,2009,1998,11,1980,29
+Nothin',2002,2002,0,2002,0
+Nothin' But The Cavi Hit,1997,1996,1,1996,1
+Nothin' On You,2010,1998,12,2010,0
+Nothin' To Lose,2005,1998,7,1991,14
+Nothing,2011,1997,14,2000,11
+Nothing As It Seems,2000,1997,3,1994,6
+Nothing In This World,2002,1998,4,1991,11
+Nothing Left To Lose,2007,1998,9,1999,8
+Nothing On But The Radio,2004,1998,6,1980,24
+Nude,2008,1997,11,1980,28
+Numb,2004,1998,6,2003,1
+Numb/Encore,2005,2004,1,2004,1
+Number One Spot,2005,2005,0,2005,0
+O,2005,1998,7,2005,0
+OMG,2010,2010,0,2010,0
+Obsessed,2009,1998,11,2009,0
+Obsession (No Es Amor),2005,2005,0,2005,0
+Ocean Avenue,2004,1998,6,1980,24
+Odio,2014,2014,0,2005,9
+Oh,2005,2005,0,2005,0
+Oh Boy,2002,2002,0,2002,0
+Oh Sweet Lorraine,2013,1995,18,1995,18
+Oh Yeah!,2002,2002,0,2000,2
+Okay,2005,2005,0,2005,0
+Old Alabama,2011,1998,13,2011,0
+Old Time's Sake,2009,2009,0,2004,5
+On & On,1997,1997,0,1997,0
+On A Night Like This,2001,1998,3,2001,0
+On Fire,2004,2001,3,2004,0
+On My Mind,2015,1998,17,2015,0
+On My Own,1997,1998,1,1980,17
+On The Floor,2011,1998,13,2011,0
+On The Hotline,2007,1999,8,1985,22
+On The Way Down,2004,1998,6,2010,6
+On To The Next One,2010,1998,12,2010,0
+Once In A Lifetime,2006,1997,9,1980,26
+One Call Away,2004,1998,6,2004,0
+One Hell Of An Amen,2015,1998,17,1980,35
+One Last Breath,2002,1998,4,1980,22
+One Last Time,2015,1998,17,2014,1
+One Less Lonely Girl,2009,2009,0,2009,0
+One Love (People Get Ready),2010,2010,0,2010,0
+One Mic,2002,2002,0,2002,0
+One Minute Man,2001,2001,0,2001,0
+One More Day,2001,1999,2,1980,21
+One More Drink,2009,1998,11,2008,1
+One More Night,2012,1998,14,2009,3
+One More Time,1997,1998,1,1980,17
+One More Try,1999,1998,1,1980,19
+One Night Stand,2000,1998,2,2000,0
+One Of Those Nights,2013,1997,16,2001,12
+One Of Us,2010,2003,7,2010,0
+One Step At A Time,2008,1998,10,2000,8
+One Thing,2004,1998,6,2004,0
+One Thing,2012,1997,15,1980,32
+One Time,2010,1998,12,2009,1
+One Voice,2000,1998,2,2000,0
+One Way Or Another (Teenage Kicks),2013,2013,0,2013,0
+One Week,1998,1998,0,1998,0
+One Wish,2006,1999,7,1999,7
+One Woman Man,2001,2001,0,2001,0
+Online,2007,2007,0,2007,0
+Only,2014,2014,0,2014,0
+Only Girl (In The World),2010,1998,12,1980,30
+Only God Knows Why,2000,1997,3,2000,0
+Only In America,2001,1999,2,2001,0
+Only One,2015,1998,17,2015,0
+Only The Good Die Young,2010,1998,12,2005,5
+Only Time,2001,1991,10,1980,21
+Only U,2005,1998,7,2002,3
+Only You Can Love Me This Way,2009,1997,12,1980,29
+Oochie Wally,2001,2001,0,2001,0
+Ooh Aah...Just A Little Bit,1997,1998,1,1980,17
+Ooh La La,1998,1998,0,1998,0
+Ooh!,2003,1996,7,1980,23
+Oops (Oh My),2002,2002,0,2002,0
+Oops!...I Did It Again,2000,1998,2,1980,20
+Or Nah,2014,2002,12,2014,0
+Ordinary Day,2002,1998,4,2002,0
+Ordinary Life,1999,1998,1,2004,5
+Ordinary People,2005,2000,5,1980,25
+Otherside,2000,1998,2,2000,0
+Otis,2011,2011,0,2011,0
+Otis,2011,2011,0,2011,0
+Our Song,2008,1998,10,2007,1
+Ours,2011,1998,13,2011,0
+Out Here Grindin',2008,2008,0,2008,0
+Out Last Night,2009,1998,11,1998,11
+Out Of My Head,1999,1996,3,1996,3
+Out Of My Head,2011,1998,13,2002,9
+Out Of The Woods,2014,1998,16,2003,11
+Outside,2015,1998,17,1980,35
+Outta Control (Remix),2005,2001,4,2005,0
+Outta My System,2007,1998,9,2007,0
+Over,2012,1998,14,1980,32
+Over,2010,1998,12,2010,0
+Over And Over,2004,1998,6,2004,0
+Over It,2007,1997,10,1980,27
+Over My Head (Cable Car),2006,1998,8,2006,0
+Over The Rainbow,2010,1999,11,2010,0
+Over You,2012,1998,14,2012,0
+Over You,2007,1997,10,1980,27
+Over You,2012,1998,14,2012,0
+Overnight Celebrity,2004,2004,0,2004,0
+Oye Mi Canto,2004,2004,0,2004,0
+P.I.M.P.,2003,2003,0,2003,0
+Pain,2007,1998,9,1980,27
+Paint Me A Birmingham,2004,1998,6,1992,12
+Pants On The Ground,2010,1999,11,1999,11
+Paparazzi,2009,1998,11,2009,0
+Paper,1998,1998,0,1980,18
+Paper Planes,2008,1998,10,2000,8
+Papers,2009,1998,11,2006,3
+Paradise,2011,2011,0,2011,0
+Paradise,2003,2003,0,2003,0
+Paralyzer,2008,1998,10,2015,7
+Paranoid,2009,1998,11,2002,7
+Paranoid,2014,2014,0,2014,0
+Part Of Me,2012,1996,16,2010,2
+Partition,2014,2014,0,2014,0
+Party,2011,2011,0,1990,21
+Party In The U.S.A.,2009,2001,8,2009,0
+Party Like A Rockstar,2007,2000,7,2012,5
+Party People,2008,2008,0,2008,0
+Party Rock Anthem,2011,2011,0,2011,0
+Party Rock Anthem,2011,2011,0,2011,0
+Party Up (Up In Here),2000,2000,0,2000,0
+Pass That Dutch,2003,2003,0,2003,0
+Pass The Courvoisier Part II,2002,2002,0,2002,0
+Payphone,2012,1998,14,2006,6
+Peaches & Cream,2001,2001,0,2001,0
+Penomenal,2015,2015,0,2013,2
+People Are Crazy,2009,1998,11,2009,0
+Perfect,2015,1998,17,2002,13
+Perfect,2004,1999,5,2002,2
+Perfect,2003,1997,6,2003,0
+Permanent,2009,1997,12,1980,29
+Photograph,2015,1997,18,1995,20
+Photograph,2005,1998,7,2003,2
+Picture,2003,1998,5,2002,1
+Picture To Burn,2008,1999,9,1988,20
+Piece Of Me,2008,2007,1,2007,1
+Pieces Of Me,2004,1996,8,1980,24
+Pills N Potions,2014,1998,16,2014,0
+Pimpin' All Over The World,2005,2005,0,2005,0
+Pinch Me,2000,1998,2,2000,0
+Pink,1998,1991,7,1980,18
+Pirate Flag,2013,1998,15,1998,15
+Planes,2015,2000,15,2015,0
+Play,2005,1999,6,2005,0
+Play,2001,1999,2,1980,21
+Play It Again,2014,1999,15,2014,0
+Play My Music,2008,1998,10,1996,12
+Play Something Country,2005,2005,0,2009,4
+Please,2015,1998,17,1980,35
+Please Don't Go,2010,1998,12,1980,30
+Please Don't Go,1997,1998,1,1980,17
+Please Don't Go,2007,1998,9,1980,27
+Please Don't Leave Me,2009,1998,11,2009,0
+Please Remember Me,1999,1997,2,1982,17
+Po' Folks,2002,2002,0,2002,0
+Pocketful Of Sunshine,2008,1998,10,1980,28
+Poetic Justice,2013,2000,13,2013,0
+Poker Face,2010,2010,0,2009,1
+Poker Face,2009,2009,0,2009,0
+Pompeii,2014,1997,17,2010,4
+Pon de Replay,2005,1998,7,2014,9
+Pontoon,2012,2000,12,2012,0
+Pop,2001,1997,4,1980,21
+Pop A Top,2000,1998,2,2000,0
+Pop Bottles,2008,2000,8,2007,1
+Pop Champagne,2009,2003,6,2008,1
+Pop Champange,2009,1998,11,1998,11
+Pop That,2012,2012,0,2012,0
+Pop Lock & Drop It,2007,2003,4,2007,0
+Poppin',2007,1998,9,2008,1
+Poppin' My Collar,2006,2001,5,2006,0
+Post To Be,2015,2000,15,2015,0
+Potential Breakup Song,2007,1998,9,2002,5
+Pound The Alarm,2012,2012,0,2012,0
+Pour It Up,2013,2007,6,2013,0
+Power,2010,2010,0,2010,0
+Power,2010,2010,0,2010,0
+Power Trip,2013,1998,15,2013,0
+Powerful Thing,1999,1998,1,2001,2
+Praise You,1999,1998,1,1980,19
+Pray For You,2010,1999,11,2005,5
+Prayer In C,2015,1997,18,2010,5
+Prayin' For Daylight,2000,2000,0,2000,0
+Praying For Time,2008,1998,10,1981,27
+Pretending,2011,1997,14,2010,1
+Pretty Boy Swag,2010,2000,10,2011,1
+Pretty Girl Rock,2011,1999,12,2008,3
+Pretty Girls,2015,1998,17,2015,0
+Pretty Girls,2011,1998,13,2011,0
+Pretty Good At Drinkin' Beer,2010,1999,11,2010,0
+Pretty Vegas,2005,2000,5,2013,8
+Pretty Wings,2009,2009,0,2009,0
+Price Tag,2011,1998,13,2011,0
+Price Tag,2011,1998,13,2011,0
+Princess Of China,2011,2011,0,2010,1
+Prisoner,2015,1999,16,1980,35
+Problem,2014,2000,14,2014,0
+Project Chick,2001,2001,0,2001,0
+Prom Queen,2009,1998,11,2010,1
+Promiscuous,2006,1998,8,2005,1
+Promise,2006,2000,6,1980,26
+Promise,2001,1998,3,1980,21
+Pullin' Me Back,2006,2001,5,1996,10
+Pump It,2006,2006,0,2006,0
+Pump It Up,2003,2003,0,2003,0
+Pumped Up Kicks,2011,2000,11,2011,0
+Purple Hills,2001,2001,0,2001,0
+Push It To The Limit,2007,1998,9,2011,4
+Pushin' Me Away,2008,1998,10,1980,28
+Pushin' Weight,1999,1998,1,1998,1
+Put It On Me,2001,1998,3,2002,1
+Put It On Ya,2009,1999,10,2009,0
+Put On,2008,2008,0,2008,0
+Put That Woman First,2003,1998,5,2009,6
+Quit Playing Games (With My Heart),1997,1998,1,1980,17
+R.I.C.O.,2015,2015,0,2015,0
+Rack City,2012,2012,0,2012,0
+Racks,2011,2000,11,2011,0
+Radioactive,2013,1999,14,1989,24
+Radioactive,2010,1998,12,1985,25
+Rain,1998,1998,0,1998,0
+Rain Is A Good Thing,2010,2003,7,2010,0
+Rain On Me,2003,1997,6,2003,0
+Rain Over Me,2011,2011,0,2011,0
+Raining On Sunday,2003,1999,4,1982,21
+Rainy Dayz,2002,1999,3,2002,0
+Raise The Roof,1998,1998,0,1998,0
+Raise Up,2001,2001,0,2001,0
+Raise Your Glass,2011,2010,1,2010,1
+Raise Your Glass,2010,1998,12,2010,0
+Raise Your Glass,2011,2010,1,2010,1
+Rap God,2013,2013,0,2013,0
+Rapture (Tastes So Sweet),2002,1999,3,1980,22
+Rather Be,2014,2014,0,2014,0
+Ray Of Light,1998,1998,0,1998,0
+React,2002,2002,0,2002,0
+Read Your Mind,2004,1998,6,1980,24
+Ready Or Not,2013,1998,15,2009,4
+Ready To Run,1999,1999,0,1980,19
+Ready Set Don't Go,2008,1998,10,1980,28
+Real Good Man,2003,1998,5,1988,15
+Real World,1998,1998,0,1998,0
+Realize,2008,1998,10,1980,28
+Really Don't Care,2014,1998,16,2014,0
+Recovery,2013,1999,14,2003,10
+Red,2012,1998,14,2012,0
+Red Dirt Road,2003,1998,5,2003,0
+Red Rag Top,2002,1998,4,2004,2
+Red Solo Cup,2012,2011,1,2011,1
+Redneck Crazy,2013,2002,11,1980,33
+Redneck Woman,2004,2002,2,2011,7
+Redneck Yacht Club,2005,2005,0,2005,0
+Rehab,2007,1998,9,2014,7
+Rehab,2009,1998,11,2009,0
+Remedy (I Won't Worry),2003,1998,5,2003,0
+Remember Me,2009,1998,11,2003,6
+Remember When,2004,1997,7,2003,1
+Remember When,1998,1996,2,1997,1
+Remind Me,2011,1998,13,2011,0
+Renegades,2015,2015,0,2015,0
+Replay,2010,1998,12,2009,1
+Replay,2014,2014,0,2014,0
+Request Line,1997,1997,0,1997,0
+Return Of The Mack,1997,1998,1,1980,17
+Rewind,2014,2014,0,2014,0
+Rhythm Divine,2000,2000,0,2000,0
+Rhythm Of Love,2011,1998,13,2011,0
+Rich As F**k,2013,2013,0,2013,0
+Rich Girl,2005,1998,7,2005,0
+Ride,2010,1998,12,2010,0
+Ride Wit Me,2001,2001,0,2001,0
+Ridin',2006,2006,0,2006,0
+Ridin' Solo,2010,1998,12,1980,30
+Riding With Private Malone,2001,1998,3,2001,0
+Right Above It,2010,2000,10,2010,0
+Right Here (Departed),2008,1999,9,2004,4
+Right Now,2013,1998,15,2008,5
+Right Now (Na Na Na),2008,1998,10,1980,28
+Right On The Money,1999,2000,1,1980,19
+Right Round,2009,1999,10,2009,0
+Right There,2011,1998,13,1998,13
+Right Thru Me,2010,2000,10,2011,1
+Right Thurr,2003,2003,0,2003,0
+Right Where I Need To Be,2001,2001,0,2001,0
+Right Where You Want Me,2006,1998,8,1992,14
+Ring The Alarm,2006,2000,6,2004,2
+Riptide,2015,2014,1,2014,1
+River Deep Mountain High,2010,1998,12,1984,26
+Roar,2013,1998,15,2013,0
+Rock That Body,2010,1998,12,2010,0
+Rock The Boat,2001,1999,2,1980,21
+Rock Wit U (Awww Baby),2003,1998,5,2003,0
+Rock Yo Hips,2007,2007,0,2007,0
+Rock Your Body,2003,1998,5,1980,23
+Rocketeer,2011,2011,0,2011,0
+Rockin' Around The Christmas Tree,2014,2014,0,1980,34
+Rockin' That Thang,2009,1998,11,2005,4
+Rockstar,2007,2007,0,2007,0
+Rodeo,2006,1998,8,2004,2
+Roll Up,2011,2011,0,2011,0
+Roll With Me,2008,1999,9,1980,28
+Roller Coaster,2013,1998,15,1980,33
+Roller Coaster,2014,1998,16,2006,8
+Rolling In The Deep,2011,1998,13,2011,0
+Rolling In The Deep,2011,1998,13,2010,1
+Rollout (My Business),2002,2000,2,2001,1
+Romeo And Juliet,1998,1998,0,1998,0
+Romeo And Juliet,1998,1998,0,1998,0
+Romeo And Juliet,1998,1998,0,1998,0
+Rompe,2006,2006,0,2006,0
+Ronan,2012,1998,14,2008,4
+Roses,2004,1998,6,2004,0
+Rotten To The Core,2015,2000,15,2000,15
+Round & Round,2010,1997,13,2010,0
+Round Here,2013,1998,15,1980,33
+Royals,2013,1996,17,2013,0
+Rubber Band Man,2004,2004,0,2004,0
+Rude,2014,1998,16,2011,3
+Rude Boy,2010,1998,12,2010,0
+Rumour Has It,2012,1999,13,1987,25
+Rumour Has It/Someone Like You,2011,1999,12,1987,24
+Run,2001,2000,1,1986,15
+Run It!,2005,1999,6,2005,0
+Run The World (Girls),2011,1998,13,2011,0
+Run This Town,2009,1998,11,2009,0
+Runaway,2010,2010,0,2010,0
+Runaway Baby,2012,1998,14,2003,9
+Runaway Love,2007,1998,9,2006,1
+Runnin (Dying To Live),2003,2000,3,2005,2
+Runnin' Outta Moonlight,2013,1999,14,2011,2
+Running Away,2002,1998,4,1980,22
+Russian Roulette,2009,1997,12,1980,29
+S&M,2011,2000,11,2011,0
+S.E.X.,2006,1998,8,2006,0
+S.O.S.,2007,2000,7,2012,5
+SOS,2006,1991,15,1980,26
+Safe & Sound,2012,1997,15,1980,32
+Safe And Sound,2013,1999,14,1993,20
+Sail,2013,1998,15,1980,33
+Salt Shaker,2004,2000,4,2003,1
+Same Girl,2007,2000,7,2007,0
+Same Love,2013,2013,0,2013,0
+Same Old Love,2015,1998,17,1980,35
+Sangria,2015,1998,17,2015,0
+Santa Tell Me,2015,1998,17,2015,0
+Satisfaction,2003,1998,5,2002,1
+Satisfy You,1999,1999,0,1999,0
+Saturday (Oooh! Ooooh!),2002,2002,0,2002,0
+Save Tonight,1999,1998,1,1980,19
+Savin' Me,2006,1997,9,2004,2
+Say,2008,1998,10,2008,0
+Say Aah,2010,2000,10,2008,2
+Say Goodbye,2006,1997,9,1980,26
+Say Hey (I Love You),2009,2000,9,2009,0
+Say Hey (I Love You),2009,2000,9,2009,0
+Say Hey (I Love You),2009,2000,9,2009,0
+Say I,2006,2000,6,2012,6
+Say It,1998,1998,0,2013,15
+Say It Right,2007,1998,9,1980,27
+Say My Name,2000,1998,2,1980,20
+Say Something,2013,1999,14,1980,33
+Say Something,2013,1999,14,1980,33
+Say Something,2010,1998,12,2010,0
+Say Yes,2003,1998,5,1980,23
+Say You'll Be There,1997,1998,1,1992,5
+Say...If You Feel Alright,1997,1998,1,1997,0
+Scandalous,2004,1999,5,1993,11
+Scar Tissue,1999,1999,0,1999,0
+Scars,2005,1998,7,2005,0
+Scream,2012,1999,13,1987,25
+Scream & Shout,2013,2001,12,2013,0
+Scream & Shout,2012,1999,13,2012,0
+Seasons Of Love,2005,2000,5,2002,3
+Second Chance,2009,1997,12,2009,0
+Second Round K.O.,1998,1998,0,1998,0
+Secret Garden,1997,1997,0,1997,0
+Secrets,2010,1998,12,2010,0
+See You Again,2013,1998,15,1980,33
+See You Again,2008,1998,10,2008,0
+See You Again,2015,1998,17,2001,14
+See You In My Nightmares,2008,1998,10,2001,7
+Semi-Charmed Life,1997,1997,0,1997,0
+Send It On,2009,1998,11,1980,29
+Senorita,2003,1998,5,1980,23
+Sensual Seduction,2008,2000,8,1986,22
+Separated,2000,1998,2,1980,20
+September,2010,1997,13,1980,30
+Set Fire To The Rain,2012,1998,14,1980,32
+Settle Down,2012,1998,14,1995,17
+Settle For A Slowdown,2006,1999,7,2006,0
+Seventeen Forever,2009,1998,11,1980,29
+Sex And Candy,1998,1999,1,1998,0
+Sexual (Li Da Di),2000,1997,3,1997,3
+Sexy And I Know It,2012,2011,1,2011,1
+Sexy Can I,2008,2001,7,2008,0
+Sexy Chick,2010,1998,12,1980,30
+Sexy Lady,2007,2007,0,2007,0
+Sexy Love,2006,1998,8,2010,4
+SexyBack,2006,1998,8,1980,26
+Sgt. Pepper's Lonely Hearts Club Band,2005,2005,0,1980,25
+Shackles (Praise You),2000,1997,3,2005,5
+Shadow Days,2012,1998,14,1980,32
+Shadow Of The Day,2008,1999,9,1980,28
+Shake,2005,2005,0,2005,0
+Shake It,2008,1998,10,2008,0
+Shake It Off,2005,1998,7,2005,0
+Shake It Off,2014,2000,14,2014,0
+Shake That,2006,2006,0,2006,0
+Shake Ya Ass,2000,2000,0,2000,0
+Shake Ya Tailfeather,2003,1999,4,2003,0
+Shake Your Bon-Bon,2000,1999,1,1999,1
+Shape Of My Heart,2000,1997,3,2000,0
+Shattered (Turn The Car Around),2008,1997,11,2008,0
+Shawty,2007,1998,9,2007,0
+Shawty Get Loose,2008,2008,0,2008,0
+Shawty Is A 10,2007,2007,0,2007,0
+She Ain't You,2011,1998,13,1980,31
+She Bangs,2000,1998,2,2009,9
+She Couldn't Change Me,2001,1998,3,2001,0
+She Got It,2008,2000,8,2008,0
+She Hates Me,2002,1998,4,1980,22
+She Knows,2015,2000,15,2015,0
+She Looks So Perfect,2014,1999,15,2013,1
+She Never Cried In Front Of Me,2008,1998,10,2008,0
+She Thinks She Needs Me,2004,1998,6,2004,0
+She Will,2011,1998,13,2011,0
+She Will Be Loved,2004,1997,7,1980,24
+She Wolf,2009,2009,0,2009,0
+She Wouldn't Be Gone,2009,1998,11,2009,0
+She'll Leave You With A Smile,2002,1998,4,1980,22
+She's All I Ever Had,1999,1998,1,1980,19
+She's All I Got,2001,1999,2,2001,0
+She's Country,2009,1998,11,2009,0
+She's Everything,2006,1999,7,2006,0
+She's Kinda Hot,2015,1997,18,1997,18
+She's Like The Wind,2007,1997,10,1980,27
+She's More,2000,1998,2,2000,0
+She's My Kind Of Rain,2003,1998,5,2003,0
+She's So High,1999,1999,0,1999,0
+She's So Mean,2012,2012,0,2012,0
+Shiftwork,2008,2000,8,2003,5
+Shimmer,1998,1998,0,1998,0
+Shortie Like Mine,2006,1998,8,2006,0
+Shorty (You Keep Playin With My Mind),1998,1998,0,1998,0
+Shorty (You Keep Playin' With My Mind),1998,1998,0,1998,0
+Shorty Wanna Ride,2004,2000,4,2004,0
+Shotgun Rider,2015,1999,16,2014,1
+Should've Said No,2008,1998,10,2008,0
+Shoulda Let You Go,2007,1998,9,2007,0
+Shoulder Lean,2006,2002,4,2006,0
+Shout To The Lord,2008,1998,10,2015,7
+Show Me,2014,1998,16,1993,21
+Show Me Love,1997,1998,1,1980,17
+Show Me The Meaning Of Being Lonely,2000,1997,3,2000,0
+Show Me What You Got,2006,1998,8,2006,0
+Show Stopper,2006,2006,0,2006,0
+Shower,2014,1998,16,2014,0
+Shut It Down,2010,2010,0,2010,0
+Shut Up And Dance,2015,1998,17,2015,0
+Shut Up And Drive,2007,2007,0,2007,0
+Sick Of Being Lonely,2003,2003,0,2003,0
+Sideways,2009,1999,10,1980,29
+Signs,2005,1998,7,2005,0
+Silly Love Songs,2011,1998,13,2010,1
+Simple Kind Of Life,2000,1997,3,1997,3
+Since U Been Gone,2005,1998,7,2000,5
+Sing,2014,1998,16,2014,0
+Sing,2011,1998,13,2010,1
+Sing For The Moment,2003,2003,0,2003,0
+Singing In The Rain/Umbrella,2010,1999,11,2007,3
+Single Ladies (Put A Ring On It),2008,2001,7,2008,0
+Single White Female,1999,1999,0,1999,0
+Sippin' On Fire,2015,1996,19,2009,6
+Sitting Home,1999,1998,1,1980,19
+Sk8er Boi,2002,1999,3,2010,8
+Skin (Sarabeth),2005,1997,8,2005,0
+Skyfall,2012,1998,14,2012,0
+Skyscraper,2011,1999,12,1986,25
+Slave To The Rhythm,2014,1998,16,2007,7
+Sleazy Remix 2.0 Get Sleazie?,2011,2011,0,2009,2
+Sledgehammer,2015,1998,17,2015,0
+Slide,1999,1999,0,1984,15
+Slow Down,2005,1998,7,2005,0
+Slow Down,2013,1999,14,2011,2
+Slow Jamz,2004,2003,1,2003,1
+Slow Motion,2004,2004,0,2004,0
+Slow Motion,2015,2001,14,2008,7
+Smack That,2006,2006,0,2006,0
+Small Town Southern Man,2008,1998,10,2001,7
+Small Town USA,2009,1998,11,2009,0
+Smile,2007,2000,7,2003,4
+Smile,2000,1997,3,1980,20
+Smile,1997,1997,0,1997,0
+Smile,2010,1997,13,2005,5
+Smile,1999,1998,1,2013,14
+Smoke,2015,1998,17,1987,28
+Smoke Break,2015,1998,17,2015,0
+Smokin' Me Out,1997,1997,0,1997,0
+Smooth,2000,1999,1,1999,1
+Smooth Criminal,2001,1991,10,1980,21
+Smooth Criminal,2012,2000,12,1996,16
+Snake,2003,2003,0,2003,0
+Snap Yo Fingers,2006,2001,5,2006,0
+Snow (Hey Oh),2007,1997,10,2006,1
+So Anxious,1999,1999,0,1999,0
+So Far Away,2003,1998,5,1990,13
+So Fine,2009,2009,0,1994,15
+So Fly,2008,2000,8,2009,1
+So Fresh So Clean,2001,2001,0,2001,0
+So Gone,2003,1998,5,1995,8
+So Good,2012,2012,0,2012,0
+So Help Me Girl,1997,1998,1,1980,17
+So In Love With Two,2001,1998,3,1980,21
+So Into You,1998,1998,0,1980,18
+So Seductive,2005,2001,4,2008,3
+So Sexy,2004,2004,0,2004,0
+So Sick,2006,1997,9,2014,8
+So Small,2007,1997,10,2010,3
+So What,2006,1998,8,2004,2
+So What,2008,1998,10,1992,16
+So Yesterday,2003,1999,4,1980,23
+Soak Up The Sun,2002,1998,4,2002,0
+Sober,2009,1998,11,2013,4
+Sock It 2 Me,1997,1997,0,1997,0
+Soldier,2005,2004,1,2004,1
+Solitaire,2004,2004,0,2004,0
+Solo,2010,2002,8,2010,0
+Some Beach,2004,2004,0,2004,0
+Some Cut,2005,1998,7,2005,0
+Some Nights,2012,1999,13,2012,0
+Somebody,2015,1998,17,2015,0
+Somebody,2004,1998,6,2014,10
+Somebody Like You,2002,1998,4,1994,8
+Somebody That I Used To Know,2012,1998,14,2012,0
+Somebody That I Used To Know,2012,1998,14,2012,0
+Somebody To Love,2009,1998,11,2010,1
+Somebody To Love,2010,1998,12,1980,30
+Someday,2004,2003,1,2003,1
+Someday,1999,1998,1,1999,0
+Someday Out Of The Blue,2000,1998,2,1986,14
+Someone,1997,1997,0,1997,0
+Someone Like You,2011,1998,13,1980,31
+Someone To Call My Lover,2001,1996,5,1996,5
+Someone To Love You,2002,1998,4,1980,22
+Someone You Used To Know,1998,1998,0,1980,18
+Somethin' 'Bout A Truck,2012,1998,14,2012,0
+Somethin' Bad,2014,2001,13,2014,0
+Something,2003,1998,5,1980,23
+Something In The Water,2014,1999,15,1980,34
+Something Like That,1999,1997,2,1999,0
+Something More,2005,1997,8,1997,8
+Something To Be Proud Of,2005,1998,7,2005,0
+Sometimes,1999,1998,1,1980,19
+Somewhere I Belong,2003,1998,5,1980,23
+Somewhere In My Car,2014,1998,16,1980,34
+Somewhere Only We Know,2011,1997,14,2010,1
+Somewhere Only We Know,2005,1997,8,2005,0
+Somewhere Out There,2002,2001,1,1980,22
+Somewhere Over The Rainbow,2006,1998,8,2006,0
+Somewhere With You,2011,1998,13,1980,31
+Son Of A Gun,2001,1998,3,2001,0
+Sorry,2008,1997,11,1980,28
+Sorry,2015,1998,17,2010,5
+Sorry 2004,2004,2000,4,2004,0
+Sorry For Party Rocking,2012,2012,0,2011,1
+Sorry Blame It On Me,2007,1998,9,1980,27
+Soul Survivor,2005,2000,5,2005,0
+Soulja Girl,2007,1998,9,2007,0
+South Side,2001,2001,0,2001,0
+Southern Girl,2013,2000,13,2013,0
+Southern Hospitality,2001,2001,0,2001,0
+Southern Voice,2009,2009,0,2009,0
+Southside,2004,2004,0,2004,0
+Space Jam,1997,1997,0,1997,0
+Space Jam,1997,1997,0,1997,0
+Spackavellie,1998,1998,0,1998,0
+Spark,1998,1998,0,2001,3
+Sparks Fly,2010,1998,12,2010,0
+Speak Now,2010,1998,12,2010,0
+Speed,2003,1998,5,2011,8
+Speed Of Sound,2005,1998,7,2005,0
+Spend My Life With You,1999,1997,2,1980,19
+Spice Up Your Life,1997,1997,0,1997,0
+Spirit Of A Boy Wisdom Of A Man,1999,1999,0,1999,0
+Splackavellie,1998,1998,0,1998,0
+Splash Waterfalls,2004,2002,2,2004,0
+Spotlight,2009,2009,0,2009,0
+Spotlight,2008,1997,11,2008,0
+Springsteen,2012,1998,14,2012,0
+Stacy's Mom,2003,2003,0,2003,0
+Stand,2007,1999,8,1981,26
+Stand Beside Me,1999,1998,1,1984,15
+Stand Up,2003,1998,5,2003,0
+Standing Still,2002,1991,11,1980,22
+Stanky Legg,2009,2009,0,2005,4
+Staring At The Sun,1997,1998,1,1997,0
+Starry Eyed Surprise,2002,2002,0,2002,0
+Stars Are Blind,2006,1998,8,2006,0
+Starships,2012,2012,0,2012,0
+Start Me Up/Livin' On A Prayer,2010,1998,12,2010,0
+Start Of Something New,2006,2006,0,2007,1
+Start The Commotion,2001,1998,3,1980,21
+Started From The Bottom,2013,2000,13,1980,33
+State Of Grace,2012,1998,14,2002,10
+Stay,2013,1998,15,2011,2
+Stay,2013,1998,15,2013,0
+Stay,2007,1998,9,1980,27
+Stay Fly,2005,2005,0,2005,0
+Stay Gone,2003,1998,5,1980,23
+Stay The Night,2000,1997,3,1996,4
+Stay The Night,1999,1997,2,1996,3
+Stay The Night,2014,2013,1,2013,1
+Stay The Same,1999,1998,1,1980,19
+Stay With Me,2014,1998,16,1980,34
+Stay With Me (Brass Bed),2005,1998,7,1980,25
+Steady Mobbin',2010,2010,0,2010,0
+Steal My Girl,2014,1999,15,1980,34
+Steal My Sunshine,1999,1999,0,1999,0
+Step By Step,1997,1998,1,1985,12
+Step In The Name Of Love,2003,1998,5,1980,23
+Stereo Hearts,2011,1998,13,2011,0
+Stereo Love,2011,1998,13,1980,31
+Stereo Love,2011,1998,13,1983,28
+Stick To The Status Quo,2006,2006,0,1994,12
+Stickwitu,2005,1998,7,2005,0
+Still A G Thang,1998,1998,0,1998,0
+Still Fly,2002,2002,0,2002,0
+Still Into You,2013,1998,15,2013,0
+Still Not A Player,1998,1998,0,1998,0
+Stingy,2002,1998,4,1980,22
+Stitch By Stitch,2011,1998,13,2010,1
+Stitches,2015,1998,17,1993,22
+Stole,2002,2002,0,2002,0
+Stolen,2007,1998,9,1987,20
+Stolen Dance,2015,1998,17,2010,5
+Stoner,2014,2014,0,2014,0
+Stop,1998,1998,0,1980,18
+Stop And Stare,2008,1998,10,1980,28
+Stop! In The Name Of Love/Free Your Mind,2010,1998,12,2010,0
+Story Of My Life,2013,1998,15,1980,33
+Straght Outta Compton,2015,1998,17,2002,13
+Straight To The Bank,2007,2007,0,2005,2
+Stranded (Haiti Mon Amour),2010,1998,12,2011,1
+Strange Clouds,2011,2011,0,2011,0
+Stranger In My House,2001,1998,3,2000,1
+Strawberries,1998,1998,0,2008,10
+Street Dreams,1997,1996,1,1996,1
+Strip,2012,2003,9,2010,2
+Strip,2012,2003,9,2010,2
+Strip It Down,2015,1998,17,1980,35
+Stronger,2001,1998,3,1980,21
+Stronger,2007,2007,0,2007,0
+Stronger (What Doesn't Kill You),2012,1999,13,1980,32
+Stuck Like Glue,2010,1999,11,2011,1
+Stuck On A Feeling,2015,2001,14,2015,0
+Studio,2014,1998,16,2002,12
+Stunt 101,2003,2003,0,2003,0
+Stuntin' Like My Daddy,2006,2002,4,2006,0
+Stupid Boy,2012,1999,13,1980,32
+Stupid Boy,2007,1999,8,1980,27
+Stupid Girls,2006,1997,9,1997,9
+Stutter,2001,1998,3,2001,0
+Style,2015,1999,16,1980,35
+Successful,2009,2000,9,2009,0
+Suddenly I See,2007,1998,9,1980,27
+Suds In The Bucket,2004,2004,0,2004,0
+Suffocate,2008,1997,11,2007,1
+Suga Suga,2003,2003,0,2003,0
+Sugar,2009,1999,10,2009,0
+Sugar,2015,1998,17,1980,35
+Sugar (Gimme Some),2005,1998,7,2005,0
+Sugar We're Goin' Down,2005,1998,7,2005,0
+Suit & Tie,2013,2013,0,2013,0
+Summer,2014,1999,15,1980,34
+Summer Girls,1999,1999,0,1999,0
+Summer Love,2007,2000,7,1980,27
+Summer Nights,2005,1998,7,2005,0
+Summer Nights,2009,2001,8,2009,0
+Summertime,2006,2006,0,2006,0
+Summertime,2008,1998,10,2015,7
+Summertime Sadness,2013,1998,15,2013,0
+Summertime Sadness,2013,1998,15,2013,0
+Sun Daze,2015,1998,17,2002,13
+Sunday Morning,2005,1998,7,2005,0
+Sunny And 75,2013,1999,14,1996,17
+Sunny Came Home,1997,1996,1,1997,0
+Sunshine,2004,1999,5,2004,0
+Super Bass,2011,1998,13,2011,0
+Super Bass,2011,2011,0,2011,0
+SuperThug (What What),1998,1998,0,1998,0
+Superman,2003,1998,5,2003,0
+Superman,2011,1999,12,2007,4
+Superman (It's Not Easy),2001,1998,3,1998,3
+Superstar,2008,2008,0,2008,0
+Superstar,2009,1997,12,1994,15
+Superwoman Pt II,2001,1998,3,2001,0
+Sure Be Cool If You Did,2013,1998,15,1980,33
+Sure Thing,2011,1997,14,2011,0
+Survival,2013,2013,0,2013,0
+Survivor,2001,1998,3,2001,0
+Swagga Like Us,2008,2008,0,2008,0
+Swagga Like Us,2008,2008,0,2008,0
+Swear It Again,2000,1998,2,1980,20
+Sweat,2011,2001,10,2011,0
+Sweater Weather,2013,1998,15,2013,0
+Sweater Weather,2013,1998,15,2013,0
+Sweet Annie,2013,1997,16,1980,33
+Sweet Caroline,2009,1997,12,2009,0
+Sweet Dreams,2009,1995,14,1980,29
+Sweet Lady,1999,1998,1,1980,19
+Sweet Nothing,2013,1997,16,2003,10
+Sweet Nothing,2013,1997,16,2003,10
+Sweet Southern Comfort,2004,2004,0,2004,0
+Sweet Surrender,1998,1998,0,1998,0
+Sweet Thing,2009,1997,12,2012,3
+Sweeter Than Fiction,2013,1998,15,1980,33
+Sweetest Girl (Dollar Bill),2008,1999,9,2007,1
+Swimming Pools (Drank),2012,1998,14,2013,1
+Swing,2008,1998,10,1992,16
+Swing My Way,1998,1998,0,1998,0
+Swing My Way,1998,1998,0,1998,0
+Switch,2005,1998,7,2005,0
+T-Shirt,2008,1998,10,2011,3
+T.H.E. (The Hardest Ever),2011,2011,0,2007,4
+TKO,2013,1998,15,2013,0
+Take A Back Road,2011,1998,13,2011,0
+Take A Bow,2009,1999,10,2008,1
+Take A Bow,2008,1998,10,2008,0
+Take A Little Ride,2012,1998,14,2012,0
+Take A Picture,2000,1999,1,1999,1
+Take Away,2002,2002,0,2002,0
+Take Back The Night,2013,1998,15,1995,18
+Take Care,2012,1998,14,2011,1
+Take It Off,2010,2000,10,2010,0
+Take It To Da House,2001,2001,0,2003,2
+Take It To The Streets,1997,2000,3,1997,0
+Take Me There,1999,1998,1,1998,1
+Take Me There,2007,1999,8,1980,27
+Take Me To Church,2014,2014,0,2014,0
+Take My Breath Away,2004,1998,6,2004,0
+Take Over Control,2011,1998,13,2011,0
+Take You Down,2008,1998,10,1980,28
+Take You Out,2001,1998,3,2001,0
+Take You There,2008,1998,10,1980,28
+Take Your Time,2015,1998,17,2015,0
+Taking Everything,1999,1998,1,1991,8
+Talk About Our Love,2004,1998,6,2004,0
+Talk Dirty,2014,2004,10,2014,0
+Talk That Talk,2011,2002,9,1995,16
+Talk To Me,1997,1998,1,1980,17
+Talking Body,2015,1998,17,1980,35
+Talladega,2015,1999,16,1997,18
+Tambourine,2007,2007,0,2002,5
+Tapout,2013,2013,0,2013,0
+Tapout,2013,2013,0,2013,0
+Tattoo,2007,1998,9,1980,27
+Tattoos On This Town,2011,2011,0,2011,0
+Teach Me How To Dougie,2010,2010,0,2010,0
+Team,2014,2013,1,2013,1
+Teardrops On My Guitar,2008,1999,9,1980,28
+Teenage Dream,2010,2000,10,2010,0
+Teenage Dream,2010,2000,10,1980,30
+Telephone,2010,2009,1,2009,1
+Telephone,2010,2009,1,2009,1
+Tell Her,2001,1999,2,2000,1
+Tell Me,2006,1999,7,2006,0
+Tell Me (What's Goin' On),2003,2003,0,2003,0
+Tell Me Baby,2006,2006,0,2008,2
+Tell Me It's Real,1999,1998,1,1980,19
+Tell Me When To Go,2006,2006,0,2006,0
+Temperature,2006,2006,0,2006,0
+Temporary Home,2010,1998,12,1980,30
+Tempted To Touch,2004,1997,7,1980,24
+Ten Rounds With Jose Cuervo,2002,1999,3,2012,10
+Tennessee Whiskey,2015,1998,17,1999,16
+Tequila Makes Her Clothes Fall Off,2005,2005,0,2005,0
+Thank God I Found You,2000,1999,1,2000,0
+Thank U,1998,1998,0,1998,0
+Thank You,2001,1999,2,2001,0
+That Don't Impress Me Much,1999,1997,2,2000,1
+That Girl,2006,2006,0,2006,0
+That Way,2011,2011,0,2015,4
+That'd Be Alright,2003,2001,2,2003,0
+That's All She Wrote,2010,2010,0,2010,0
+That's My Kind Of Night,2013,1999,14,2013,0
+That's Not My Name,2009,2009,0,2009,0
+That's That,2006,1998,8,2006,0
+That's That S***,2006,2001,5,2006,0
+That's The Way,2000,1998,2,1980,20
+That's The Way It Is,2000,1997,3,1980,20
+That's What It's All About,2004,1998,6,2004,0
+That's When I Love You,2002,1998,4,1980,22
+The A Team,2013,1999,14,2012,1
+The A Team,2013,1999,14,2012,1
+The Adventures Of Rain Dance Maggie,2011,2011,0,1995,16
+The Animal Song,1999,1998,1,2011,12
+The Anthem,2003,1998,5,2003,0
+The Anthem,2008,2008,0,2008,0
+The Arms Of The One Who Loves You,1998,1998,0,1980,18
+The Baby,2003,1999,4,1984,19
+The Best Day,2000,2000,0,1992,8
+The Blower's Daughter,2014,2014,0,2013,1
+The Boss,2008,2008,0,2008,0
+The Boy Is Mine,1998,1998,0,1998,0
+The Boys Of Fall,2010,2000,10,2010,0
+The Boys Of Summer,2003,1998,5,2015,12
+The Business,2008,1999,9,2008,0
+The Catalyst,2010,2010,0,1993,17
+The Cave,2011,1998,13,1992,19
+The Chain Of Love,2000,1999,1,2000,0
+The Christmas Shoes,2001,1999,2,2009,8
+The Christmas Song (Chestnuts Roasting On An Open Fire),2000,2003,3,1994,6
+The Christmas Song (Merry Christmas To You),2014,2003,11,1994,20
+The Climb,2009,1996,13,1980,29
+The Climb,2009,1996,13,1980,29
+The Cowboy In Me,2002,1998,4,1985,17
+The Cup Of Life,1999,1999,0,1999,0
+The Day That Never Comes,2008,1999,9,2002,6
+The Day The World Went Away,1999,1998,1,1993,6
+The Diary Of Jane,2006,1999,7,1980,26
+The Edge Of Glory,2011,1998,13,1980,31
+The Fighter,2012,2012,0,2012,0
+The First Cut Is The Deepest,2004,1998,6,1980,24
+The First Night,1998,1998,0,1980,18
+The Fox,2013,2013,0,2013,0
+The Freshmen,1997,1997,0,1997,0
+The Game Of Love,2002,1998,4,1980,22
+The Good Stuff,2002,2000,2,2002,0
+The Great Escape,2007,1998,9,2007,0
+The Great Escape,2007,1998,9,2007,0
+The Hand That Feeds,2005,1999,6,2005,0
+The Hanging Tree,2014,1999,15,1980,34
+The Hardest Thing,1999,1998,1,1999,0
+The Heart Wants What It Wants,2014,1998,16,1987,27
+The Hills,2015,2015,0,2015,0
+The House That Built Me,2010,2000,10,2010,0
+The Impossible,2002,1998,4,2002,0
+The Itch,2000,2000,0,2000,0
+The Jump Off,2003,2003,0,2003,0
+The Lazy Song,2011,2011,0,2011,0
+The Light,2000,2000,0,2000,0
+The Little Girl,2000,1999,1,1980,20
+The Long Goodbye,2002,1998,4,1980,22
+The Man,2014,1998,16,1999,15
+The Man I Want To Be,2010,1998,12,1980,30
+The Memory Remains,1997,1997,0,1997,0
+The Middle,2002,1998,4,1980,22
+The Monster,2013,2013,0,2013,0
+The Motto,2012,2011,1,2011,1
+The Mummer's Dance,1998,1998,0,1998,0
+The Mummers Dance,1998,1998,0,1998,0
+The Mummers' Dance,1998,1998,0,1998,0
+The Next Episode,2000,2000,0,2000,0
+The Night Is Still Young,2015,1999,16,2015,0
+The One,2000,1998,2,1980,20
+The One,2002,1999,3,2001,1
+The One I Gave My Heart To,1997,1998,1,1980,17
+The One That Got Away,2012,1998,14,2005,7
+The Only Exception,2010,1998,12,2010,0
+The Only Exception,2010,1998,12,2010,0
+The Only Way I Know,2013,1998,15,1980,33
+The Other Side,2013,1999,14,1980,33
+The Other Side Of The Door,2009,1997,12,1991,18
+The Party Continues,1998,1998,0,1998,0
+The Perfect Drug,1997,2003,6,1980,17
+The Power Of Good-Bye,1998,1998,0,1980,18
+The Pretender,2007,1998,9,2007,0
+The Real Slim Shady,2000,2000,0,2000,0
+The Reason,2004,1998,6,1980,24
+The Riddle,2006,1999,7,1981,25
+The River,2007,1998,9,1992,15
+The Secret Of Life,1999,1999,0,1996,3
+The Show Goes On,2011,1999,12,2011,0
+The Space Between,2001,2001,0,2001,0
+The Star Spangled Banner,2001,1995,6,2004,3
+The Story Of Us,2010,1999,11,1992,18
+The Sweet Escape,2007,1999,8,1984,23
+The Time (Dirty Bit),2010,1998,12,2010,0
+The Time Of My Life,2008,1998,10,1980,28
+The Truth,2010,1998,12,1980,30
+The Voice Within,2004,1999,5,1980,24
+The Way,2013,1998,15,1980,33
+The Way I Am,2007,1999,8,2006,1
+The Way I Are,2007,2001,6,2015,8
+The Way I Live,2007,2007,0,2007,0
+The Way That I Love You,2008,2001,7,2013,5
+The Way You Love Me,2001,1999,2,1980,21
+The Way You Move,2004,2003,1,2003,1
+The Whole World,2002,2002,0,2002,0
+The Woman With You,2004,2004,0,2004,0
+The World,2006,2000,6,1983,23
+The World I Know,2008,2000,8,1996,12
+The World's Greatest,2002,1998,4,2002,0
+The Worst,2014,1998,16,2014,0
+The Zephyr Song,2002,2002,0,2002,0
+Then,2009,1999,10,1980,29
+Then The Morning Comes,2000,1999,1,1999,1
+There Goes My Baby,2010,1999,11,2010,0
+There Goes My Life,2003,1998,5,1999,4
+There Is No Arizona,2001,1998,3,2001,0
+There It Go! (The Whistle Song),2006,2003,3,2004,2
+There She Goes,2001,1998,3,1980,21
+There She Goes,1999,1997,2,1997,2
+There You Go,2000,1998,2,2000,0
+There You Have It,1999,1998,1,1998,1
+There You Have It,1999,1998,1,1998,1
+There You'll Be,2001,1999,2,1980,21
+There's Your Trouble,1998,1999,1,1980,18
+These Are My People,2007,1999,8,2007,0
+These Are The Times,1999,1999,0,2009,10
+These Boots Are Made For Walkin',2005,1999,6,2005,0
+These Days,2002,1998,4,2002,0
+These Words,2005,2005,0,2005,0
+They Don't Know,1998,1999,1,1980,18
+They Don't Know,1998,1999,1,1980,18
+They Like It Slow,1997,2000,3,1997,0
+Things'll Never Change/Rapper's Ball,1997,1997,0,1997,0
+Thinkin Bout You,2012,1999,13,2013,1
+Thinkin' 'Bout It,1998,1997,1,2011,13
+Thinking Of You,2009,1999,10,2009,0
+Thinking Of You,1997,1997,0,1997,0
+Thinking Of You,1997,1997,0,1997,0
+Thinking Out Loud,2015,1997,18,2008,7
+Thirty-Three,1997,1996,1,1996,1
+This Afternoon,2010,1999,11,2010,0
+This Ain't A Scene It's An Arms Race,2007,2007,0,2007,0
+This Could Be Us,2015,1999,16,2010,5
+This Gift,2000,1997,3,1980,20
+This I Promise You,2000,1998,2,1998,2
+This Is How We Do,2014,2014,0,2014,0
+This Is How We Roll,2014,1998,16,2014,0
+This Is How We Roll,2014,1998,16,2014,0
+This Is Me,2008,1999,9,1980,28
+This Is Me,2001,1998,3,2013,12
+This Is My Now,2007,1998,9,1980,27
+This Is The Night,2003,1998,5,1980,23
+This Is Why I'm Hot,2007,2007,0,2007,0
+This Is Your Night,1997,1996,1,1996,1
+This Kiss,1998,1998,0,1998,0
+This Love,2004,1998,6,1980,24
+This One's For The Girls,2003,1998,5,2009,6
+This Summer's Gonna Hurt...,2015,1998,17,2014,1
+This Time Around,2000,1999,1,2000,0
+Thnks Fr Th Mmrs,2007,1999,8,2007,0
+Thoia Thoing,2003,2003,0,2003,0
+Thong Song,2000,1999,1,2008,8
+Three Wooden Crosses,2003,1998,5,2010,7
+Thrift Shop,2013,2012,1,2012,1
+Thriller/Heads Will Roll,2011,1997,14,2010,1
+Through Glass,2007,1999,8,2006,1
+Through The Wire,2004,2003,1,2003,1
+Throw It In The Bag,2009,2009,0,2009,0
+Throw Some D's,2007,2003,4,2005,2
+Throw Sum Mo,2015,1999,16,2015,0
+Thug Lovin',2002,2002,0,2002,0
+Thugz Mansion,2002,2001,1,2002,0
+TiK ToK,2010,2003,7,2009,1
+Ticks,2007,2000,7,2007,0
+Tie Me Down,2010,2009,1,2009,1
+Till The World Ends,2011,1998,13,2009,2
+Tim McGraw,2007,1998,9,2006,1
+Timber,2014,1999,15,2012,2
+Time After Time,1998,1997,1,1981,17
+Time For Miracles,2009,1998,11,1980,29
+Time Is Love,2012,1998,14,1980,32
+Time Of Our Lives,2015,1999,16,2015,0
+Tipsy,2004,1999,5,2004,0
+Titanium,2012,2002,10,2012,0
+Titanium,2012,2002,10,2012,0
+To Make You Feel My Love,1997,1998,1,1980,17
+To The Moon And Back,1998,1997,1,1997,1
+Today Was A Fairytale,2010,1998,12,2000,10
+Toes,2009,1998,11,2009,0
+Together Again,1998,1998,0,1980,18
+Tom Ford,2013,2013,0,2012,1
+Tomorrow,2011,1998,13,1980,31
+Tongue Tied,2012,2000,12,2000,12
+Tonight,2008,1998,10,1980,28
+Tonight (I'm Lovin' You),2011,2002,9,2012,1
+Tonight I Wanna Cry,2006,1998,8,1984,22
+Tonight Is The Night,2012,1998,14,2012,0
+Tonight Looks Good On You,2015,1999,16,1980,35
+Tonight The Heartache's On Me,1999,1998,1,1987,12
+Tonight Tonight,2011,2011,0,2011,0
+Too Bad,2002,1999,3,1980,22
+Too Close,2012,1998,14,1980,32
+Too Close,1998,1998,0,1980,18
+Too Gone Too Long,1997,1998,1,1998,1
+Too Late Too Soon,1997,1997,0,1980,17
+Too Little Too Late,2006,1998,8,1980,26
+Too Much,1998,1998,0,1998,0
+Too Much Of A Good Thing,2004,1997,7,1980,24
+Top Back,2007,2007,0,2007,0
+Torn,2006,1998,8,1980,26
+Torn,1998,1998,0,1998,0
+Total Eclipse Of The Heart,2010,1998,12,2010,0
+Touch It,2006,2006,0,2006,0
+Touch It,1998,1998,0,1998,0
+Touch My Body,2008,2001,7,2011,3
+Touch The Sky,2006,2006,0,2006,0
+Touchin On My,2010,1998,12,1980,30
+Touchin Lovin,2014,2014,0,2014,0
+Tough Little Boys,2003,2000,3,2003,0
+Toxic,2004,1998,6,2004,0
+Toxic,2010,1998,12,2010,0
+Trade It All,2002,2001,1,2002,0
+Trading Places,2008,1999,9,2006,2
+Trap Queen,2015,2015,0,2015,0
+Trapped In The Closet,2005,1998,7,2003,2
+Travelin' Soldier,2003,1999,4,2003,0
+Treasure,2013,1998,15,1980,33
+Trippin',1999,1998,1,1993,6
+Trophies,2014,2014,0,2010,4
+Troublemaker,2013,1998,15,2013,0
+True,2005,1999,6,1980,25
+Truffle Butter,2015,2000,15,2015,0
+Truly Madly Deeply,1998,1998,0,1980,18
+Trumpets,2014,1999,15,2008,6
+Truth Is,2005,1999,6,1980,25
+Truth It,2005,1999,6,1980,25
+Try,2013,1998,15,2005,8
+Try,2012,1998,14,2005,7
+Try Again,2000,1998,2,1980,20
+Try Me,2014,2014,0,2014,0
+Try Sleeping With A Broken Heart,2010,1998,12,1980,30
+Tubthumping,1997,1997,0,1997,0
+Tuesday,2014,2014,0,2014,0
+Turn Down For What,2014,2005,9,1980,34
+Turn It Up,2006,2005,1,2005,1
+Turn It Up/Fire It Up,1998,1998,0,1998,0
+Turn Me On,2012,1998,14,2011,1
+Turn Me On,2004,1999,5,2004,0
+Turn My Swag On,2009,1998,11,2009,0
+Turn Off The Light,2001,1998,3,2010,9
+Turn On The Lights,2012,1998,14,1991,21
+Turn Up The Music,2012,2012,0,2012,0
+Turn it Up,2005,2005,0,2005,0
+Turnin Me On,2009,1998,11,2009,0
+Two Black Cadillacs,2013,1997,16,2013,0
+Two Is Better Than One,2010,1998,12,1980,30
+Two Teardrops,1999,1999,0,1999,0
+Two Wrongs,2002,2002,0,2002,0
+Two is Better Than One,2010,1998,12,1980,30
+Type Of Way,2013,2001,12,2014,1
+U + Ur Hand,2007,1998,9,2007,0
+U Already Know,2005,2001,4,1981,24
+U And Dat,2006,2000,6,2006,0
+U Don't Have To Call,2002,1998,4,2002,0
+U Don't Know Me,2005,2005,0,2005,0
+U Got It Bad,2001,1998,3,1994,7
+U Know What's Up,1999,2000,1,2006,7
+U Make Me Wanna,2004,2001,3,2004,0
+U Remind Me,2001,1997,4,1996,5
+U Should've Known Better,2004,2004,0,2004,0
+U Smile,2010,1998,12,1980,30
+U.O.E.N.O.,2013,2013,0,2013,0
+UP!,2012,2000,12,2012,0
+UP!,2012,2000,12,2012,0
+Ugly,2001,2001,0,2001,0
+Uh Huh,2002,2002,0,2002,0
+Uma Thurman,2015,2015,0,2015,0
+Umbrella,2007,1998,9,2007,0
+Un-Thinkable (I'm Ready),2010,1998,12,2010,0
+Unappreciated,2006,1998,8,2006,0
+Unbelievable,1999,1999,0,1999,0
+Unbreakable,2005,2005,0,2005,0
+Unbroken,2002,1998,4,1980,22
+Unconditional,2000,1998,2,1980,20
+Unconditionally,2013,1999,14,2013,0
+Under Pressure,2005,1991,14,1980,25
+Underneath It All,2002,1998,4,2002,0
+Underneath Your Clothes,2002,1998,4,2010,8
+Undo It,2010,1998,12,1980,30
+Unfaithful,2006,1999,7,2006,0
+Unpredictable,2006,1998,8,2005,1
+Unpretty,1999,1998,1,2011,12
+Until I Find You Again,1997,1998,1,1980,17
+Until The End Of Time,2007,1999,8,1980,27
+Untitled (How Can This Happen To Me?),2005,1997,8,1980,25
+Untitled (How Does It Feel),2000,1997,3,1980,20
+Untouchable,2009,1997,12,1993,16
+Untouched,2009,1998,11,2008,1
+Unwell,2003,1998,5,1980,23
+Unwritten,2006,1998,8,2006,0
+Up All Night,2010,2010,0,1985,25
+Up Jumps Da Boogie,1997,1997,0,1997,0
+Uprising,2009,2009,0,1990,19
+Upside Down,2006,1996,10,1980,26
+Uptown Funk!,2015,1999,16,2014,1
+Use Somebody,2009,1999,10,2006,3
+Va Va Voom,2012,2000,12,2012,0
+Valentine,1997,1998,1,1988,9
+Venus,2013,1997,16,1985,28
+Vertigo,2004,1998,6,2004,0
+Victory,1998,1998,0,1998,0
+Video,2001,2001,0,2002,1
+Violet Hill,2008,2008,0,2002,6
+Viva La Vida,2008,2008,0,2008,0
+Vivrant Thing,1999,1999,0,1999,0
+Wadsyaname,2007,1998,9,1998,9
+Wagon Wheel,2013,1998,15,2013,0
+Wait (The Whisper Song),2005,2001,4,2005,0
+Wait A Minute,2001,2001,0,2001,0
+Wait A Minute,2007,1998,9,1992,15
+Wait For You,2007,1998,9,1980,27
+Waitin' On A Woman,2008,2000,8,2001,7
+Waiting For The End,2011,1997,14,2011,0
+Waiting For Tonight,1999,1998,1,2002,3
+Waiting On The World To Change,2007,1998,9,1996,11
+Waka Waka (This Time For Africa),2010,2010,0,2010,0
+Wake Me Up When September Ends,2005,1998,7,2003,2
+Wake Me Up!,2013,1997,16,1980,33
+Wake Up,2005,1998,7,2005,0
+Wake Up Call,2007,1998,9,2010,3
+Waking Up In Vegas,2009,2000,9,1980,29
+Walk Away,2006,1999,7,1980,26
+Walk Away (Remember Me),2007,1997,10,2006,1
+Walk It Out,2007,2006,1,2006,1
+Walk it Out,2006,2006,0,2006,0
+Walked Outta Heaven,2003,1998,5,1995,8
+Walking Away,2002,1998,4,2002,0
+Walking On Air,2013,1998,15,1992,21
+Wanksta,2003,2002,1,2002,1
+Wanna Get To Know You,2004,1998,6,2004,0
+Wannabe,1997,1997,0,1997,0
+Want To,2006,1998,8,1980,26
+Want To Want Me,2015,1998,17,2012,3
+Want U Back,2012,1998,14,2006,6
+Wanted,2012,1998,14,1980,32
+Wanted,2009,1998,11,1980,29
+Wanted Dead Or Alive,2006,1997,9,1980,26
+Wanted You More,2011,1997,14,1980,31
+Wasted,2007,2000,7,2007,0
+Wasted,2009,2009,0,2009,0
+Wasted,2014,2000,14,2000,14
+Wasted Love,2015,1999,16,1980,35
+Wasting All These Tears,2013,1997,16,2015,2
+Wasting My Time,2002,1997,5,1980,22
+Wat Da Hook Gon Be,2003,2003,0,2003,0
+Watch Me,2015,2011,4,2015,0
+Watch Me Do My Thing,1997,1999,2,1997,0
+Watch The Wind Blow By,2004,2004,0,2004,0
+Watching Airplanes,2008,1997,11,2009,1
+Watching You,2007,1998,9,2006,1
+Water,2010,1998,12,1998,12
+Wave On Wave,2003,1999,4,2003,0
+Waves,2014,1998,16,1980,34
+We Are Never Ever Getting Back Together,2012,1998,14,2006,6
+We Are The World 25,2010,2010,0,2010,0
+We Are Young,2011,1998,13,2010,1
+We Are Young,2012,1998,14,1980,32
+We Are Young,2012,1998,14,1980,32
+We Be Burnin',2005,2005,0,2005,0
+We Belong Together,2006,1999,7,1981,25
+We Belong Together,2005,1998,7,2005,0
+We Can't Be Friends,1999,1999,0,1999,0
+We Can't Stop,2013,1998,15,2011,2
+We Danced,2000,1997,3,2002,2
+We Dem Boyz,2014,2000,14,2011,3
+We Fly High,2007,2002,5,2006,1
+We Found Love,2011,1997,14,1980,31
+We Like To Party!,1999,1999,0,1999,0
+We Made You,2009,2009,0,2009,0
+We Might Be Dead By Tomorrow,2014,1998,16,1980,34
+We No Speak Americano,2010,2010,0,2010,0
+We Own It (Fast & Furious),2013,1999,14,2013,0
+We Owned The Night,2011,1997,14,1980,31
+We R Who We R,2010,2010,0,2010,0
+We Really Shouldn't Be Doing This,1998,1998,0,1998,0
+We Rock,2008,1999,9,1980,28
+We Run The Night,2012,1998,14,1982,30
+We Run This,2006,2006,0,2009,3
+We Takin' Over,2007,2007,0,2007,0
+We Thuggin',2002,2001,1,2001,1
+We Trying To Stay Alive,1997,1997,0,1997,0
+We Were Us,2013,1998,15,2013,0
+We're All In This Together,2006,1996,10,1990,16
+We're Not Making Love No More,1998,1998,0,2009,11
+Welcome Back,2004,2004,0,2004,0
+Welcome Back,2004,2002,2,2004,0
+Welcome To Atlanta,2002,2002,0,2002,0
+Welcome To My Life,2004,1998,6,1980,24
+Welcome To New York,2014,2000,14,1994,20
+Welcome To The Black Parade,2007,1998,9,1998,9
+Welcome To The Future,2009,1998,11,2003,6
+West Coast,2014,2014,0,2000,14
+Westside,1998,1998,0,1998,0
+Wetter (Calling You Daddy),2009,2009,0,2009,0
+Wetter (Calling You Daddy),2009,2009,0,2009,0
+What A Beautiful Day,2003,2003,0,2003,0
+What A Girl Wants,2000,1999,1,1980,20
+What About Now,2008,1998,10,1980,28
+What About Now,2000,1998,2,2012,12
+What About Us,1997,1997,0,1997,0
+What About Us?,2002,1998,4,1998,4
+What Do You Mean?,2015,1999,16,2010,5
+What Do You Say,2000,1998,2,1985,15
+What Do You Say To That,1999,1995,4,1999,0
+What Goes Around...Comes Around,2007,1998,9,1980,27
+What Happened To That Boy,2003,2003,0,2003,0
+What Hurts The Most,2006,1997,9,1981,25
+What I Really Meant To Say,2001,1998,3,2001,0
+What I've Been Looking For,2006,2006,0,1990,16
+What I've Done,2007,1997,10,1980,27
+What If,1998,1998,0,1980,18
+What If She's An Angel,2002,1998,4,1980,22
+What It Feels Like For A Girl,2001,1999,2,2005,4
+What It's Like,1999,1999,0,1999,0
+What Makes You Beautiful,2012,1997,15,2012,0
+What Now,2013,1998,15,2013,0
+What The Hell,2011,1998,13,1980,31
+What Them Girls Like,2008,2008,0,2008,0
+What They Do,1997,1997,0,1997,0
+What Time Is It,2007,1998,9,1988,19
+What U Gon' Do,2004,2004,0,2004,0
+What Was I Thinkin',2003,1999,4,2003,0
+What Would Happen,1998,1998,0,1998,0
+What Would You Do?,2001,1998,3,2001,0
+What Would You Do?,2003,1998,5,2004,1
+What Ya Want,1999,1999,0,1999,0
+What You Got,2008,1999,9,2007,1
+What You Know,2006,2000,6,2006,0
+What You Waiting For?,2004,1998,6,2005,1
+What You Want,2000,2000,0,2009,9
+What You Want,1998,1998,0,1998,0
+What'Chu Like,2000,1999,1,1991,9
+What's Going On,2001,2001,0,2001,0
+What's Happnin',2004,2004,0,2004,0
+What's It Gonna Be?!,1999,1998,1,1999,0
+What's Left Of Me,2006,1998,8,1980,26
+What's Luv?,2002,1998,4,2002,0
+What's My Name?,2010,1999,11,2011,1
+What's On Tonight,1997,1997,0,1996,1
+What's So Different,1999,1999,0,2003,4
+What's Wrong With Them,2010,2010,0,1984,26
+What's Your Fantasy,2000,2000,0,2000,0
+Whataya Want From Me,2010,2010,0,2010,0
+Whatcha Gone Do?,1998,1998,0,1998,0
+Whatcha Say,2009,1999,10,2009,0
+Whatcha Wanna Do?,1998,1998,0,1998,0
+Whateva Man,1997,1997,0,1997,0
+Whatever,1997,1997,0,1980,17
+Whatever,2000,1999,1,2006,6
+Whatever It Is,2009,1998,11,2009,0
+Whatever It Takes,2008,1998,10,1980,28
+Whatever She's Got,2014,1999,15,2013,1
+Whatever You Like,2008,2008,0,2008,0
+Whatever You Say,1999,1999,0,1999,0
+Whe U See Is What U Get,1998,1998,0,2002,4
+When A Woman's Fed Up,1999,1998,1,1999,0
+When I Close My Eyes,1999,1998,1,1980,19
+When I Die,1997,1998,1,1980,17
+When I Get Where I'm Going,2006,1998,8,1980,26
+When I Get You Alone,2011,1998,13,2010,1
+When I Grow Up,2008,1999,9,2014,6
+When I Look At You,2010,1999,11,1990,20
+When I Said I Do,1999,1997,2,1994,5
+When I See U,2007,1998,9,1996,11
+When I Think About Angels,2001,2001,0,2001,0
+When I Think About Cheatin',2005,1999,6,2013,8
+When I Was Your Man,2013,1998,15,1980,33
+When I'm Gone,2003,1998,5,1984,19
+When I'm Gone,2005,1998,7,2005,0
+When It's Over,2001,1998,3,1980,21
+When She Says Baby,2014,1998,16,2014,0
+When The Last Time,2002,2002,0,2002,0
+When The Lights Go Out,1998,1997,1,1980,18
+When The Stars Go Blue,2006,1996,10,2006,0
+When The Sun Goes Down,2004,2004,0,2004,0
+When We Stand Together,2011,1997,14,2011,0
+When You Believe,1999,1996,3,2009,10
+When You Look Me In The Eyes,2008,1998,10,1980,28
+When You Tell Me That You Love Me,2005,1998,7,1980,25
+When You Were Young,2006,1998,8,1980,26
+When You're Gone,2007,1998,9,1980,27
+When You're Gone/Free To Decide,1997,1996,1,1996,1
+When You're Mad,2006,1999,7,1993,13
+Whenever Wherever,2001,1998,3,2001,0
+Where Are U Now,2015,1998,17,2015,0
+Where Are You Going,2002,1998,4,1980,22
+Where Have All The Cowboys Gone?,1997,2002,5,2015,18
+Where Have You Been,2012,1997,15,1980,32
+Where I Come From,2001,2001,0,2001,0
+Where I Wanna Be,2000,1998,2,2000,0
+Where Is The Love?,2003,2003,0,2003,0
+Where It's At (Yep Yep),2014,2002,12,2009,5
+Where My Girls At?,1999,1999,0,1980,19
+Where The Blacktop Ends,2001,2002,1,2002,1
+Where The Party At,2001,2001,0,2001,0
+Where Them Girls At,2011,2011,0,2011,0
+Where Were You (When The World Stopped Turning),2002,1999,3,2001,1
+Where Would You Be,2002,1999,3,1980,22
+Where Ya At,2015,2015,0,2015,0
+Where the Stars & Stripes and the Eagle Fly,2001,1997,4,1980,21
+Where'd You Go,2006,2002,4,2006,0
+Wherever You Go,1998,1998,0,1980,18
+Wherever You Will Go,2002,1998,4,1980,22
+Whine Up,2007,2007,0,2007,0
+Whip My Hair,2010,2010,0,2010,0
+Whiskey Girl,2004,1999,5,2006,2
+Whiskey Lullaby,2004,2000,4,2004,0
+Whistle,2012,1998,14,2012,0
+White & Nerdy,2006,2006,0,2006,0
+White Flag,2004,1998,6,1980,24
+White Horse,2008,1998,10,2008,0
+White Iverson,2015,2002,13,2004,11
+White Liar,2009,1998,11,2009,0
+White Walls,2013,2002,11,2013,0
+White Walls,2013,2002,11,2013,0
+Who Am I,1998,1998,0,1998,0
+Who Are You When I'm Not Looking,2011,2002,9,2013,2
+Who Dat,1999,1999,0,1999,0
+Who Dat,1999,1999,0,1999,0
+Who Dat Girl,2011,2001,10,2011,0
+Who Gon Stop Me,2011,2011,0,2009,2
+Who I Am,2001,2000,1,2002,1
+Who I Am With You,2014,1998,16,1980,34
+Who Knew,2007,1998,9,1980,27
+Who Let The Dogs Out,2000,2000,0,2000,0
+Who Says,2009,1999,10,1984,25
+Who Says,2011,1998,13,2011,0
+Who Says You Can't Go Home,2006,1998,8,1983,23
+Who Wouldn't Wanna Be Me,2003,2003,0,2003,0
+Who You Love,2014,1998,16,1980,34
+Who You'd Be Today,2005,1999,6,1980,25
+Who's That Girl?,2001,2001,0,2001,0
+Who's Your Daddy?,2002,2000,2,2002,0
+Whoa!,2000,2000,0,2000,0
+Why,2006,1996,10,1980,26
+Why Can't I,2003,1999,4,2001,2
+Why Don't We Fall In Love,2002,2002,0,2002,0
+Why Don't We Just Dance,2010,1998,12,2006,4
+Why Don't You & I,2003,1998,5,2001,2
+Why Wait,2010,1998,12,2010,0
+Why Ya Wanna,2012,2000,12,2002,10
+Why You Wanna,2006,1999,7,2002,4
+Why?,2004,2004,0,2004,0
+Wide Awake,2012,2000,12,2005,7
+Wide Open Spaces,1998,1998,0,1998,0
+Wifey,2000,2000,0,2000,0
+Wiggle,2014,2001,13,2014,0
+Wild Horses,2001,2001,0,1998,3
+Wild Ones,2012,2012,0,2012,0
+Wild Wild Love,2014,2014,0,2014,0
+Wild Wild West,1999,1999,0,1999,0
+Wild Wild West,1999,1999,0,1999,0
+Wildest Dreams,2015,1997,18,2015,0
+Will 2K,1999,1999,0,1999,0
+Wind It Up,2006,2006,0,2006,0
+Window Shopper,2005,2000,5,2005,0
+Winner,2010,2010,0,2010,0
+Wipe Me Down,2007,2000,7,2007,0
+Wish You Were Here,1999,1998,1,1994,5
+Wishlist,1998,1998,0,1998,0
+With Arms Wide Open,2000,1997,3,1980,20
+With Love,2007,1991,16,1980,27
+With You,2008,1998,10,2004,4
+With You,2004,1999,5,1999,5
+With You,1999,1998,1,1980,19
+Without Love,1997,1998,1,2010,13
+Without Me,2002,2002,0,2002,0
+Without You,2011,2011,0,2011,0
+Without You,2000,1998,2,1980,20
+Without You,2012,1997,15,2010,2
+Wobble Wobble,2000,2000,0,2000,0
+Womanizer,2008,2008,0,2008,0
+Won't Go Home Without You,2008,1998,10,2011,3
+Wonderful,2000,1999,1,1980,20
+Wonderful,2004,2001,3,2004,0
+Woof Woof,1998,1998,0,1998,0
+Word Crimes,2014,2014,0,2009,5
+Work B**ch!,2013,2000,13,1997,16
+Work Hard Play Hard,2012,2003,9,2010,2
+Work In Progress,2002,2002,0,2002,0
+Work It,2002,2002,0,2002,0
+Work Out,2012,2011,1,2011,1
+World Wide Suicide,2006,1998,8,2013,7
+Worth It,2015,2000,15,1995,20
+Would You Go With Me,2006,1998,8,2006,0
+Wrapped Around,2002,1998,4,2003,1
+Wrapped Up In You,2001,1999,2,1980,21
+Wrecking Ball,2013,1997,16,2013,0
+Write This Down,1999,1999,0,1999,0
+Written In The Stars,1999,1998,1,1999,0
+Written In The Stars,2011,2011,0,2011,0
+Wrong Again,1999,1997,2,1980,19
+XO,2014,2014,0,2014,0
+YAHHH!,2008,2008,0,2005,3
+Yeah,2014,1998,16,2009,5
+Yeah 3X,2011,1999,12,2007,4
+Yeah Ya Know (Takers),2010,2010,0,2012,2
+Yeah!,2004,2004,0,2004,0
+Year 3000,2007,2007,0,2007,0
+Yellow,2001,2001,0,2014,13
+Yellow Flicker Beat,2014,1998,16,1991,23
+Yes!,2000,1998,2,1980,20
+Yo (Excuse Me Miss),2006,1998,8,2006,0
+You,2012,1999,13,2012,0
+You,1999,1997,2,1980,19
+You,2007,1998,9,2008,1
+You And I,2011,1997,14,1992,19
+You And Me,2005,2001,4,1980,25
+You And Tequila,2011,1998,13,2011,0
+You And Your Heart,2010,1998,12,1980,30
+You Are The Music In Me,2007,1996,11,1980,27
+You Belong With Me,2009,1999,10,1980,29
+You Bring Me Up,1997,1997,0,1997,0
+You Can Do It,2000,1999,1,1999,1
+You Can't Hide Beautiful,2003,1997,6,2001,2
+You Can't Take The Honky Tonk Out Of The Girl,2004,2000,4,2003,1
+You Da One,2011,1998,13,1980,31
+You Don't Have To Hurt No More,1997,1998,1,1991,6
+You Don't Know,2006,2006,0,2006,0
+You Don't Know Her Like I Do,2012,1996,16,1980,32
+You Don't Know My Name,2004,2003,1,2003,1
+You Found Me,2009,1999,10,1999,10
+You Get What You Give,1999,1998,1,1998,1
+You Gets No Love,2001,1998,3,1980,21
+You Give Love A Bad Name,2007,2007,0,1990,17
+You Got Me,1999,1999,0,1999,0
+You Had Me From Hello,1999,1999,0,1980,19
+You Know What It Is,2007,1999,8,2007,0
+You Know You Like It,2015,1998,17,2015,0
+You Know You're Right,2002,1998,4,1989,13
+You Lie,2011,2000,11,2011,0
+You Light Up My Life,1997,1998,1,1980,17
+You Look Good In My Shirt,2008,1998,10,2008,0
+You Make Me Feel...,2011,2011,0,2011,0
+You Make Me Sick,2001,2001,0,2001,0
+You Make Me Wanna...,1997,1999,2,1980,17
+You Rock My World,2001,1991,10,1980,21
+You Sang To Me,2000,1998,2,1980,20
+You Save Me,2006,1998,8,1996,10
+You Should Be Mine (Don't Waste Your Time),1997,1998,1,1997,0
+You Shouldn't Kiss Me Like This,2001,1998,3,2004,3
+You Were Mine,1999,1998,1,1980,19
+You Won't Ever Be Lonely,1999,1998,1,1980,19
+You Won't Forget Me,1998,1998,0,2003,5
+You'll Be In My Heart,1999,1998,1,1980,19
+You'll Think Of Me,2004,1997,7,2012,8
+You're A God,2000,1992,8,1980,20
+You're A God,2001,2001,0,1980,21
+You're A Jerk,2009,2009,0,2009,0
+You're Beautiful,2006,1991,15,1980,26
+You're Beginning To Get To Me,1998,1998,0,2001,3
+You're Easy On The Eyes,1998,1998,0,1998,0
+You're Gonna Miss This,2008,2000,8,2008,0
+You're My Better Half,2005,1997,8,2005,0
+You're Not Sorry,2008,1999,9,1980,28
+You're So Beautiful,2015,2001,14,1980,35
+You're Still The One,1998,1998,0,2004,6
+You've Got A Way,1999,1998,1,1980,19
+Young,2002,2002,0,2002,0
+Young And Beautiful,2013,1997,16,2013,0
+Young Forever,2010,1997,13,2009,1
+Young Girls,2014,2000,14,2012,2
+Young'n (Holla Back),2002,2002,0,2002,0
+Young Wild & Free,2011,2000,11,2011,0
+Young Wild & Free,2012,2000,12,2011,1
+Your Body,2012,1998,14,1980,32
+Your Body,2005,2005,0,2005,0
+Your Body Is A Wonderland,2003,1998,5,2002,1
+Your Love,2010,2010,0,2010,0
+Your Love Is My Drug,2010,2002,8,2002,8
+Your Man,2006,1997,9,1980,26
+Your Woman,1997,1997,0,1997,0
+Youth Of The Nation,2002,1998,4,2002,0
+dontchange,2002,1998,4,1980,22
+halfcrazy,2002,1998,4,1980,22
+i,2014,2014,0,2014,0
+teachme,2007,1998,9,2007,0

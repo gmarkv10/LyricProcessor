@@ -33,7 +33,7 @@ public class FinalCrossValidator {
 		this.h     = new Helpers();
 		
 		q = new queries();
-		allData = q.get100songsANDartists();
+		allData = q.songsANDartists();
 		foldSize = allData.length/folds;
 		test = new String[foldSize][2];
 		train =  new String[allData.length - foldSize][2];
@@ -111,10 +111,13 @@ public class FinalCrossValidator {
 			writer.write("Song,Actual,TF-IDF,TF-IDF Error,Custom,Custom Err"); writer.newLine();
 		}
 		for(int i = 0; i < test.length; i ++){
+			int year = h.extractYear(q.bestWeek(test[i][0], test[i][1]));
+			if(year < 1997) continue;
 			localWordStats =  new HashMap<String, Integer>();
 			
 			//find unique words and their frequencies
 			String lyric = q.getLyrics(test[i][0], test[i][1]);
+			
 			
 			lyric = lyric.replaceAll("[^A-Za-z0-9 ]", "");
 			String[] words = lyric.split(" ");
@@ -142,7 +145,7 @@ public class FinalCrossValidator {
 				
 			}
 			String song = test[i][0].replaceAll(",", "");
-			int year = h.extractYear(q.bestWeek(test[i][0], test[i][1]));
+			
 			int bowPrediction = h.maxIdx(tfidfYearScore) + 1980;
 			int custPrediction = h.maxIdx(customYearScore) + 1980;
 			
