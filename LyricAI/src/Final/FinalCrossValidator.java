@@ -120,11 +120,15 @@ public class FinalCrossValidator {
 		System.out.println("Testing fold: " + fold);
 		permuteTestTrain(fold);
 		if(fold == 0){
-			writer.write("Song,Actual,TF-IDF,TF-IDF Error,Custom,Custom Err, ,1980"); writer.newLine();
+			writer.write("Song,Actual,TF-IDF,TF-IDF Error,Custom,Custom Err, ,");
+			for(int z = 1980; z<2016;z++){
+				writer.write(z + ",");
+			}
+			writer.newLine();
 		}
 		for(int i = 0; i < test.length; i ++){
 			int year = h.extractYear(q.bestWeek(test[i][0], test[i][1]));
-			//if(year < 1990 ) continue;
+			if(year < 1990 ) continue;
 			localWordStats =  new HashMap<String, Integer>();
 			
 			//find unique words and their frequencies

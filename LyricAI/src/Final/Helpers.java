@@ -74,11 +74,14 @@ public class Helpers {
 	public int[] top5Years(ArrayList<Integer> yrs){
 		int[] yrfrq = new int[5];
 		Integer mode = 0;
+		Integer max = 0;
 		for(int i  = 0; i < 5; i++){
-			if(yrs.isEmpty()){
-				yrfrq[i] = mode;
+			if(mode(yrs) < 0){
+				yrfrq[i] = max;//give any remaining weights to the max, it deserves it
+				continue;
 			}
 			mode = mode(yrs);
+			if(i == 0) max = mode;
 			yrfrq[i] = mode;
 			while(yrs.remove(mode));
 		}
@@ -87,6 +90,7 @@ public class Helpers {
 	}
 	
 	public Integer mode(ArrayList<Integer> yrs){
+		if(yrs.isEmpty()) return -1;
 		int[]  spread = new int[36];
 		Iterator<Integer> it = yrs.iterator();
 		while(it.hasNext()){
