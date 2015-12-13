@@ -39,12 +39,6 @@ public class Helpers {
 		int minYear   = 2017;
 		int maxYear   = 1979;
 		int avgYear   = 0;
-		int topYear1  = 0;
-		int topYear2  = 0;
-		int topYear3  = 0;
-		int topYear4 =  0;
-		int topYear5  = 0;
-		
 		int freq      = 0;
 		double stdDev = -1.0; 
 		ArrayList<Integer> years =  new ArrayList<Integer>();
@@ -58,6 +52,8 @@ public class Helpers {
 		 * [5]:top year
 		 * [6]:2nd top year
 		 * [7]:3rd top year
+		 * [8]:4th top year
+		 * [9]:5th top year
 		 */
 		for(weekCount data: list){
 			for(int i = 0; i < data.count; i ++){
@@ -71,19 +67,51 @@ public class Helpers {
 		}
 		avgYear = avgYear/freq;
 		stdDev = getStdDev(avgYear, years);
-		return new Object[]{minYear, maxYear, avgYear, freq, stdDev};
+		int[] topYears = top5Years(years);
+		return new Object[]{minYear, maxYear, avgYear, freq, stdDev, topYears[0], topYears[1], topYears[2], topYears[3], topYears[4]};
 	}
 	
 	public int[] top5Years(ArrayList<Integer> yrs){
-		int[] yrfrq = new int[36];
-		for(Integer y: yrs){
+		int[] yrfrq = new int[5];
+		Integer mode = 0;
+		for(int i  = 0; i < 5; i++){
+			if(yrs.isEmpty()){
+				yrfrq[i] = mode;
+			}
+			mode = mode(yrs);
+			yrfrq[i] = mode;
+			while(yrs.remove(mode));
 		}
-		return null;
+		
+		return yrfrq;
+	}
+	
+	public Integer mode(ArrayList<Integer> yrs){
+		int[]  spread = new int[36];
+		Iterator<Integer> it = yrs.iterator();
+		while(it.hasNext()){
+			spread[it.next() - 1980]++;
+		}
+		
+		return maxIdx(spread) + 1980;
+		
 	}
 	
 	public int maxIdx(double[]  years){
 		int max = 0;
 		double maxVal = -1.0;
+		for(int i = 0; i < years.length; i++){
+			if(years[i] > maxVal){
+				max = i;
+				maxVal = years[i];
+			}
+		}
+		return max;
+	}
+	
+	public int maxIdx(int[]  years){
+		int max = 0;
+		double maxVal = -1;
 		for(int i = 0; i < years.length; i++){
 			if(years[i] > maxVal){
 				max = i;

@@ -43,17 +43,23 @@ public class LyricManager {
 		populateProcecessedWeeklyCount(); //do all the processing for the training permutation
 		
 		writer = new BufferedWriter(new FileWriter("Data/trainingData"+fold+".csv")); //we're ready to write
-		writer.write("Word,1st Year,Nth Year, Avg Year,Frequency,Standard Dev,Usage"); writer.newLine();
+		writer.write("Word,1st Year,Nth Year, Avg Year,Frequency,Standard Dev,year1,year2,year3,year4,year5,Usage"); writer.newLine();
 		ArrayList<weekCount> freqList;
 		
 		Iterator it = processedLyricWeeks.keySet().iterator();
+		
 		while(it.hasNext()){
+			
 			String word = (String) it.next();
 			freqList = processedLyricWeeks.get(word);
 			int songUsage = songFreq.get(word); //number of songs this word appears in
 			Object[] result = helperFunctions.getStatsFromWeekCount(freqList);
-			
-			writer.write(word + "," + result[0] + "," + result[1] + "," + result[2] + "," + result[3] + "," + result[4] + "," + songUsage);		
+			writer.write(word + ",");
+			for(int x = 0;x<result.length;x++){
+				writer.write(result[x] + ",");		
+				
+			}
+			writer.write(songUsage + "");
 			writer.newLine();
 		}
 		

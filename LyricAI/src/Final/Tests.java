@@ -32,7 +32,7 @@ public class Tests {
 			for (String week : testArrayOfWeeks){testListOfWeeks.add(week);}
 		
 		
-		testPermute();
+		//testPermute();
 		//testPermute2();
 		
 		//testFindUniques("hey hey wow tony wow hey pie");
@@ -48,6 +48,7 @@ public class Tests {
 		//testTheWholeThing();
 		//System.out.println("End");
 		
+		testYearCountClass();
 		
 	}
 	//tests populateLyricWeeks() and populateProcessedWeeklyCounts();
@@ -143,12 +144,15 @@ public class Tests {
 		f.crossValidate();
 	}
 	
-	public void testYearCountClass(){
-//		yearCount a = new yearCount("1980",1);
-//		yearCount b = new yearCount("1980",1);
-//		yearCount c = new yearCount("1981",2);
-//		yearCount d = new yearCount("1983",1);
-//		yearCount e = new yearCount("1984",3);
+	public static void testYearCountClass(){
+		ArrayList<Integer> yrs = new ArrayList<Integer>();
+		yrs.add(1982); yrs.add(1982);yrs.add(1980);yrs.add(1980);
+		 
+		
+		int[] res = h.top5Years(yrs);
+		for(int j =0;j<5;j++){
+			System.out.println(res[j]);
+		}
 		
 	}
 

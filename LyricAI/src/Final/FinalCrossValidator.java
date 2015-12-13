@@ -83,7 +83,19 @@ public class FinalCrossValidator {
 		String[] data;
 		int min, max, avg, freq, usage;
 		double sd;
-		
+		//return order:
+		/** word on top then
+		 * [1]:minYear
+		 * [2]:maxYear
+		 * [3]:avgYear
+		 * [4]:frequency
+		 * [5]:standard deviation
+		 * [6]:top year
+		 * [7]:2nd top year
+		 * [8]:3rd top year
+		 * [9]:4th top year
+		 * [10]:5th top year
+		 */
 		globalWordStats = new HashMap<String, WordStats>();
 		reader =  new BufferedReader(new FileReader("Data/trainingData"+fold+".csv"));
 		String waste = reader.readLine(); //waste the first line, it has the column labels
@@ -94,9 +106,9 @@ public class FinalCrossValidator {
 			avg  = Integer.parseInt(data[3]);
 			freq = Integer.parseInt(data[4]);
 			sd   = Double.parseDouble(data[5]);
-			usage = Integer.parseInt(data[6]);
-			
-			globalWordStats.put(data[0], new WordStats(min, max, avg, freq, sd, usage));
+			int[] topYears = {Integer.parseInt(data[6]), Integer.parseInt(data[7]), Integer.parseInt(data[8]), Integer.parseInt(data[9]), Integer.parseInt(data[10])};
+			usage = Integer.parseInt(data[11]);
+			globalWordStats.put(data[0], new WordStats(min, max, avg, freq, sd, topYears, usage));
 			
 		}
 		reader.close();
@@ -138,9 +150,11 @@ public class FinalCrossValidator {
 				
 				double bowScore = getTFIDF(s); //Bag of Words style word importance score
 				double custScore = h.getWeight(current.stdDev, current.freq);
-				
-				customYearScore[current.avgYear - 1980] += custScore;
-				tfidfYearScore[current.avgYear - 1980]  += bowScore;
+				int[] tops = current.topYears;
+				for(int a = 0; a < tops.length; a++){				
+					customYearScore[tops[a] - 1980] += custScore*(1.0 - (0.1*a));
+					tfidfYearScore[tops[a] - 1980]  += bowScore*(1.0 - (0.1*a));
+				}
 				
 				
 			}
@@ -177,15 +191,17 @@ public class FinalCrossValidator {
 		int maxYear   = 0;
 		int avgYear   = 0;
 		int freq      = 0;
+		int[] topYears;
 		double stdDev = 0.0;
 		int useage = 0;
 		
-		public WordStats(int min, int max, int avg, int f, double sd, int use){
+		public WordStats(int min, int max, int avg, int f, double sd, int[] tops, int use){
 			minYear = min;
 			maxYear = max;
 			avgYear = avg;
 			freq = f;
 			stdDev = sd;
+			topYears = tops;
 			useage = use;
 		}
 	}
