@@ -5,22 +5,24 @@ Gabriel Markarian & Anthony Depace
 
 Predicting Release Dates of Popular Works Using Bag Of Words
 
- You will need a github account to access this!
-    
+
+You will need a github account to access this!
+
     When you are configured in your terminal or desktop app do a 
-    
-      git clone https://github.com/gmarkv10/LyricProcessor.git
+    git clone https://github.com/gmarkv10/LyricProcessor.git
       
     Open Eclipse and do File->New->Java Project
     Name that project LyricProcessor
-    
     The wizard will build the project for you if you've done it right
-    
     !IMPORTANT
-    go to the queries.java file and switch the comments off for tony's path if you have a mac and gabe's path if you have windows! Paths are funny that way.
+    go to the queries.java file 
+    switch the comments off for tony's path if you have a mac 
+    and gabe's path if you have windows! Paths are funny that way.
     
-    ***All useful work is in the Final package***
-    The CVDriver class has 2 functions:
+
+
+***All useful work is in the Final package***
+The CVDriver class has 2 functions:
   
 LyricManager lm = new LyricManager(FOLDS);
 lm.makeFoldFiles();
