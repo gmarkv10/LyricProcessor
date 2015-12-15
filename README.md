@@ -5,10 +5,7 @@ Gabriel Markarian & Anthony Depace
 
 Predicting Release Dates of Popular Works Using Bag Of Words
 
-ABSTRACT
-    Studies show popular songs imitate and influence popular culture.[3] By that metric, as culture changes, so too should the songs which are popular.  By extracting the right features from the songs that are the most popular, we sought to predict the time in which the song was popular. The most accessible features for the authors to analyze were the lyrics, so a database of 7801 song lyrics from top 50 lists going back to 1980 was materialized. Several attempts at seeking out features in popular lyrics are discussed which classify on a mix of relevant attributes to popular music. While many of our own lyrical features were brainstormed, acceptable classification performance came from a Bag of Words classifier implemented in Java and evaluated by a 10-fold cross validation. The success of the tf-idf weighting scheme with Bag Of Words and the pitfalls of several underperforming classification strategies are discussed
-    
-    You will need a github account to access this!
+ You will need a github account to access this!
     
     When you are configured in your terminal or desktop app do a 
     
