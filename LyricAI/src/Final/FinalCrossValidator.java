@@ -20,6 +20,7 @@ public class FinalCrossValidator {
 	int testIdx = 0;
 	int foldSize = 0;
 	
+	
 	HashMap<String, WordStats> globalWordStats;
 	HashMap<String, Integer> localWordStats;
 	
@@ -70,10 +71,10 @@ public class FinalCrossValidator {
 		
 	}
 	
-	public void crossValidate() throws Exception{
+	public void crossValidate(int co) throws Exception{
 		for(int i  = 0; i < folds; i++){
 			train(i);
-			test(i);
+			test(i, co);
 		}
 		writer.close();
 	}
@@ -116,7 +117,7 @@ public class FinalCrossValidator {
 
 
 	
-	public void test(int fold) throws Exception{
+	public void test(int fold, int cutoff) throws Exception{
 		System.out.println("Testing fold: " + fold);
 		permuteTestTrain(fold);
 		if(fold == 0){
@@ -128,7 +129,7 @@ public class FinalCrossValidator {
 		}
 		for(int i = 0; i < test.length; i ++){
 			int year = h.extractYear(q.bestWeek(test[i][0], test[i][1]));
-			if(year < 1990 ) continue;
+			if(year < cutoff ) continue;
 			localWordStats =  new HashMap<String, Integer>();
 			
 			//find unique words and their frequencies
@@ -159,7 +160,7 @@ public class FinalCrossValidator {
 					customYearScore[tops[a] - 1980] += custScore*(1.0 - (0.1*a));
 					tfidfYearScore[tops[a] - 1980]  += bowScore*(1.0 - (0.1*a));
 				}
-				
+				Helpers.trimUnpredictedYears(cutoff, tfidfYearScore);
 				
 			}
 			String song = test[i][0].replaceAll(",", "");

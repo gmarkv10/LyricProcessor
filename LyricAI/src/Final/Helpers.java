@@ -143,4 +143,18 @@ public class Helpers {
 		return uniques;
 	}
 
+
+	public static void trimUnpredictedYears(int coYear, double[] score) {
+		// TODO Auto-generated method stub
+		double HALF = 0.5;
+		double DELTA = HALF/(coYear - 1980);
+		for(int i = 0; i < score.length; i ++){
+			if(i + 1980 < coYear){
+				score[i] = score[i]*(HALF + i*DELTA);
+				
+			}
+		}
+		
+	}
+
 }

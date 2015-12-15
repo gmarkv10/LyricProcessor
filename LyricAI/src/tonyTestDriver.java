@@ -12,7 +12,7 @@ public class tonyTestDriver {
 	
 	public static void main(String[] args) throws Exception{
 		queries q = new queries();
-		timePrediction tp = new timePrediction();
+		//timePrediction tp = new timePrediction();
 		//tp.init();
 		//String[][] alldata = q.songANDartistANDbestweekANDbestrank();
 		/*String lyrics = q.getLyrics("Hotline Bling", "Drake");
@@ -46,7 +46,7 @@ public class tonyTestDriver {
 		
 		//tp.writeDataFile();
 		//tp.loadData();
-		String weekdat = "1983-20-10";
+		//String weekdat = "1983-20-10";
 		//System.out.println(weekdat.substring(0,4));
 		
 		//int year = tp.predictYear(q.getLyrics("Hotline Bling", "Drake"));
@@ -67,8 +67,11 @@ public class tonyTestDriver {
 		sc.close();
 		System.out.println("predicting testLyrics are from year: "+tp.predictYear(testLyrics));*/
 		//tp.testAllData();
-		NFoldCV nfcv = new NFoldCV(10,false);
-		nfcv.crossValidate();
+		//NFoldCV nfcv = new NFoldCV(10,false);
+		//nfcv.crossValidate();
+		String[][] s = q.songsANDartists();
+
+		System.out.println(q.getLyrics("Power Of Love/Love Power","Luther Vandross"));
 		
 		
 	}

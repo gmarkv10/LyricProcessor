@@ -10,7 +10,7 @@ public class CVDriver {
 		FinalCrossValidator fcv = FinalCrossValidator.getInstance(FOLDS);
 		//LyricManager lm = new LyricManager(FOLDS);
 		//lm.makeFoldFiles();
-		fcv.crossValidate();
+		fcv.crossValidate(1990);
 
 
 		

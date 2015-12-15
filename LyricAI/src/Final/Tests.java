@@ -16,7 +16,7 @@ public class Tests {
 	static Helpers h;
 	public static void main(String[] args) throws Exception {
 		
-		f = FinalCrossValidator.getInstance(FOLDS);
+		//f = FinalCrossValidator.getInstance(FOLDS);
 		h = new Helpers();
 		lm = new LyricManager(FOLDS);
 		
@@ -48,8 +48,17 @@ public class Tests {
 		//testTheWholeThing();
 		//System.out.println("End");
 		
-		testYearCountClass();
+		testYearTrimming();
 		
+	}
+	
+	public static void testYearTrimming(){
+		double[] years = { 14.95909917	,19.94588077,	4.987719424,	10.26376022,	18.31762648,	26.45523182	,12.57649239	,12.76869294	,11.30506516	,19.15339982	,23.34284155	,62.41673665	,34.59338455	,66.66129308	,30.65214471	,37.09059752	,30.52744331	,57.27208979	,112.0896694	,34.66926514	,26.87538941	,24.34436358	,88.23147506	,131.4526746	,108.1960826	,117.4083488	,173.0807941	,93.96149518	,48.01145424	,50.95916363	,62.29558492	,63.90592797	,36.02213118,	49.04397273,	55.18882531,	22.75228472 };
+		double[] tyears = { 14.95909917	,19.94588077,	4.987719424,	10.26376022,	18.31762648,	26.45523182	,12.57649239	,12.76869294	,11.30506516	,19.15339982	,23.34284155	,62.41673665	,34.59338455	,66.66129308	,30.65214471	,37.09059752	,30.52744331	,57.27208979	,112.0896694	,34.66926514	,26.87538941	,24.34436358	,88.23147506	,131.4526746	,108.1960826	,117.4083488	,173.0807941	,93.96149518	,48.01145424	,50.95916363	,62.29558492	,63.90592797	,36.02213118,	49.04397273,	55.18882531,	22.75228472 };
+		Helpers.trimUnpredictedYears(1990, years);
+		for(int i = 0; i < years.length;i++){
+			System.out.println(years[i] + "," + tyears[i]);
+		}		
 	}
 	//tests populateLyricWeeks() and populateProcessedWeeklyCounts();
 	public static void testDataPopulation() throws Exception{
@@ -137,11 +146,11 @@ public class Tests {
 	}
 	
 	public static void testTestMethod() throws Exception {
-		f.test(4);
+		f.test(4,1990);
 	}
 	
 	public static void testTheWholeThing() throws Exception {
-		f.crossValidate();
+		f.crossValidate(1990);
 	}
 	
 	public static void testYearCountClass(){
@@ -153,5 +162,6 @@ public class Tests {
 		}
 		
 	}
+	
 
 }
